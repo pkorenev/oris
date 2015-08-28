@@ -9,6 +9,6 @@ class MailchimpController < ApplicationController
                                 #"leid" => "123123"
                               })
 
-    redirect_to root_path, flash: "Вы успешно подписались на рассылку"
+    redirect_to root_path, notice: "Вы успешно подписались на рассылку. Проверьте почту. Вам необходимо подтвердить подписку."
   end
 end

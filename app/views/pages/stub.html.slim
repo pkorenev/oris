@@ -15,6 +15,11 @@ html lang="en"
     .stub-page
       #wrap
         #main
+          - if flash[:notice].present?
+            .notice
+              .row
+                = flash[:notice]
+
           .header
             .row
               #logo.columns.large-3
