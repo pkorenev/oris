@@ -1,0 +1,78 @@
+$stub-footer-height: 64px
+.stub-page
+  background: #ebeff2
+  height: 100%
+
+  #wrap
+    min-height: 100%
+
+  #main
+    overflow: auto
+    padding-bottom: $stub-footer-height // must be same height as the footer
+
+  #footer
+    position: relative
+    margin-top: -#{$stub-footer-height} /* negative value of footer height */
+    height: $stub-footer-height
+    clear: both
+
+
+  .header
+    padding-top: 40px
+
+
+  .social
+    display: inline-block
+  .constraction-icon
+    display: inline-block
+  #content-row
+    text-align: center
+    padding-top: 128px
+  .subscribe-box
+    margin-top: 72px
+    input
+      outline: none
+      height: 40px
+      width: calc(100% - 66px)
+      border: 1px solid $input-color
+      padding: 0 15px
+
+      color: $input-color
+      font-weight: 600
+      font-size: 16px
+
+      +placeholder
+        color: $input-color
+        font-size: 16px
+        font-style: italic
+        font-weight: 300
+
+    button
+      +transition(0.2s all)
+      background: $sky-blue-color
+      width: 40px
+      height: 40px
+      margin: 0 0 0 2px
+      display: inline-block
+      vertical-align: top
+      position: relative
+
+      svg
+        top: 0
+        left: 10px
+        position: absolute
+
+      &:hover
+        background-color: rgba(#039BE6, 0.8)
+
+  .reconstruction-header, .reconstruction-description
+    color: $sky-blue-color
+    font-family: $body-font-family
+
+  .reconstruction-header
+    text-transform: uppercase
+  #footer
+    .phone, .email
+      width: auto
+      svg
+        vertical-align: middle

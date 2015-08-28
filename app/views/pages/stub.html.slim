@@ -1,0 +1,58 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+    title == content_for?(:title) ? yield(:title) : "Untitled"
+
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "vendor/modernizr"
+    = javascript_include_tag "application", 'data-turbolinks-track' => true
+    = csrf_meta_tag
+
+  body
+    .stub-page
+      #wrap
+        #main
+          .header
+            .row
+              #logo.columns.large-3
+                = embedded_svg_from_assets("logo")
+              #social-links.columns.large-3
+                #social__facebook.social
+                  a href="#"
+                    = embedded_svg_from_assets("social-facebook")
+                #social__twitter.social
+                  a href="#"
+                    = embedded_svg_from_assets("social-twitter")
+                #social__linked-in.social
+                  a href="#"
+                    = embedded_svg_from_assets("social-linked-in")
+          #content
+            #content-row.row
+              #construction-icon
+                = embedded_svg_from_assets("construction-icon")
+              h1.reconstruction-header
+                |Сайт в разработке
+              p.reconstruction-description
+                |Мы переделываем наш сайт, чтобы вам было удобнее
+              .columns.large-10.subscribe-box
+                input placeholder="Введите Ваш email, чтобы первыми узнать о запуске"
+                button type="submit"
+                  = embedded_svg_from_assets("send")
+
+
+      #footer
+        .row
+          - @phones.each_with_index do |phone, index|
+
+            .columns.phone
+              - if index == 0
+                = embedded_svg_from_assets("phone")
+              span
+                = phone
+          .columns.end.email
+            = embedded_svg_from_assets("mail")
+            span
+              = @mail
