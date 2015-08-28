@@ -38,9 +38,10 @@ html lang="en"
               p.reconstruction-description
                 |Мы переделываем наш сайт, чтобы вам было удобнее
               .columns.large-10.subscribe-box
-                input placeholder="Введите Ваш email, чтобы первыми узнать о запуске"
-                button type="submit"
-                  = embedded_svg_from_assets("send")
+                form method="post" action="/subscribe"
+                  input name="email" type="email" required="required" placeholder="Введите Ваш email, чтобы первыми узнать о запуске"
+                  button type="submit"
+                    = embedded_svg_from_assets("send")
 
 
       #footer

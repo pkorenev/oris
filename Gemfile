@@ -47,3 +47,5 @@ end
 
 gem 'foundation-rails'
 gem 'slim-rails'
+
+gem 'mailchimp-api', require: 'mailchimp'
