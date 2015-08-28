@@ -8,5 +8,7 @@ class MailchimpController < ApplicationController
                                 #"euid" => "123",
                                 #"leid" => "123123"
                               })
+
+    redirect_to root_path, flash: "Вы успешно подписались на рассылку"
   end
 end
