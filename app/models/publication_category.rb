@@ -19,11 +19,19 @@ class PublicationCategory < ActiveRecord::Base
     end
   end
 
+
+
+  #
+
   def to_param(locale = I18n.locale)
     self.translations_by_locale[locale].url_fragment
   end
 
   def url
+    routes.publications_category_path(publication_category: self)
+  end
 
+  def routes
+    Rails.application.routes.url_helpers
   end
 end

@@ -1,59 +1,47 @@
 Rails.application.routes.draw do
-  root to: 'pages#stub'
+  mount Ckeditor::Engine => '/ckeditor'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  devise_for :users
+  #root to: 'pages#stub'
   post "subscribe", to: "mailchimp#subscribe"
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+    root to: "pages#index"
+    get "about", to: "pages#about"
+    get "contact", to: "pages#contact"
+    resources :events, only: [:index, :show]
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+    scope "services" do
+      root to: "services#index", as: :services
+      get "practices", to: "services#index", defaults: { resource_class: "ServicePractice" }, as: :services_practices
+      get "departments", to: "services#index", defaults: { resource_class: "ServiceDepartment" }, as: :services_departments
+      get ":id", to: "services#show", as: :service
 
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+    end
 
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+    scope "projects" do
+      root to: "projects#index", as: :projects
+      scope ":project_category" do
+        root to: "projects#index", as: "projects_category"
+        get ":id", to: "projects#show", as: :project
+      end
 
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+    end
 
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
+    scope "publications" do
+      root to: "publications#index", as: :publications
+      scope ":publication_category" do
+        root to: "publications#index", as: "publications_category"
+        get ":id", to: "publications#show", as: :publication
+      end
 
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
+    end
 
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
+    scope "partners" do
+      get ":id", to: "partners#show", as: :partner
+    end
+  end
 
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  match "*url", to: "application#not_found", via: [:get, :post, :put, :update, :delete]
 end

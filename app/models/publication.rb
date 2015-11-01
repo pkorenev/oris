@@ -8,7 +8,7 @@ class Publication < ActiveRecord::Base
   has_attached_file :banner, styles: { page: "1366x500", thumb: "205x75#" }
   has_attached_file :avatar, styles: { publications_index: "220x320#", thumb: "100x150#" }
 
-  attr_accessible :banner, :delete_banner
+  attr_accessible :banner
   attr_accessible :avatar
 
   do_not_validate_attachment_file_type :banner

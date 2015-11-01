@@ -49,3 +49,31 @@ gem 'foundation-rails'
 gem 'slim-rails'
 
 gem 'mailchimp-api', require: 'mailchimp'
+
+gem 'thin'
+
+gem "quiet_assets"
+
+gem "devise"
+
+gem "rails_admin"
+
+gem 'russian'
+
+gem "globalize"
+
+gem "rails_admin_globalize_field"
+
+gem 'paperclip'
+
+gem 'ckeditor'
+
+gem 'protected_attributes'
+
+gem "rails_admin-i18n"
+
+gem "rails-i18n"
+
+gem 'devise-i18n'
+
+gem 'amoeba'

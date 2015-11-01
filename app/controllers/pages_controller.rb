@@ -10,6 +10,6 @@ class PagesController < ApplicationController
   end
 
   def about
-
+    @partners = Partner.published
   end
 end

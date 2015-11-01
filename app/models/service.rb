@@ -12,6 +12,11 @@ class Service < ActiveRecord::Base
     attr_accessible *attribute_names
     belongs_to :item, class_name: Service
     attr_accessible :item
+
+    before_validation :set_url_fragment
+    def set_url_fragment
+      self.url_fragment = self.name.parameterize if self.url_fragment.blank?
+    end
   end
 
   def list_item_name(index, locale = I18n.locale)

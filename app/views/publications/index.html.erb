@@ -37,7 +37,7 @@
 			<div class="ob_pab">
 				<div class="cont_filtr">
 					<ul class="menu_pab pab_pabl">
-                      <% categories_tabs.each do |tab| %>
+                      <% categories_tabs(PublicationCategory, publications_path).each do |tab| %>
 						<li><a href="<%= tab[:url] %>" class="<%= "p_activ" if tab[:active] %>"><%= tab[:name] %></a></li>
                       <% end %>
 					</ul>

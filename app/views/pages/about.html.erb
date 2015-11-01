@@ -197,28 +197,21 @@
     </div>
 
 
+    <% if @partners.try(&:any?) %>
     <div class="row ub_ppart">
-      <div class="col-md-6 col-sm-6 col-xs-12 gsim">
-        <a href="ebout_one.html" class="ab_partn"><span class="wor_im">Амир Тусупханов</span> <span class="wakp">Managing Partner</span></a>
-        <div class="cont_gh">
-          <h3 class="fgh">General Information </h3>
-          <p>Amir Tussupkhanov is the founding partner of ORIS law firm. He is recommended by all major international legal guides, including Chambers Global, Legal 500, IFLR1000, and AsiaLaw Profiles for corporate and financial transactions.</p>
-          <p>Amir’s primary specialization is project finance and development. He has represented developers and lenders in transport, municipal infrastructure, oil & gas and energy sectors in Kazakhstan.</p>
-          <p>He also possesses substantial practice in PPP/concessions, expertise in Kazakhstan’s legal framework, experience in regulatory advisory, and a strong track record advising international investors dealing with state agencies/ministries and state-owned enterprises.</p>
-          <a class="uz getuz" href="ebout_one.html">Узнать больше<span>›</span> </a>
-        </div>
-      </div>
-      <div class="col-md-6 col-sm-6 col-xs-12 gsim">
-        <a href="ebout_one.html" class="ab_partn"><span class="wor_im">Айтуар Мадин</span> <span class="wakp">Партнер</span></a>
-        <div class="cont_gh">
-          <h3 class="fgh">General Information </h3>
-          <p>Aituar Madin is recommended by all major international legal guides (Chambers & Partners, Legal 500, IFLR1000 and AsiaLaw Profiles) and is a recognized leading lawyer in corporate and financial transactions.</p>
-          <p>Aituar advises major national companies and foreign investors, including global corporations (Air Liquide, ALE Holdings, Axens, SK C&C, Samsung, Shell, Marubeni, Roche), transnational financial institutions (Bank of America Merrill Lynch, Deutsche Bank, EBRD, Natixis, Societe Generale, UBS AG, VTB Capital) and national holdings (KazAgro, Baiterek, Samruk Kazyna).</p>
-          <p>He is a member of the working group of the Ministry of Industry and Trade for the development of laws related to stock exchanges regulation. Also he participates in the working group of the Committee on Financial Supervision of Islamic finance legislative development.</p>
-          <a class="uz getuz" href="ebout_one.html">Узнать больше<span>›</span> </a>
-        </div>
-      </div>
+      <% @partners.each do |partner| %>
+          <div class="col-md-6 col-sm-6 col-xs-12 gsim">
+            <a href="<%= partner.url %>" class="ab_partn"><span class="wor_im"><%= partner.name %></span> <span class="wakp"><%= partner.status %></span></a>
+            <div class="cont_gh">
+              <%= raw partner.short_description_html %>
+              <a class="uz getuz" href="<%= partner.url %>">Узнать больше<span>›</span> </a>
+            </div>
+          </div>
+      <% end %>
     </div>
+    <% end %>
+
+
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <p class="pred_eb">Если вы профессионал <span>Своего дела,</span> будем рады видеть Вас у себя в команде</p>
@@ -509,7 +502,7 @@
             });
         });
     </script>
-    <script src="/assets/application/jquery.matchHeight-min.js"></script>
+
 
     <script type="text/javascript">
         $(function() {
@@ -542,26 +535,11 @@
             $('.bb_otori').matchHeight();
         });
     </script>
-    <script type="text/javascript">
-        $(function() {
-            $('.cont_gh').matchHeight();
-        });
-    </script>
-    <script type="text/javascript" src="/assets/application/jquery.fatNav.min.js"></script>
-    <script type="text/javascript">
-        (function() {
 
-            $.fatNav();
 
-        }());
-    </script>
-    <script type="text/javascript">
-        $('.site-search__icon').click(function() {
-            $('body').toggleClass('site-search--active');
-        });
-    </script>
 
-    <script type="text/javascript" src="/assets/application/simplemenu.js"></script>
+
+
 
 <% end %>
 

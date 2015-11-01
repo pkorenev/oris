@@ -59,84 +59,35 @@
         </div>
 
         <div class="plan_ot">
-          <div class=" col-md-4 col-sm-4 col-xs-6 plan_tab">
-            <a class="ak_plan" href="event_one.html">
-              <h3 class="h3plan">25/11</h3>
-              <p>Рефинансирование исполнено. Перестрахование косвенно индоссирует преддоговорный закон. </p>
-              <p class="plan_tow">Астана  <span>/ 16:00</span></p>
-            </a>
-          </div>
-          <div class=" col-md-4 col-sm-4 col-xs-6 plan_tab">
-            <a class="ak_plan" href="event_one.html">
-              <h3 class="h3plan">27/11</h3>
-              <p>Политическое учение Монтескье традиционно ограничивает классический коммунизм. Политическая коммуникация, тем более в условиях социально-экономического кризиса, </p>
-              <p class="plan_tow">Алматы<span>/20:00</span></p>
-            </a>
-          </div>
-          <div class=" col-md-4 col-sm-4 col-xs-6 plan_tab">
-            <a class="ak_plan" href="event_one.html">
-              <h3 class="h3plan">30/11</h3>
-              <p>Конфедерация сохраняет прагматический авторитаризм. Политическая культура неоднозначна. Политическое лидерство, особенно в условиях политической нестабильности,  </p>
-              <p class="plan_tow">Алматы  <span>/ 16:00</span></p>
-            </a>
-          </div>
-          <div class=" col-md-4 col-sm-4 col-xs-6 plan_tab">
-            <a class="ak_plan" href="event_one.html">
-              <h3 class="h3plan">02/12</h3>
-              <p>Рефинансирование исполнено. Перестрахование косвенно индоссирует преддоговорный закон. </p>
-              <p class="plan_tow">Астана  <span>/ 16:00</span></p>
-            </a>
-          </div>
-          <div class=" col-md-4 col-sm-4 col-xs-6 plan_tab">
-            <a class="ak_plan" href="event_one.html">
-              <h3 class="h3plan">25/11</h3>
-              <p>Рефинансирование исполнено. Перестрахование косвенно индоссирует преддоговорный закон. </p>
-              <p class="plan_tow">Астана  <span>/ 16:00</span></p>
-            </a>
-          </div>
-          <div class=" col-md-4 col-sm-4 col-xs-6 plan_tab">
-            <a class="ak_plan" href="event_one.html">
-              <h3 class="h3plan">25/11</h3>
-              <p>Рефинансирование исполнено. Перестрахование косвенно индоссирует преддоговорный закон. </p>
-              <p class="plan_tow">Астана  <span>/ 16:00</span></p>
-            </a>
-          </div>
+         <% @featured_events.each do |event| %>
+              <div class=" col-md-4 col-sm-4 col-xs-6 plan_tab">
+                <a class="ak_plan" href="<%= event.url %>">
+                  <h3 class="h3plan"><%= event.short_date %></h3>
+                  <p><%= event.short_description %> </p>
+                  <p class="plan_tow"><%= event.city %>  <span>/ <%= event.event_time %></span></p>
+                </a>
+              </div>
+          <% end %>
         </div>
       </div>
 
-
-      <h3 class="nash_h3 aur_h3 hev"><a href="#">Прошедшие мероприятия</a></h3>
-
-
-      <div class="plan_ot ev_prod">
-        <div class=" col-md-4 col-sm-4 col-xs-6 plan_tab evenut">
-          <a class="ak_plan" href="event_one.html">
-            <h3 class="h3plan">25/11</h3>
-            <p>Рефинансирование исполнено. Перестрахование косвенно индоссирует преддоговорный закон. </p>
-            <p class="plan_tow">Астана  <span>/ 16:00</span></p>
-            <p class="ev_zav">Завершено</p>
-          </a>
-        </div>
-        <div class=" col-md-4 col-sm-4 col-xs-6 plan_tab evenut">
-          <a class="ak_plan" href="event_one.html">
-            <h3 class="h3plan">27/11</h3>
-            <p>Политическое учение Монтескье традиционно ограничивает классический коммунизм. Политическая коммуникация, тем более в условиях социально-экономического кризиса, </p>
-            <p class="plan_tow">Алматы<span>/20:00</span></p>
-            <p class="ev_zav">Завершено</p>
-          </a>
-        </div>
-        <div class=" col-md-4 col-sm-4 col-xs-6 plan_tab evenut">
-          <a class="ak_plan" href="event_one.html">
-            <h3 class="h3plan">30/11</h3>
-            <p>Конфедерация сохраняет прагматический авторитаризм. Политическая культура неоднозначна. Политическое лидерство, особенно в условиях политической нестабильности,  </p>
-            <p class="plan_tow">Алматы  <span>/ 16:00</span></p>
-            <p class="ev_zav">Завершено</p>
-          </a>
-        </div>
+      <% if @completed_events.try(&:any?) %>
+          <h3 class="nash_h3 aur_h3 hev"><a href="#">Прошедшие мероприятия</a></h3>
 
 
-
-      </div>
+          <div class="plan_ot ev_prod">
+            <% @completed_events.each do |event| %>
+                <div class=" col-md-4 col-sm-4 col-xs-6 plan_tab evenut">
+                  <a class="ak_plan" href="<%= event.url %>">
+                    <h3 class="h3plan"><%= event.short_date %></h3>
+                    <p><%= event.short_description %> </p>
+                    <p class="plan_tow"><%= event.city %>  <span>/ <%= event.event_time %></span></p>
+                    <p class="ev_zav">Завершено</p>
+                  </a>
+                </div>
+            <% end %>
+          </div>
+      <% end %>
 
 
 

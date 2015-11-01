@@ -1,0 +1,84 @@
+ru:
+  activerecord:
+    models:
+      event:
+        one: "Мероприятие"
+        other: "Мероприятия"
+      event_address:
+        one: "Адрес"
+        other: "Адреса"
+      project_category:
+        one: "Категория проектов"
+        other: "Категории проектов"
+      project:
+        one: "Проект"
+        other: "Проекты"
+      publication:
+        one: "Публикация"
+        other: "Публикации"
+      publication_category:
+        one: "Категория публикай"
+        other: "Категории публикаций"
+      service:
+        one: "Услуга"
+        other: "Услуги"
+      service_practice:
+        one: "Услуга/Практика"
+        other: "Услуги/Практика"
+      service_department:
+        one: "Услуги/Отрасль"
+        other: "Услуги/Отрасли"
+      user:
+        one: "Пользователь"
+        other: "Пользователи"
+      partner:
+        one: "Партнер"
+        other: "Партнеры"
+      partner_education:
+        one: "Образование"
+        other: "Образование"
+      company_feedback:
+        one: "Отзыв"
+        other: "Отзывы"
+
+    attributes:
+      event:
+        published: "Опубликовано"
+        banner: "Баннер"
+        event_datetime: "Дата и время события"
+      event/translation:
+        name: "Название"
+        url_fragment: "URL-фрагмент"
+        short_description: "Краткое описание"
+        content: "Полное описание"
+        location_description: "Описание местонахождения"
+        time_string: "описание времени"
+
+      partner:
+        avatar: "Аватар"
+        banner: "Баннер"
+        url_fragment: "URL-фрагмент"
+        status: "Статус"
+        short_description_html: "Краткое описание"
+        full_description: "Полное описание"
+        published: "Опубликовано"
+        projects: "Проекты"
+        partner_educations: "Образование"
+        company_feedbacks: "Отзывы компаний"
+
+      partner/translation:
+        name: "Имя"
+        url_fragment: "URL-фрагмент"
+        status: "Статус"
+        short_description_html: "Краткое описание"
+        full_description: "Полное описание"
+      partner_education:
+        school name: "Название ВУЗа"
+        degree: "Степень"
+      partner_education/translation:
+        school name: "Название ВУЗа"
+        degree: "Степень"
+      company_feedback/translation:
+        name: "Название компании"
+        comment: "Текст отзыва"
+        company_url: "Сайт компании"

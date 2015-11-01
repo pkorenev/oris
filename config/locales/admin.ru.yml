@@ -1,0 +1,9 @@
+ru:
+  admin:
+    navigation_labels:
+      services: "Наши Услуги"
+      events: "Мероприятия"
+      publications: "Публикации"
+      projects: "Наш опыт"
+      users: "Пользователи"
+      about_us: "О нас"
