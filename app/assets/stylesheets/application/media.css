@@ -1,0 +1,264 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 2500px) {
+	.ter_im img { min-width: 100%;}
+.hed_baner {     height: 750px;}
+.st_ppmenu {
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+}
+.ak_plan {min-height: 450px;}
+}
+
+@media only screen and (max-width : 2000px) {
+	.ter_im img {
+    min-width: 100%;
+}
+}
+@media only screen and (max-width : 1800px) {
+.pp_n {
+    margin: 12% 0;
+    padding: 0;
+}
+}
+@media only screen and (max-width : 1500px) {
+.ter_im img {right: -100px;}
+.hed_baner {     height: 659px;}
+}
+@media only screen and (max-width : 1400px) {
+	.mobilenav li {
+    padding: 0px 0px;
+}
+.ak_plan {min-height: 350px;}
+	}
+@media only screen and (max-width : 1200px) {
+
+}
+@media only screen and (max-width : 1300px) {
+.st_ppmenu {position: relative;}
+}
+@media only screen and (max-width : 1000px) {
+.ttm_t {width: 225px;     padding: 0;}
+.pail_pp {
+    background: url(/assets/application/mailowerflow.png) no-repeat center center;
+    margin-right: 0px;
+    padding-left: 0px;
+    margin-left: 0%;
+    font-size: 0px;
+    width: 50%;
+     border: 1px solid #fff;
+     height: 27px;
+     text-indent: -999;
+         float: left;
+}
+.menu_tel {
+    background: url(/assets/application/telowerflow.png) no-repeat center center;
+    height: 27px;
+    width: 50%;
+    font-size: 0px;
+    text-indent: -999;
+    border: 1px solid #fff;
+        float: left;
+}
+.menu_tel:hover {    background: #ffa000 url(/assets/application/telowerflow.png) no-repeat center center;
+ border: 1px solid #ffa000;}
+.st_ppmenu {bottom: 10px;}
+.pail_pp:hover{        background: #ffa000 url(/assets/application/mailowerflow.png) no-repeat center center;
+    border: 1px solid #ffa000;}
+.tu_ban { position: relative;}
+
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+.s_slogan {font-size: 24px;}
+.s_slogan span { background-size: 100% 100%;width: 20px;height: 15px;}
+.custom-thumbnails-wrap { bottom: 0px;}
+.hed_baner {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+}
+.header_topline {
+    position: relative;
+    width: 100%;
+    z-index: 999;
+}
+.oris_podoiska.cont_poisk .feedback-input {width: 85%;}
+.ab_partn {font-size: 15px;}
+.wor_im {padding: 15px 10px 15px 15px;}
+.tern_inf { padding: 34px 45px 40px 45px; width: 100%;}
+.infobot li p {font-size: 14px;margin-top: 25px;margin-bottom: 15px;}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+.mor_pp {width: 46%;margin: 0 2% 20px 2%;}
+.menu_pab li { width: 24.3%;}
+   .menu_pab li a {font-size: 14px;}
+.foot_logo {display: block;text-align: center;margin-bottom: 30px;}
+.zer_po {  text-align: center;}
+.zer_reg {text-align: center;}
+	.tu_ban { position: relative; width: 100%; top: 0px;}
+	.post_ban {width: 100%; margin: 0 auto;}
+	.row_baer {padding: 0 15px;}
+.fdjjk .icon { left: 15px;}
+.het_t.jio_b {border-right: 1px solid #EDEEF0;padding-bottom: 30px;border-bottom: 0px;}
+.gu_t2 a {width: 43px;height: 43px; float: right;}
+.outside span a {display: none;}
+.nash_h3.aur_h3.hev {margin-left: 15px;}
+.oris_podoiska.cont_poisk .feedback-input { width: 91%;}
+.ofil_inf {padding: 25px 25px;}
+.on_oth img {min-height: 100%;margin-left: 0px;max-width: 100%; min-width: 100%;    margin-top: -120px;}
+.on_oth { height: 300px;}
+.iconstot {display: none;}
+.pokaz_ab {padding: 30px 30px 100px 30px;}
+.vak_ab.jerui {margin: 0 auto;float: none;}
+.compact_gtl.li_of .bx-wrapper img {display: none!important;}
+.p_texegr.ter_im {
+    position: relative;
+    right: 0px;
+    height: auto;
+    min-height: 360px;
+    overflow: hidden;
+    height: 310px!important;
+    margin-bottom: 30px;
+}
+.cont_of .abp_por {font-size: 16px; margin-top: 6px; padding-left: 2px;}
+.tern_b {text-align: center;}
+.outside.drimab span a { display: block;}
+.see_conk { width: 100%;}
+.vak_ab {margin-bottom: 30px;}
+}
+@media only screen and (max-width : 767px) {
+.p_tex.ter_im {    position: relative;     height: 301px;overflow: hidden;}
+.ter_im img {max-width: 100%; position: relative; right: 0px;}
+.uz { margin-bottom: 6%;}
+.one_pagi a { width: 100%;}
+.one_pagi a:nth-child(2n) { width: 100%; margin-left: 0%;}
+.tern_b {font-size: 16px;}
+.u_namber {font-size: 60px;}
+.resp-accordion {font-size: 15px;    padding: 15px 70px 15px 22px!important;}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 617px) {
+    .slidepart { width: 80%; margin: 0 auto;}
+}
+@media only screen and (max-width : 600px) {
+	.bx-wrapper img { min-width: auto; display: block; max-width: 100%;}
+	.row.foot_ot div {width: 100%; margin-bottom: 30px;}
+	.oris_podoiska {
+    margin: 0px auto;
+    width: 300px;
+    margin: 0 auto;
+    float: none;
+    display: block;
+    color: beige;
+    overflow: hidden;
+}
+
+.oris_podoiska .feedback-input {width: 84%;}
+.gert_ad { width: 100%; text-align: center;}
+.oris_podoiska.cont_poisk {width: 100%;}
+.oris_podoiska.cont_poisk .feedback-input {width: 82%;}
+.conif_tow {width: 92%;}
+.conif_tow li { margin-top: 30px;}
+.h_ofst {font-size: 20px;}
+.p_obof {font-size: 15px;line-height: 20px;}
+.conif_tow li p {font-size: 15px;}
+.mmlc {font-size: 16px;}
+.row.getco div:last-child { padding: 0;    width: 32%;}
+.row.getco div:first-child { width: 68%;}
+.vak_ab {    width: 62%; float: none; margin: 0 auto; margin-bottom: 30px;}
+.infobot li { width: 50%; margin-bottom: 30px;}
+}
+@media only screen and (max-width : 500px) {
+.soc_icon {float: none;margin-left: 10px;}
+.col-md-3.col-sm-3.col-xs-3.soc_inf {
+    width: 100%;
+    width: 120px;
+    float: none;
+    margin: 0 auto;
+    clear: both;
+}
+.open-menu-btnx {
+    margin-left: 0px;
+    margin-top: 50px;
+    display: block;
+}
+.icon {left: 25px;}
+.ob_inf {padding: 0px 0;}
+.s_slogan {font-size: 20px;line-height: 22px;}
+.logo a img {max-width: 400px;width: 150px;}
+.ter_im img { max-width: inherit;}
+.title_teg {position: relative;}
+.menu_pab li {width: 100%;text-align: center;}
+.mor_pp {width: 95%;margin: 0 auto 20px auto; float: none;}
+.mor_pp:nth-child(4n) { margin-right: auto;}
+.plan_tab {width: 95%;margin: 0 auto;float: none;}
+.ad_bol {width: 95%;margin: 0 auto;float: none;     margin-bottom: 30px;}
+.oik_bx {padding: 20px 20px 45px 20px;}
+.het_t {margin-bottom: 10px;padding: 0 30px;width: 100%;}
+.hamburgeru {right: 15px; left: auto;}
+.hamburgeru {  top: 0px;}
+.fdjjk .icon {top: 0px;}
+.st-accordion .st_akor li > a { font-size: 14px;     padding: 15px 70px 15px 22px;}
+.st-accordion .st_akor li > a span {right: 20px;}
+.on_oth {height: auto; max-height: 300px;}
+.vak_ab { width: 90%; float: none; margin: 0 auto; margin-bottom: 30px;}
+}
+@media only screen and (max-width : 480px) {
+.ta_x {right: 0px;}
+.col-md-6.col-sm-6.col-xs-6.reht {
+    margin: 0 auto;
+    float: none;
+    width: 59%;
+}
+.st-accordion .st_akor li > a:after { right: 65px;}
+.on_oth img {margin-top: 0px;}
+.resp-accordion:after {    right: 49px;}
+.resp-arrow {right: 13px;}
+.resp-tab-active span.resp-arrow { right: 13px;}
+.st-content p {    font-size: 15px;}
+.st-content {margin-right: 40px;}
+}
+@media only screen and (max-width : 350px) {
+.wor_im {width: 100%;text-align: center;}
+.wor_im:after { background-color: transparent;}
+.ab_partn .wakp { width: 100%; text-align: center; display: block;  padding-bottom: 15px;}
+.wor_im {padding: 15px 10px 0px 15px;}
+.resp-accordion {font-size: 12px; padding: 15px 70px 15px 22px!important;}
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+.ev_dat {margin: 44px 0;font-size: 14px;line-height: 30px;}
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

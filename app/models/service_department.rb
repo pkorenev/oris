@@ -1,0 +1,3 @@
+class ServiceDepartment < Service
+
+end

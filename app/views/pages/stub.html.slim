@@ -5,11 +5,23 @@ html lang="en"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
 
     title == content_for?(:title) ? yield(:title) : "Untitled"
-
+    link href="/assets/print.css" rel="stylesheet"  type="text/css"
     = stylesheet_link_tag "application"
     = javascript_include_tag "vendor/modernizr"
     = javascript_include_tag "application", 'data-turbolinks-track' => true
     = csrf_meta_tag
+
+    /style type="text/css" media="print"
+      |
+        body{
+          color: red !important;
+          background-color: green;
+          padding: 200px;
+        }
+
+        #content{
+          background: red;
+        }
 
   body
     .stub-page

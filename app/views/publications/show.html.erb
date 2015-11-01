@@ -1,0 +1,136 @@
+<% content_for :custom_header do %>
+
+	<header class="top_header bgheight bg_pab">
+		<div class="header_topline">
+			<div class="container">
+				
+				<div class="row row_baer">
+
+					<div class="col-md-3 col-sm-3 col-xs-3 inf_menu">
+						<div class="inf_bootom">
+							
+						</div>		
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-6">
+						<div class="logo">
+							<a href="#"><img src="/assets/application/logo.png" alt="alt"></a>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-3 soc_inf">
+						<div class="ob_inf">
+							<a class="mow" href="#">En</a>
+							<p class="soc_icon">
+								<a class="hf" href="#"></a>
+											<a class="ft" href="#"></a>
+											<a class="hi" href="#"></a>
+							</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="v_slog">
+			<div class="container">
+				<div class="row">
+				<h3 class="vt_s"><%= @publication.name %></h3>
+				<p class="vt_p"><%= @publication.formatted_word_date %></p>
+				</div>
+			</div>
+		</div>
+	</header>
+
+<% end %>
+
+
+
+
+
+
+
+	<section class="osn_colcont">
+		<div class="container">
+				<div class="row">
+				<div class="col-md-4 col-sm-4 col-xs-12 honnco_l">
+					
+					<div class="row">
+
+						<div class="col-md-12 col-sm-12 col-xs-6 het_t">
+						<h3 class="nash_h3 aur_h3 jegio"><a href="#">Дата публикаци</a></h3>
+
+						<p class="ferit"><%= @publication.formatted_word_date %></p>
+						</div>
+						
+						
+					</div>
+				</div>
+				<div class="col-md-8 col-sm-8 col-xs-12 honnco_r">
+				<%= raw @publication.content %>
+				<div class="cont_bootinf">
+					<p><%= @publication.formatted_numeric_date %></p>
+					<a href="#">Поделиться проектом</a>
+				</div>
+				</div>
+					
+				</div>
+		</div>
+	</section>
+
+
+	<section class=" sec_pablic vn_bg">
+		<div class="container">
+
+			
+			<div class="row pabl_pagi">
+				<div class=" pos_pub psid pPpubl col-md-6 col-sm-6 col-xs-12 ">
+					<a href="<%= @prev_article.url %>">
+						<p>Предыдущий проект</p>
+						<h3><%= @prev_article.name  %></h3>
+						<span></span>
+					</a>
+				</div>
+				<div class=" pos_pub psid pPpubr col-md-6 col-sm-6 col-xs-12">
+					<a href="<%= @next_article.url %>">
+						<p>Следующий проект</p>
+						<h3><%= @next_article.name %></h3>
+						<span></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

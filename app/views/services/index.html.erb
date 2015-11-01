@@ -1,0 +1,69 @@
+	<section class="kat_tab">
+		<div class="container">
+			<div class="row">
+				
+
+
+
+				<ul class="myTabs tutab tabs"> 
+		        <li class="active"> <a href='#tab1'>Практики</a></li>
+		        <li ><a href='#tab2'>Отрасли</a></li>
+		    </ul>
+
+
+		    <div class="tab_container"> 
+
+		    	<div id="tab1" class="tab_content"> 
+
+		    		 <div id="st-accordion" class="st-accordion">
+                    <ul class="st_akor">
+                      <% @services_practices.each_with_index do |service, index| %>
+                        <li>
+                            <a href="#"><%= service.list_item_name(index) %><span class="st-arrow">Открыть или закрыть</span></a>
+                            <div class="st-content">
+                                <%= raw service.content %>
+
+                            </div>
+                        </li>
+                      <% end %>
+                    </ul>
+                </div>
+
+		    	</div><!-- #tab1 -->
+                
+		    	<div id="tab2" class="tab_content"> 
+		    	<div id="st-accordiona" class="st-accordion">
+                    <ul class="st_akor">
+                      <% @services_departments.each_with_index do |service, index| %>
+                        <li>
+                            <a href="#"><%= service.list_item_name(index) %><span class="st-arrow">Открыть или закрыть</span></a>
+                            <div class="st-content">
+                              <%= raw service.content %>
+                            </div>
+                        </li>
+                      <% end %>
+                    </ul>
+                </div>
+		    	</div><!-- #tab2 -->
+
+		    </div> <!-- .tab_container --> 
+
+
+			</div>
+		</div>
+	</section>
+
+
+    <%= render "services_scripts" %>
+
+
+
+
+
+
+
+
+
+
+
+

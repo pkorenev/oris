@@ -1,0 +1,81 @@
+$fonts-root: "/assets/fonts";
+@font-face {
+  font-family: 'Exo2-ExtraBold';
+  src: 
+  url('#{$fonts-root}/fonts/Exo2-ExtraBold/Exo2-ExtraBold.eot?#iefix') format('embedded-opentype'),  
+  url('#{$fonts-root}/Exo2-ExtraBold/Exo2-ExtraBold.woff') format('woff'), 
+  url('#{$fonts-root}/Exo2-ExtraBold/Exo2-ExtraBold.ttf')  format('truetype'), 
+  url('#{$fonts-root}/Exo2-ExtraBold/Exo2-ExtraBold.svg#Exo2-ExtraBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Exo2-Italic';
+  src: 
+  url('#{$fonts-root}/Exo2-Italic/Exo2-Italic.eot?#iefix') format('embedded-opentype'),  
+  url('#{$fonts-root}/Exo2-Italic/Exo2-Italic.woff') format('woff'), 
+  url('#{$fonts-root}/Exo2-Italic/Exo2-Italic.ttf')  format('truetype'), 
+  url('#{$fonts-root}/Exo2-Italic/Exo2-Italic.svg#Exo2-Italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Exo2-Light';
+  src: 
+  url('#{$fonts-root}/Exo2-Light/Exo2-Light.eot?#iefix') format('embedded-opentype'),  
+  url('#{$fonts-root}/Exo2-Light/Exo2-Light.woff') format('woff'), 
+  url('#{$fonts-root}/Exo2-Light/Exo2-Light.ttf')  format('truetype'), 
+  url('#{$fonts-root}/Exo2-Light/Exo2-Light.svg#Exo2-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Exo2-LightItalic';
+  src: 
+  url('#{$fonts-root}/Exo2-LightItalic/Exo2-LightItalic.eot?#iefix') format('embedded-opentype'),  
+  url('#{$fonts-root}/Exo2-LightItalic/Exo2-LightItalic.woff') format('woff'), 
+  url('#{$fonts-root}/Exo2-LightItalic/Exo2-LightItalic.ttf')  format('truetype'), 
+  url('#{$fonts-root}/Exo2-LightItalic/Exo2-LightItalic.svg#Exo2-LightItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Exo2-Medium';
+  src: 
+  url('#{$fonts-root}/Exo2-Medium/Exo2-Medium.eot?#iefix') format('embedded-opentype'),  
+  url('#{$fonts-root}/Exo2-Medium/Exo2-Medium.woff') format('woff'), 
+  url('#{$fonts-root}/Exo2-Medium/Exo2-Medium.ttf')  format('truetype'), 
+  url('#{$fonts-root}/Exo2-Medium/Exo2-Medium.svg#Exo2-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Exo2-SemiBold';
+  src: 
+  url('#{$fonts-root}/Exo2-SemiBold/Exo2-SemiBold.eot?#iefix') format('embedded-opentype'),  
+  url('#{$fonts-root}/Exo2-SemiBold/Exo2-SemiBold.woff') format('woff'), 
+  url('#{$fonts-root}/Exo2-SemiBold/Exo2-SemiBold.ttf')  format('truetype'), 
+  url('#{$fonts-root}/Exo2-SemiBold/Exo2-SemiBold.svg#Exo2-SemiBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Exo2-Bold';
+  src: 
+  url('#{$fonts-root}/Exo2-Bold/Exo2-Bold.eot?#iefix') format('embedded-opentype'),  
+  url('#{$fonts-root}/Exo2-Bold/Exo2-Bold.woff') format('woff'), 
+  url('#{$fonts-root}/Exo2-Bold/Exo2-Bold.ttf')  format('truetype'), 
+  url('#{$fonts-root}/Exo2-Bold/Exo2-Bold.svg#Exo2-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Exo2-Regular';
+  src: 
+  url('#{$fonts-root}/Exo2-Regular/Exo2-Regular.eot?#iefix') format('embedded-opentype'),  
+  url('#{$fonts-root}/Exo2-Regular/Exo2-Regular.woff') format('woff'), 
+  url('#{$fonts-root}/Exo2-Regular/Exo2-Regular.ttf')  format('truetype'), 
+  url('#{$fonts-root}/Exo2-Regular/Exo2-Regular.svg#Exo2-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
