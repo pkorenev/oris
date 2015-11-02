@@ -79,3 +79,5 @@ gem 'devise-i18n'
 gem 'amoeba'
 
 gem 'enumerize'
+
+gem 'http_accept_language'

@@ -26,46 +26,38 @@ def include_models(config, *models)
   end
 end
 
-def services_navigation_label
+def keyed_navigation_label(key)
   navigation_label do
-    I18n.t("admin.navigation_labels.services")
+    I18n.t("admin.navigation_labels.#{key}", raise: true) rescue key.humanize
   end
+end
+
+def services_navigation_label
+  keyed_navigation_label("services")
 end
 
 def events_navigation_label
-  navigation_label do
-    I18n.t("admin.navigation_labels.events")
-  end
+  keyed_navigation_label("events")
 end
 
 def publications_navigation_label
-  navigation_label do
-    I18n.t("admin.navigation_labels.publications")
-  end
+  keyed_navigation_label("publications")
 end
 
 def projects_navigation_label
-  navigation_label do
-    I18n.t("admin.navigation_labels.projects")
-  end
+  keyed_navigation_label("projects")
 end
 
 def users_navigation_label
-  navigation_label do
-    I18n.t("admin.navigation_labels.users")
-  end
+  keyed_navigation_label("users")
 end
 
 def about_us_navigation_label
-  navigation_label do
-    I18n.t("admin.navigation_labels.about_us")
-  end
+  keyed_navigation_label("about_us")
 end
 
 def contact_navigation_label
-  navigation_label do
-    I18n.t("admin.navigation_labels.contact")
-  end
+  keyed_navigation_label("contact")
 end
 
 def paperclip_help(field_name)

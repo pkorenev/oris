@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   include PagesHelper
 
+  before_action :set_locale, unless: -> { controller_path.scan(/\Adevise/).any? || controller_path.scan(/\Arails_admin/).any? }
+
+  before_action :init_locale_links
+
   def default_url_options
     {locale: I18n.locale}
   end
@@ -64,11 +68,65 @@ class ApplicationController < ActionController::Base
     render "not_found", status: 404
   end
 
-  before_action :set_locale
 
-  def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
+
+  def set_locale(force = true)
+    if !params[:controller].match(/^rails_admin/) && !(params[:controller] == 'error')
+      params_locale = params[:locale]
+      params_predefined_locale = params[:predefined_locale]
+      locale = params_locale || params_predefined_locale
+
+      cookies_locale = cookies[:locale]
+
+      if !locale || !I18n.available_locales.include?(locale.to_sym)
+        locale = cookies_locale
+      end
+
+      if !locale || !I18n.available_locales.include?(locale.to_sym)
+        locale = http_accept_language.compatible_language_from(I18n.available_locales)
+      end
+
+      if locale != cookies_locale
+        cookies[:locale] = {
+            value: locale,
+            expires: 1.year.from_now
+        }
+      end
+
+      #render inline: "locale: #{locale.inspect}"
+
+      #logger.debug "locale: #{locale.inspect}"
+      #logger.debug "params_locale: #{params_locale.inspect}"
+      #logger.debug "cookies_locale: #{cookies_locale.inspect}"
+
+      #return render inline: "#{locale != params_locale}"
+      if locale != params_locale && locale != params_predefined_locale && force
+        redirect_to locale: locale, :status => :moved_permanently
+      else
+        I18n.locale = locale
+      end
+    elsif params[:controller].match(/^rails_admin/)
+      I18n.locale = :uk
+    end
+
   end
+
+
+  def set_locale_links
+    @locale_links = []
+    I18n.available_locales.select{|l| l != I18n.locale }.each do |locale|
+      @locale_links[locale.to_sym] = url_for(locale: locale)
+    end
+  end
+
+  def init_locale_links
+    @locale_links = {}
+    I18n.available_locales.each do |locale|
+      @locale_links[locale.to_sym] = url_for locale: locale
+    end
+
+  end
+
 
   def about_section
 
@@ -109,5 +167,14 @@ class ApplicationController < ActionController::Base
     end
 
     @page_instance = page_instance
+  end
+
+
+  def pjax?
+    !request.headers['X-PJAX'].nil?
+  end
+
+  def index
+    render layout: false if pjax?
   end
 end
