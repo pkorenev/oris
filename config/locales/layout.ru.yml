@@ -1,0 +1,10 @@
+ru:
+  layout:
+    menu:
+      about: "О фирме"
+      projects: "Наш опыт"
+      services: "Наши услуги"
+      publications: "Публикации"
+      events: "Мероприятия"
+      career: "Вакансии"
+      contact: "Контакты"

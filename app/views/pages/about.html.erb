@@ -204,7 +204,9 @@
             <a href="<%= partner.url %>" class="ab_partn"><span class="wor_im"><%= partner.name %></span> <span class="wakp"><%= partner.status %></span></a>
             <div class="cont_gh">
               <%= raw partner.short_description_html %>
-              <a class="uz getuz" href="<%= partner.url %>">Узнать больше<span>›</span> </a>
+              <p>
+                <a class="uz getuz" href="<%= partner.url %>">Узнать больше<span>›</span> </a>
+              </p>
             </div>
           </div>
       <% end %>

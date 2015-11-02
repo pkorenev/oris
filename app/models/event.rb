@@ -4,11 +4,8 @@ class Event < ActiveRecord::Base
   belongs_to :event_address
 
   # paperclip
-  has_attached_file :banner, styles: { page: "1366x500", thumb: "205x75#" }
+  has_attached_image :banner, styles: { page: "1366x500", thumb: "205x75#" }
 
-  attr_accessible :banner
-
-  do_not_validate_attachment_file_type :banner
 
 
 

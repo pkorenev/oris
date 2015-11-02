@@ -9,22 +9,10 @@ class Project < ActiveRecord::Base
   attr_accessible :partners, :partner_ids
 
   # paperclip
-  has_attached_file :avatar, styles: { projects_index: "469x166" }
-  has_attached_file :banner, styles: { page: "1366x500" }
+  has_attached_image :avatar, styles: { projects_index: "469x166" }
+  has_attached_image :banner, styles: { page: "1366x500" }
 
-  attr_accessible :banner
-  attr_accessible :avatar
 
-  do_not_validate_attachment_file_type :banner
-  do_not_validate_attachment_file_type :avatar
-
-  attr_accessor :delete_avatar
-  attr_accessible :delete_avatar
-  before_validation { self.avatar.clear if self.delete_avatar == '1'}
-
-  attr_accessor :delete_banner
-  attr_accessible :delete_banner
-  before_validation { self.banner.clear if self.delete_banner == '1' }
 
   # / paperclip
 

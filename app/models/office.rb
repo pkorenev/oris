@@ -1,7 +1,7 @@
 class Office < ActiveRecord::Base
   attr_accessible *attribute_names
 
-  has_image :avatar, styles: { contact_item: "582x450#", thumb: "100x150#" }
+  has_attached_image :avatar, styles: { contact_item: "582x450#", thumb: "100x150#" }
 
   translates :city, :short_description, :address
   accepts_nested_attributes_for :translations

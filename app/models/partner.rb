@@ -17,22 +17,10 @@ class Partner < ActiveRecord::Base
 
   # paperclip
 
-  has_attached_file :banner, styles: { page: "1366x500" }
-  has_attached_file :avatar, styles: { partner_show: "158x158#", small_avatar: "62x62#" }
+  has_attached_image :banner, styles: { page: "1366x500" }
+  has_attached_image :avatar, styles: { partner_show: "158x158#", small_avatar: "62x62#" }
 
-  attr_accessible :banner
-  attr_accessible :avatar
 
-  do_not_validate_attachment_file_type :banner
-  do_not_validate_attachment_file_type :avatar
-
-  attr_accessor :delete_avatar
-  attr_accessible :delete_avatar
-  before_validation { self.avatar.clear if self.delete_avatar == '1'}
-
-  attr_accessor :delete_banner
-  attr_accessible :delete_banner
-  before_validation { self.banner.clear if self.delete_banner == '1' }
 
   # /paperclip
 

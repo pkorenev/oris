@@ -30,13 +30,18 @@
 
         <div class="grui">
           <ul class="pp_n">
-            <li><a href="<%= about_path %>">О фирме</a></li>
-            <li><a href="<%= projects_path %>" class="m_activ">Наш опыт</a></li>
-            <li><a href="<%= services_practices_path %>">Наши услуги</a></li>
-            <li><a href="<%= publications_path %>">Публикации</a></li>
-            <li><a href="<%= events_path %>">Мероприятия</a></li>
-            <li><a href="<%= contact_path %>">Контакты</a></li>
-            <li><a href="<%= career_path %>">Вакансии</a></li>
+            <% menu_items.each do |item| %>
+                <li>
+                  <% if item[:clickable] %>
+                    <a class="<%= 'm_activ' if item[:active] %>" href="<%= item[:url] %>"><%= item[:name] %></a>
+                  <% else  %>
+                    <span class="<%= 'm_activ' if item[:active] %>"><%= item[:name] %></span>
+                  <% end %>
+
+                </li>
+            <% end %>
+
+
           </ul></div>
         <div class="st_ppmenu">
           <div class="container">

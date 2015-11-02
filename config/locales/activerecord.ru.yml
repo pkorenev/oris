@@ -31,6 +31,9 @@ ru:
       user:
         one: "Пользователь"
         other: "Пользователи"
+      vacancy:
+        one: "Вакансия"
+        other: "Вакансии"
       partner:
         one: "Партнер"
         other: "Партнеры"

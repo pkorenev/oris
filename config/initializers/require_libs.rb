@@ -1,1 +1,2 @@
 require 'images'
+require 'cms'

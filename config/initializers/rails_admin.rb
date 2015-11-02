@@ -1,5 +1,31 @@
 require_relative 'require_libs'
 
+def pages_models
+  Dir[Rails.root.join("app/models/pages/*")].map{|p| filename = File.basename(p, ".rb"); "Pages::" + filename.camelize }
+end
+
+def include_pages_models
+  include_models(pages_models)
+end
+
+def include_models(config, *models)
+  models.each do |model|
+    config.included_models += [model]
+
+    if !model.instance_of?(Class)
+      Dir[Rails.root.join("app/models/#{model.underscore}")].each do |file_name|
+        require file_name
+      end
+
+      model = model.constantize rescue nil
+    end
+
+    if model.respond_to?(:translates?) && model.translates?
+      config.included_models += [model.translation_class]
+    end
+  end
+end
+
 def services_navigation_label
   navigation_label do
     I18n.t("admin.navigation_labels.services")
@@ -91,7 +117,9 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  models = [Project, ProjectCategory, Event, EventAddress, Publication, PublicationCategory, Service, ServiceDepartment, ServicePractice, User, Partner, PartnerEducation, CompanyFeedback, Office ]
+  include_pages_models
+
+  models = [Pages, Project, ProjectCategory, Event, EventAddress, Publication, PublicationCategory, Service, ServiceDepartment, ServicePractice, User, Vacancy, Partner, PartnerEducation, CompanyFeedback, Office ]
 
   models.each do |m|
     config.included_models += [m]
@@ -304,7 +332,17 @@ RailsAdmin.config do |config|
   end
 
   def service_config
-    services_navigation_label
+    list_item_config(:services_navigation_label)
+  end
+
+  def service_translation_config
+    list_item_translation_config
+  end
+
+  def list_item_config(label_method = nil)
+    if label_method
+      send(label_method)
+    end
 
     list do
       field :published
@@ -318,7 +356,7 @@ RailsAdmin.config do |config|
     end
   end
 
-  def service_translation_config
+  def list_item_translation_config
     visible false
 
     nested do
@@ -382,6 +420,14 @@ RailsAdmin.config do |config|
 
 
   # about
+
+  config.model Vacancy do
+    list_item_config(:about_us_navigation_label)
+  end
+
+  config.model Vacancy::Translation do
+    list_item_translation_config
+  end
 
   config.model Partner do
     about_us_navigation_label

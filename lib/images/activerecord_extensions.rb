@@ -1,7 +1,7 @@
 module Images
   module ActiveRecordExtensions
     module ClassMethods
-      def has_image(name = :avatar, options = {})
+      def has_attached_image(name = :avatar, options = {})
 
         has_attached_file name, options
 
