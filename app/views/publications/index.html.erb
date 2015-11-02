@@ -46,22 +46,7 @@
 			</div>
 			<div class="row ">
               <% @publications.each do |publication| %>
-                  <div class="col-md-3 col-sm-3 col-xs-12 mor_pp">
-                    <a href="<%= publication.url %>">
-                        <img  src="<%= publication.avatar.url(:publications_index) %>" alt="alt">
-                        <div class="m_otsn">
-                            <div class="img_bgmo"></div>
-                        </div>
-                        <div class="mo_text m_nor">
-                            <div class="nn_st">
-
-                                <h3><%= publication.name %></h3>
-                                <p><%= publication.formatted_numeric_date %></p>
-                                <p class="mo_new">Новое</p>
-                            </div>
-                        </div>
-                        </a>
-                    </div>
+                  <%= render "publication_list_item", publication: publication %>
               <% end %>
 
 		</div>

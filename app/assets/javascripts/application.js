@@ -8,3 +8,4 @@
 //= require application/jquery.easyResponsiveTabs
 //= require application/simplemenu.js
 //= require application/common
+//= require application/js

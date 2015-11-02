@@ -6,7 +6,10 @@ class PagesController < ApplicationController
   end
 
   def index
+    @projects = Project.published.limit(4)
+    @events = Event.published.featured.order_by_event_date_asc
 
+    @publications = categorized_index(nil, PublicationCategory, Publication, :publications).order_by_created_at_desc
   end
 
   def contact
