@@ -44,103 +44,72 @@
 
 <% end %>
 
+<% if @offices.try(&:any?) %>
+    <section class="cont_main">
+      <div class="container">
+        <div class="row">
+          <h3 class="nash_h3 aur_h3 d_kilo"><a href="#">Наши офисы</a></h3>
 
-<section class="cont_main">
-  <div class="container">
-    <div class="row">
-      <h3 class="nash_h3 aur_h3"><a href="#">Наши офисы</a></h3>
+          <% @offices.each do |office| %>
+              <div class="col-md-12 col-sm-12 col-xs-12 snb_cont">
+                <div class="one_ofis">
+                  <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12 on_oth jior1">
+                      <img src="<%= office.avatar.url(:contact_item) %>" alt="alt">
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-xs-12 ofil_inf jior1">
+                      <div class="row getco">
+                        <div class="col-md-9 col-sm-9 col-xs-9">
+                          <h3 class="test_i1 h_ofst gtht"><%= office.city %></h3>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                          <p class="soc_icon">
+                            <% if office.social_facebook.present? %>
+                                <a class="hf" href="<%= office.social_facebook %>"></a>
+                            <% end %>
+                            <% if office.social_twitter.present? %>
+                                <a class="ft" href="<%= office.social_twitter %>"></a>
+                            <% end %>
+                            <% if office.social_linked_in.present? %>
+                                <a class="hi" href="<%= office.social_linked_in %>"></a>
+                            <% end %>
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="b_cont">
+                        <p class="p_obof"><%= office.short_description %></p>
+                        <ul class="conif_tow">
+                          <li> <p> <%= office.address %></p>
+                          </li>
+                          <li>
+                            <% office.phones.each do |phone| %>
+                                <p>
+                                  <a href="tel:<%= phone.remove(/\s/) %>" class="menuf_ikj"><%= phone %></a>
+                                </p>
+                            <% end %>
+
+                          </li>
+                          <li>
+                            <% office.emails.each do |email| %>
+                                <p>
+                                    <a href="mailto:<%= email %>" class="mmlc"><%= email %></a>
+                                </p>
+                            <% end %>
+                          </li>
+                        </ul>
+                      </div>
 
 
-      <div class="col-md-12 col-sm-12 col-xs-12 snb_cont">
-        <div class="one_ofis">
-          <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-12 on_oth jior1">
-              <img src="/assets/application/contactsalmati.jpg" alt="alt">
-            </div>
-            <div class="col-md-8 col-sm-8 col-xs-12 ofil_inf jior1">
-              <div class="row getco">
-                <div class="col-md-9 col-sm-9 col-xs-9">
-                  <h3 class="test_i1 h_ofst"><a href="#">Астана</a></h3>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                  <p class="soc_icon">
-                    <a class="hf" href="#"></a>
-                    <a class="ft" href="#"></a>
-                    <a class="hi" href="#"></a>
-                  </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              <div class="b_cont">
-                <p class="p_obof">Наш офис, расположенный в Астане, позволяет нам тесно сотрудничать с национальными компаниями, государственными органами и иностранными инвесторами.</p>
-                <ul class="conif_tow">
-                  <li> <p> ул. Сыганак 27, 13й этаж
-                    Бизнес-центр «Пекин Палас»
-                    010000, Астана, Казахстан</p>
-                  </li>
-                  <li><a href="tel:+7 7172 539 277" class="menuf_ikj">
-                    <p>+7 7172 539 277</p>
-                    <p>+7 7172 539 275</p></a>
-                  </li>
-                  <li><a href="mailto:nfo@orislegal.com" class="mmlc">nfo@orislegal.com</a> </li>
-                </ul>
-              </div>
-
-
-            </div>
-          </div>
+          <% end %>
         </div>
       </div>
-
-
-
-      <div class="col-md-12 col-sm-12 col-xs-12 snb_cont">
-        <div class="one_ofis">
-          <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-12 on_oth jior">
-              <img src="/assets/application/contactsastana.jpg" alt="alt">
-            </div>
-            <div class="col-md-8 col-sm-8 col-xs-12 ofil_inf jior ">
-              <div class="row getco">
-                <div class="col-md-9 col-sm-9 col-xs-9">
-                  <h3 class="test_i1 h_ofst"><a href="#">Алматы</a></h3>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                  <p class="soc_icon">
-                    <a class="hf" href="#"></a>
-                    <a class="ft" href="#"></a>
-                    <a class="hi" href="#"></a>
-                  </p>
-                </div>
-              </div>
-
-              <div class="b_cont">
-                <p class="p_obof">Наш офис в Алматы позволяет нам локально сотрудничать с финансовыми институтами, фондовой биржей и коммерческими структурами.</p>
-                <ul class="conif_tow">
-                  <li> <p>пр. Достык 188, офис 805
-                    Бизнес-центр «Кулан»
-                    050051, Алматы, Казахстан</p>
-                  </li>
-                  <li><a href="tel:+7 7172 539 277" class="menuf_ikj">
-                    <p>+7 7273 30 2323</p>
-                    <p>+7 7272 59 6263</p></a>
-                  </li>
-                  <li><a href="mailto:nfo@orislegal.com" class="mmlc">nfo@orislegal.com</a> </li>
-                </ul>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-    </div>
-  </div>
-</section>
-
+    </section>
+<% end %>
 
 
 <section class="map_cont">

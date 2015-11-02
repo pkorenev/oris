@@ -1,3 +1,5 @@
+require_relative 'require_libs'
+
 def services_navigation_label
   navigation_label do
     I18n.t("admin.navigation_labels.services")
@@ -31,6 +33,12 @@ end
 def about_us_navigation_label
   navigation_label do
     I18n.t("admin.navigation_labels.about_us")
+  end
+end
+
+def contact_navigation_label
+  navigation_label do
+    I18n.t("admin.navigation_labels.contact")
   end
 end
 
@@ -83,7 +91,7 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  models = [Project, ProjectCategory, Event, EventAddress, Publication, PublicationCategory, Service, ServiceDepartment, ServicePractice, User, Partner, PartnerEducation, CompanyFeedback ]
+  models = [Project, ProjectCategory, Event, EventAddress, Publication, PublicationCategory, Service, ServiceDepartment, ServicePractice, User, Partner, PartnerEducation, CompanyFeedback, Office ]
 
   models.each do |m|
     config.included_models += [m]
@@ -454,6 +462,34 @@ RailsAdmin.config do |config|
       field :name
       field :comment
       field :company_url
+    end
+  end
+
+  config.model Office do
+    contact_navigation_label
+
+    edit do
+      field :published
+      field :translations, :globalize_tabs
+      field :longitude
+      field :latitude
+      field :phones
+      field :emails
+      field :avatar
+      field :social_facebook
+      field :social_twitter
+      field :social_linked_in
+    end
+  end
+
+  config.model Office::Translation do
+    visible false
+
+    nested do
+      field :locale, :hidden
+      field :city
+      field :short_description
+      field :address
     end
   end
 

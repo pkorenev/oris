@@ -40,6 +40,9 @@ ru:
       company_feedback:
         one: "Отзыв"
         other: "Отзывы"
+      office:
+        one: "Офис"
+        other: "Офисы"
 
     attributes:
       event:

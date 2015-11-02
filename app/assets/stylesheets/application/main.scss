@@ -177,7 +177,9 @@ display: inline-block;
     line-height: 47px;
     margin: 0;
     margin-top: 8px;
-        margin-bottom: 20px;
+    margin-bottom: 20px;
+    height: 90px;
+    overflow: hidden;
 }
 .s_slogan:hover{
     color: #ffa000;
@@ -1593,7 +1595,8 @@ header {
     line-height: 33px!important;
 }
 .pp_n li .m_activ{
-    color: #0274BB;
+  color: #0274BB;
+  pointer-events: none;
 }
 .pp_n li .m_activ:hover{
     color: #0274BB;
@@ -4244,7 +4247,7 @@ ul.tr_ul li:after{
 
 
 
-ul.resp-tabs-list, p {
+ul.resp-tabs-list p {
     margin: 0px;
     padding: 0px;
 }
@@ -4489,4 +4492,44 @@ ul.resp-tabs-list, p {
 }
 .resp-accordion.ver_1.resp-tab-active:hover {
     color: #ffa000!important;
+}
+
+
+.test_i1.h_ofst {
+  margin: 0 30px 30px 10px;
+}
+
+
+
+
+
+.owl-theme.tegsim0 .owl-controls .owl-page span {
+  background: #fff;
+  background: url(../img/aboutusslide.png) no-repeat center center;
+  text-indent: -9999px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 0 5px;
+  outline: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.owl-theme.tegsim0 .owl-controls .owl-page.active span {
+  background: transparent url(../img/aboutusslideactive.png) no-repeat top left!important;
+}
+
+.nash_h3.d_kilo {
+  color: #536F7B;
+}
+.nash_h3.d_kilo:hover:after {
+  width: 50px;
+  background: #536F7B;
+}
+
+
+.test_i1.gtht:hover:after {
+  width: 50px;
+  background: #039be5;
 }

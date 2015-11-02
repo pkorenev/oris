@@ -9,6 +9,10 @@ class PagesController < ApplicationController
 
   end
 
+  def contact
+    @offices = Office.published
+  end
+
   def about
     @partners = Partner.published
   end
