@@ -81,3 +81,5 @@ gem 'amoeba'
 gem 'enumerize'
 
 gem 'http_accept_language'
+
+gem 'attachable', github: "VoroninNick/attachable"

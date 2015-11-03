@@ -41,4 +41,50 @@ module PagesHelper
 
     link_to(locale_title, url , class: "mow")
   end
+
+  def html_block_with_fallback(key, from_page_instance = false, locale = I18n.locale, &block)
+    page_instance = nil
+    html_block = nil
+    if from_page_instance == true
+      page_instance = @page_instance
+    elsif from_page_instance.is_a?(Page)
+      page_instance = from_page_instance
+    end
+
+    page_instance.try do |p|
+      html_block = p.html_blocks.by_field(key).first
+    end
+
+    if  (html_block || (html_block = KeyedHtmlBlock.by_key(key).first)) && html_block.content.present?
+      return raw html_block.translations_by_locale[locale].content
+    end
+
+    if block_given?
+      yield
+      #self.instance_eval(&block)
+
+    end
+
+    nil
+
+  end
+
+  def page_heading
+    if content_for?(:page_heading)
+      return content_for(:page_heading)
+    end
+
+    if @page_class
+      page_key = @page_class.name.demodulize.underscore
+      title = (I18n.t("pages.#{page_key}.page_heading.name" , raise: true) rescue nil)
+      description = (I18n.t("pages.#{page_key}.page_heading.description" , raise: true) rescue nil)
+    end
+    title ||= @page_metadata.try{|m| m[:title] }
+    description ||= nil
+
+    #return content_tag(:h1, @page_class.inspect)
+    raw([(content_tag(:h3, title, class: "vt_s") if title.present?),
+         (content_tag(:p, description, class: "vt_p") if description.present?)
+        ].select(&:present?).join)
+  end
 end

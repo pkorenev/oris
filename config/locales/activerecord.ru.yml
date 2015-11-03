@@ -46,6 +46,12 @@ ru:
       office:
         one: "Офис"
         other: "Офисы"
+      client:
+        one: "Клиент"
+        few: "Клиента"
+        many: "Клиентов"
+        other: "Клиенты"
+
 
     attributes:
       event:

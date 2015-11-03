@@ -1,56 +1,48 @@
+<% content_for :page_heading do %>
+    <h3 class="vt_s"><%= t("pages") %></h3>
+    <p class="vt_p"><%= @publication.formatted_word_date %></p>
+<% end %>
+
+<section class="pob_sech">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-12">
+        <h3 class="po_hp">Поиск по публикациям</h3>
+        <form class="poisk_h_ing ff_pabb ">
+            <input name="name" type="text" class="feedback-input" placeholder="Я хачу найти...">
+            <input type="submit" value="SUBMIT">
+        </form>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+        <h3 class="zer_po">Результаты поиска</h3>
+        <p class="zer_reg">Найдено 23 совпадения</p>
+        </div>
+        </div>
+    </div>
+</section>
 
 
-	<%= render "index_header" %>
+<section class=" sec_pablic">
+    <div class="container">
+        <div class="row">
+        <div class="ob_pab">
+            <div class="cont_filtr">
+                <ul class="menu_pab pab_pabl">
+                  <% categories_tabs(PublicationCategory, publications_path).each do |tab| %>
+                    <li><a href="<%= tab[:url] %>" class="<%= "p_activ" if tab[:active] %>"><%= tab[:name] %></a></li>
+                  <% end %>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div class="row ">
+          <% @publications.each do |publication| %>
+              <%= render "publication_list_item", publication: publication %>
+          <% end %>
+        </div>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-	<section class="pob_sech">
-		<div class="container">
-			<div class="row">
-			<div class="col-md-8 col-sm-8 col-xs-12">
-			<h3 class="po_hp">Поиск по публикациям</h3>
-			<form class="poisk_h_ing ff_pabb ">      
-				<input name="name" type="text" class="feedback-input" placeholder="Я хачу найти...">   
-				<input type="submit" value="SUBMIT">
-			</form>
-			</div>
-			<div class="col-md-4 col-sm-4 col-xs-12">
-			<h3 class="zer_po">Результаты поиска</h3>
-			<p class="zer_reg">Найдено 23 совпадения</p>
-			</div>
-			</div>
-		</div>
-	</section>
-
-
-	<section class=" sec_pablic">
-		<div class="container">
-			<div class="row">
-			<div class="ob_pab">
-				<div class="cont_filtr">
-					<ul class="menu_pab pab_pabl">
-                      <% categories_tabs(PublicationCategory, publications_path).each do |tab| %>
-						<li><a href="<%= tab[:url] %>" class="<%= "p_activ" if tab[:active] %>"><%= tab[:name] %></a></li>
-                      <% end %>
-					</ul>
-				</div>
-			</div>
-			</div>
-			<div class="row ">
-              <% @publications.each do |publication| %>
-                  <%= render "publication_list_item", publication: publication %>
-              <% end %>
-
-		</div>
-	</section>
+</section>
 
 
 

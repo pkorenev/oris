@@ -9,3 +9,55 @@
 //= require application/simplemenu.js
 //= require application/common
 //= require application/js
+
+
+
+// script
+$('.site-search__icon').click(function() {
+    $('body').toggleClass('site-search--active');
+});
+
+
+// script
+$('#my_popup').popup({
+    transition: 'all 0.3s'
+});
+
+// script
+jQuery(document).ready(function( $ ) {
+    $('.counter').counterUp({
+        delay: 10,
+        time: 1500
+    });
+});
+
+// script
+(function() {
+
+    $.fatNav();
+
+}());
+
+// script
+$(function() {
+    $('.tt_bot').matchHeight();
+});
+
+// script
+$(function() {
+    $('.m_nor').matchHeight();
+});
+
+// script
+$(function() {
+    $('.plan_tab').matchHeight();
+});
+
+// script
+$('.bxslidere').bxSlider({
+    nextSelector: '#slider-next',
+    prevSelector: '#slider-prev',
+    pager: false,
+    nextText: 'Onward',
+    prevText: 'Go back'
+});

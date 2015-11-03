@@ -1,5 +1,37 @@
 ru:
   pages:
     home:
-      title: "Главная"
-
+      head_title: "Главная"
+    about:
+      page_heading:
+        name: "О ФИРМЕ"
+        description: "Кратко о нас"
+    contact:
+      page_heading:
+        name: "Контакты"
+        description: "Обращайтесь, будем рады сотрудничеству!"
+    projects:
+      page_heading:
+        name: "Наш опыт"
+        description: "Избранные сделки нашей команды"
+    events:
+      page_heading:
+        name: "Мероприятия"
+        description: "Семинары, конференции, бизнес-завтраки и другие"
+    publications:
+      page_heading:
+        name: "Публикации"
+        description: "Самые свежие и актуальные"
+    services:
+      page_heading:
+        name: "Наши услуги"
+        description: "Мы консультируем по широкому спектру вопросов"
+    career:
+      page_heading:
+        name: "Вакансии"
+        description: "Станьте частью команды профессионалов"
+    projects:
+      show:
+        client: "Клиент"
+        clients: "Клиенты"
+        managers: "Проектом управляли"

@@ -3,16 +3,23 @@ class Project < ActiveRecord::Base
 
   belongs_to :project_category
   has_and_belongs_to_many :partners
+  has_and_belongs_to_many :services
+  has_and_belongs_to_many :project_tags
+  #has_tags
+  has_and_belongs_to_many :clients
+  #belongs_to :service_practice
+  #belongs_to :service_department
 
   attr_accessible :project_category
-
   attr_accessible :partners, :partner_ids
+  #attr_accessible :services, :service_ids
 
+  attr_accessible :project_tags, :project_tag_ids
+  attr_accessible :clients, :client_ids
   # paperclip
+
   has_attached_image :avatar, styles: { projects_index: "469x166" }
   has_attached_image :banner, styles: { page: "1366x500" }
-
-
 
   # / paperclip
 

@@ -1,126 +1,86 @@
-<% content_for :custom_header do %>
-	<header class="top_header bgheight bg_wwo">
-		<div class="header_topline">
-			<div class="container">
-				
-				<div class="row row_baer">
+<section class="osn_colcont">
+    <div class="container">
+            <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12 honnco_l">
 
-					<div class="col-md-3 col-sm-3 col-xs-3 inf_menu">
-						<div class="inf_bootom">
-							
+                <div class="row">
+                  <% if @project.clients.try(&:any?) %>
 
-						</div>		
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-6">
-						<div class="logo">
-							<a href="#"><img src="/assets/application/logo.png" alt="alt"></a>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-3 col-xs-3 soc_inf">
-						<div class="ob_inf">
-							<a class="mow" href="#">En</a>
-							<p class="soc_icon">
-                              <%= other_locale_link %>
-											<a class="ft" href="#"></a>
-											<a class="hi" href="#"></a>
-							</p>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="v_slog">
-			<div class="container">
-				<div class="row">
-				<h3 class="vt_s"><%= @project.name %></h3>
-				<p class="vt_p"><%= @project.date_range %></p>
-				</div>
-			</div>
-		</div>
-	</header>
-<% end %>
-
-
-
-
-
-
-
-	<section class="osn_colcont">
-		<div class="container">
-				<div class="row">
-				<div class="col-md-4 col-sm-4 col-xs-12 honnco_l">
-					
-					<div class="row">
-						<div class="col-md-12 col-sm-12 col-xs-6 het_t jio_b">
-						<h3 class="nash_h3 aur_h3 jegio"><a href="#">Клиент</a></h3>
-						<div class="row">
-							<div class="col-md-4 col-sm-4 col-xs-4">
-								<img src="/assets/application/workimg_04.jpg" alt="alt">
-							</div>
-							<div class="col-md-8 col-sm-8 col-xs-4 gh_ot">
-							<a href="#" class="hid_gih">Народный банк Казахстана</a>
-							</div>
-						</div>
-						</div>
-
-						<div class="col-md-12 col-sm-12 col-xs-6 het_t">
-						<h3 class="nash_h3 aur_h3 jegio"><a href="#">Проектом управляли</a></h3>
-
-                        <% @project.partners.each do |partner| %>
-                            <div class="row gomi">
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <img class="retush" src="<%= partner.avatar.url(:small_avatar) %>" alt="alt">
+                          <div class="col-md-12 col-sm-12 col-xs-6 het_t jio_b">
+                            <h3 class="nash_h3 aur_h3 jegio"><%= t("pages.projects.show.client#{'s' if @project.clients.count > 1}") %></h3>
+                            <div class="row">
+                              <% @project.clients.each do |client|  %>
+                              <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <img src="/assets/application/workimg_04.jpg" alt="alt">
                                 </div>
                                 <div class="col-md-8 col-sm-8 col-xs-4 gh_ot">
-                                <a href="<%= partner.url %>" class="hid_gih"><%= partner.name %></a>
-                                <p class="ferui"><%= partner.status %></p>
+                                <% if client.company_url.present? %>
+                                  <%= link_to(client.name, client.company_url, class: "hid_gih") %>
+                                <% else %>
+                                      <span class="hid_gih"><%= client.name %></span>
+                                <% end %>
                                 </div>
+                              <% end %>
                             </div>
-                        <% end %>
-						</div>
-						
-						<a href="#" class="gijef">Заказать услугу</a>
-						
-					</div>
-				</div>
-				<div class="col-md-8 col-sm-8 col-xs-12 honnco_r">
-				<%= raw @project.content %>
-				<div class="cont_bootinf">
-					<p>21/07/2015</p>
-					<a href="#">Поделиться проектом</a>
-				</div>
-				</div>
-					
-				</div>
-		</div>
-	</section>
+                            </div>
+
+                    <% end %>
+
+                    <div class="col-md-12 col-sm-12 col-xs-6 het_t">
+                    <h3 class="nash_h3 aur_h3 jegio"><%= t("pages.projects.show.managers") %></h3>
+
+                    <% @project.partners.each do |partner| %>
+                        <div class="row gomi">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <img class="retush" src="<%= partner.avatar.url(:small_avatar) %>" alt="alt">
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-4 gh_ot">
+                            <a href="<%= partner.url %>" class="hid_gih"><%= partner.name %></a>
+                            <p class="ferui"><%= partner.status %></p>
+                            </div>
+                        </div>
+                    <% end %>
+                    </div>
+
+                    <a href="#" class="gijef">Заказать услугу</a>
+
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-8 col-xs-12 honnco_r">
+            <%= raw @project.content %>
+            <div class="cont_bootinf">
+                <p>21/07/2015</p>
+                <a href="#">Поделиться проектом</a>
+            </div>
+            </div>
+
+            </div>
+    </div>
+</section>
 
 
-	<section class=" sec_pablic vn_bg">
-		<div class="container">
+<section class=" sec_pablic vn_bg">
+    <div class="container">
 
-			
-			<div class="row pabl_pagi">
-				<div class=" pos_pub psid pPpubl col-md-6 col-sm-6 col-xs-12 ">
-					<a href="<%= @prev_article.url %>">
-						<p>Предыдущий проект</p>
-						<h3><%= @prev_article.name %></h3>
-						<span></span>
-					</a>
-				</div>
-				<div class=" pos_pub psid pPpubr col-md-6 col-sm-6 col-xs-12">
-					<a href="<%= @next_article.url %>">
-						<p>Следующий проект</p>
-						<h3><%= @next_article.name %></h3>
-						<span></span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
+
+        <div class="row pabl_pagi">
+            <div class=" pos_pub psid pPpubl col-md-6 col-sm-6 col-xs-12 ">
+                <a href="<%= @prev_article.url %>">
+                    <p>Предыдущий проект</p>
+                    <h3><%= @prev_article.name %></h3>
+                    <span></span>
+                </a>
+            </div>
+            <div class=" pos_pub psid pPpubr col-md-6 col-sm-6 col-xs-12">
+                <a href="<%= @next_article.url %>">
+                    <p>Следующий проект</p>
+                    <h3><%= @next_article.name %></h3>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
