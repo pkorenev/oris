@@ -1,0 +1,25 @@
+namespace :db do
+  %w(seed create drop).each do |task_name|
+    desc "#{task_name} Migration"
+    task task_name do
+      on roles(:app) do
+        within release_path do
+          with rails_env: fetch(:rails_env) do
+            execute :rake, "db:#{task_name}"
+          end
+        end
+      end
+    end
+  end
+
+  desc "Rollback to a specific Migration"
+  task :rollback, :step do |task_name, step|
+    on roles(:app) do
+      within release_path do
+        with rails_env: fetch(:rails_env) do
+          execute :rake, "#{task_name} step=#{step}"
+        end
+      end
+    end
+  end
+end
