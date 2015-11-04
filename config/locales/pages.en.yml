@@ -1,0 +1,13 @@
+en:
+  pages:
+    home:
+      title: "Home"
+  search:
+    results: "Search Results"
+    found: "%{count} Items found"
+    website_search: 'WEBSITE SEARCH'
+    want_to_find: 'I want to find..'
+    project: Projects
+    publication: Publications
+    service: Services
+    event: Events

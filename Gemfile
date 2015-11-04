@@ -81,3 +81,9 @@ gem 'amoeba'
 gem 'enumerize'
 
 gem 'http_accept_language'
+
+gem 'sunspot_rails'
+
+gem 'sunspot_solr'
+
+gem 'truncate_html'
