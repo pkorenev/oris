@@ -43,14 +43,24 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'thin'
+  gem 'capistrano', '~> 3.3.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-rails-console'
+  gem 'capistrano-rbenv', '~> 2.0'
+  gem 'capistrano3-puma', require: false
+end
+
+group :production do
+  gem 'therubyracer', platforms: :ruby
+  gem 'puma', '~> 2.11.3'
 end
 
 gem 'foundation-rails'
 gem 'slim-rails'
 
 gem 'mailchimp-api', require: 'mailchimp'
-
-gem 'thin'
 
 gem "quiet_assets"
 
