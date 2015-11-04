@@ -23,6 +23,12 @@ class Publication < ActiveRecord::Base
     def set_url_fragment
       self.url_fragment = self.name.parameterize if self.url_fragment.blank?
     end
+
+    searchable do
+      string :locale
+      text :name
+      text :content
+    end
   end
 
 

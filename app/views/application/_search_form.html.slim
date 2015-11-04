@@ -1,0 +1,3 @@
+= form_tag search_path(), class: "#{form_class}", method: 'get' do
+  = text_field_tag :s, params[:s], placeholder: "#{I18n.t('search.want_to_find')}", class: 'feedback-input'
+  input type="submit" value="SUBMIT" /

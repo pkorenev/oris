@@ -2,4 +2,13 @@ ru:
   pages:
     home:
       title: "Главная"
+  search:
+    results: "Результаты поиска"
+    found: "Найдено %{count} совпадения"
+    website_search: 'ПОИСК ПО САЙТУ'
+    want_to_find: 'Я хочу найти..'
+    project: Наш опыт
+    publication: Публикации
+    service: Наш опыт
+    event: Мероприятия
 

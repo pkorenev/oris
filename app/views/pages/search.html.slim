@@ -1,0 +1,43 @@
+- content_for(:custom_header) do
+  header.top_header.hsheth
+    .header_topline
+      .container
+        .row.row_baer
+          .col-md-3.col-sm-3.col-xs-3.inf_menu
+            .inf_bootom
+          .col-md-6.col-sm-6.col-xs-6
+            .logo
+              a href="#{root_path}"
+                img src="/assets/application/logo.png" alt="alt" /
+          .col-md-3.col-sm-3.col-xs-3.soc_inf
+            .ob_inf
+              = other_locale_link
+              p.soc_icon
+                a.hf href="#"
+                a.ft href="#"
+                a.hi href="#"
+  section.kat_tab.poiisk
+    .container
+      .row
+        h3.hsek=t 'search.website_search'
+        = render 'search_form', form_class: 'poisk_h_ing'
+
+section.see_content
+  .container
+    .row
+      h3.zer_po=t 'search.results'
+      p.zer_reg=t 'search.found', count: @results.count
+      ul.ob_poisk
+        - @results.each do |obj|
+          li
+            p.inf_zer
+              = link_to I18n.t("search.#{obj.item.class.name.downcase}"), send("#{obj.item.class.name.downcase.pluralize}_path")
+              span
+                | /
+                = Russian::strftime(obj.created_at, "%d %B %C")
+            h3.zer_h
+              = link_to obj.name, obj.item.url
+            p.s_det= truncate_html obj.content, length: 222
+      .s_pagi
+        - (1..@results.total_pages).each do |page|
+          = link_to page, params.merge({page: page}), class: "#{params[:page].to_i == page && 'se_ekt'}"

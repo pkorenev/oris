@@ -18,3 +18,10 @@
 
 /db/schema.rb
 
+/Gemfile.lock
+
+**/.DS_Store
+
+public/system
+
+solr/

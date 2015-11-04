@@ -43,4 +43,15 @@ class PagesController < ApplicationController
   def set_page_instance
     @page = page_class.first
   end
+
+  def search
+    search = Sunspot.search(Project::Translation, Publication::Translation,\
+                            Service::Translation, Event::Translation) do
+      with  :locale, I18n.locale
+      fulltext params[:s]
+      paginate page: params[:page] || 1, per_page: 5
+    end
+
+    @results = search.results
+  end
 end
