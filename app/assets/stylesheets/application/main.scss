@@ -1,5 +1,3 @@
-$images-root-url: "/assets/application";
-
 *::-webkit-input-placeholder {
 	color: #666;
 	opacity: 1;
@@ -72,7 +70,7 @@ button:focus {
     height: 100%!important;
 }
 .had_bgimg{
-	background: url(/assets/application/slide_03.jpg) no-repeat center center;
+	background: url(asset_path('slide_03.jpg')) no-repeat center center;
 }
 .header_topline {
     position: absolute;
@@ -120,12 +118,12 @@ header.top_header {
 display: inline-block;
     float: left;
 }
-.hf { background:#fff url(/assets/application/fasebook.png) no-repeat center center; }
-.ft {background:#fff url(/assets/application/vk.png) no-repeat center center;}
-.hi {background:#fff url(/assets/application/in.png) no-repeat center center;}
-.hf:hover { background:#fff url(/assets/application/fasebookh.png) no-repeat center center; }
-.ft:hover {background:#fff url(/assets/application/vkh.png) no-repeat center center;}
-.hi:hover {background:#fff url(/assets/application/inh.png) no-repeat center center;}
+.hf { background:#fff url(asset_path('fasebook.png')) no-repeat center center; }
+.ft {background:#fff url(asset_path('vk.png')) no-repeat center center;}
+.hi {background:#fff url(asset_path('in.png')) no-repeat center center;}
+.hf:hover { background:#fff url(asset_path('fasebookh.png')) no-repeat center center; }
+.ft:hover {background:#fff url(asset_path('vkh.png')) no-repeat center center;}
+.hi:hover {background:#fff url(asset_path('inh.png')) no-repeat center center;}
 .soc_icon a img {
     background-color: #fff;
 }
@@ -157,7 +155,7 @@ display: inline-block;
     display: inline-block;
 }
 .custom-thumbnails-wrap ul li a{
-    background: url(/assets/application/navigator_09.png) no-repeat center center;
+    background: url(asset_path('navigator_09.png')) no-repeat center center;
     width: 16px;
     height: 16px;
     display: block;
@@ -165,7 +163,7 @@ display: inline-block;
     margin-left: 3px;
 }
 .custom-thumbnails-wrap ul li .active{
-    background: url(/assets/application/navigator_07.png) no-repeat center center;
+    background: url(asset_path('navigator_07.png')) no-repeat center center;
 
 }
 .s_slogan {
@@ -188,13 +186,13 @@ display: inline-block;
     color: #039BE4;
 }
 .s_slogan span{
-	background: url(/assets/application/arrow.png) no-repeat center center;
+	background: url(asset_path('arrow.png')) no-repeat center center;
 	width: 32px;
 	height: 32px;
 	    display: inline-block;
 }
 .s_slogan:hover span{
-    background: url(/assets/application/arrow_h.png) no-repeat center center;
+    background: url(asset_path('arrow_h.png')) no-repeat center center;
         background-size: 100% 100%;
 }
 
@@ -549,13 +547,13 @@ padding: 6px;
 	width: 40px;
 	height: 40px;
 	color: #fff;
-	background: #039BE6 url(/assets/application/gosimple.png) no-repeat center center;
+	background: #039BE6 url(asset_path('gosimple.png')) no-repeat center center;
 	padding: 8px 17px;
 	font-weight: bold;
 	font-size: 14px;
 }
 .tt_aroow:hover{
-background: #ffa000 url(/assets/application/gosimple.png) no-repeat center center;
+background: #ffa000 url(asset_path('gosimple.png')) no-repeat center center;
 }
 .tt_a {
 	font-size: 13px;
@@ -578,7 +576,7 @@ background: #ffa000 url(/assets/application/gosimple.png) no-repeat center cente
 
 .our_services {
 	    padding: 35px 0 65px 0;
-	background: #C9C9C9 url(/assets/application/mainourworks.jpg) no-repeat top center;
+	background: #C9C9C9 url(asset_path('mainourworks.jpg')) no-repeat top center;
     background-size: cover;
 
 }
@@ -657,17 +655,17 @@ background: #ffa000 url(/assets/application/gosimple.png) no-repeat center cente
 }
 #slider-prev a{
     left: 0px;
-    background: url(/assets/application/prev_t.png) no-repeat center center;
+    background: url(asset_path('prev_t.png')) no-repeat center center;
 }
 #slider-next a{
     right: 0px;
-    background: url(/assets/application/next_t.png) no-repeat center center;
+    background: url(asset_path('next_t.png')) no-repeat center center;
 }
 #slider-prev a:hover{
-    background:#ffa000 url(/assets/application/prev_t.png) no-repeat center center;
+    background:#ffa000 url(asset_path('prev_t.png')) no-repeat center center;
 }
 #slider-next a:hover{
-    background:#ffa000 url(/assets/application/next_t.png) no-repeat center center;
+    background:#ffa000 url(asset_path('next_t.png')) no-repeat center center;
 }
 .gtl_inf p {
     text-align: center;
@@ -685,7 +683,7 @@ background: #ffa000 url(/assets/application/gosimple.png) no-repeat center cente
     margin: 12px 0 10px 0;
 }
 .gtl_inf {
-	background: url(/assets/application/quotesleft.png) no-repeat top left, url(/assets/application/quotesright.png) no-repeat bottom right;
+	background: url(asset_path('quotesleft.png')) no-repeat top left, url(asset_path('quotesright.png')) no-repeat bottom right;
 	padding: 20px 10px 12px 10px;
 }
 .gt_lw {
@@ -827,7 +825,7 @@ footer {
     right: -4px;
 	width: 4px;
 	height: 10px;
-	background: url(/assets/application/formright.png) no-repeat center center;
+	background: url(asset_path('formright.png')) no-repeat center center;
 }
 .foot_form:before{
 	content: "";
@@ -836,7 +834,7 @@ footer {
     left: -4px;
 	width: 4px;
 	height: 10px;
-	background: url(/assets/application/formleft.png) no-repeat center center;
+	background: url(asset_path('formleft.png')) no-repeat center center;
 }
 .ff_for{ margin:0px auto; }
 
@@ -867,7 +865,7 @@ footer {
 .ff_for [type="submit"] {
     width: 100%;
     font-family: 'Exo2-Light';
-        background: #039BE6 url(/assets/application/searchbattonwhite.png) no-repeat right center;
+        background: #039BE6 url(asset_path('searchbattonwhite.png')) no-repeat right center;
     border: 0;
     cursor: pointer;
     color: white;
@@ -879,7 +877,7 @@ footer {
     margin: 4px 0 12px 0;
     position: relative;
 }
-.ff_for [type="submit"]:hover { background:#ffa000 url(/assets/application/searchbattonworange.png) no-repeat right center; }
+.ff_for [type="submit"]:hover { background:#ffa000 url(asset_path('searchbattonworange.png')) no-repeat right center; }
 
 .fot_slogan {
     text-transform: uppercase;
@@ -940,10 +938,10 @@ h3.f_tawn:hover a{
     margin-top: 28px;
 }
 .f_inf_ad li:first-child{
-	background: url(/assets/application/iconmap.png) no-repeat top left;
+	background: url(asset_path('iconmap.png')) no-repeat top left;
 }
 .f_inf_ad li:nth-child(2){
-	background: url(/assets/application/icontel.png) no-repeat top left;
+	background: url(asset_path('icontel.png')) no-repeat top left;
 }
 .f_inf_ad li:nth-child(2) p{
 line-height: 17px;
@@ -951,7 +949,7 @@ line-height: 17px;
     font-family: 'Exo2-SemiBold';
 }
 .f_inf_ad li:last-child{
-	background: url(/assets/application/iconmail.png) no-repeat top left;
+	background: url(asset_path('iconmail.png')) no-repeat top left;
 }
 .f_inf_ad li p{
     color: #fff;
@@ -1168,7 +1166,7 @@ span.counter.cat_namb {
     position: relative;
     letter-spacing: 3px;
     color: #546F7A;
-    background: url(/assets/application/linenotfound.png) no-repeat bottom center;
+    background: url(asset_path('linenotfound.png')) no-repeat bottom center;
 }
 
 
@@ -1176,7 +1174,7 @@ span.counter.cat_namb {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url(/assets/application/pagenotfound.jpg) no-repeat center center;
+    background: url(asset_path('pagenotfound.jpg')) no-repeat center center;
     background-size: cover;
 }
 .op404 {
@@ -1185,7 +1183,7 @@ span.counter.cat_namb {
 }
 .sa_404 {
     font-family: 'Exo2-Light';
-    background: #039BE6 url(/assets/application/frontbatton.png) no-repeat right center;
+    background: #039BE6 url(asset_path('frontbatton.png')) no-repeat right center;
     border: 0;
     color: white;
     font-size: 18px;
@@ -1199,7 +1197,7 @@ span.counter.cat_namb {
     overflow: hidden;
 }
 .sa_404:hover{
-    background: #ffa000 url(/assets/application/frontbatton.png) no-repeat right center;
+    background: #ffa000 url(asset_path('frontbatton.png')) no-repeat right center;
 }
 .sa_404:after{
 content: "";
@@ -1271,9 +1269,9 @@ content: "";
     height: 40px;
         float: left;
             margin-left: 1%;
-    background: #fff url(/assets/application/searchbatton.png) no-repeat top center;
+    background: #fff url(asset_path('searchbatton.png')) no-repeat top center;
 }
-.oris_podoiska [type="submit"]:hover { background:#ffa000 url(/assets/application/searchbattonwhite_h.png) no-repeat top center;  }
+.oris_podoiska [type="submit"]:hover { background:#ffa000 url(asset_path('searchbattonwhite_h.png')) no-repeat top center;  }
 
 
 .foo_chek {
@@ -1282,13 +1280,13 @@ content: "";
     padding: 7px 53px 9px 15px;
     margin: 0;
     font-size: 18px;
-    background: #fff url(/assets/application/orderbuy.png) no-repeat right center;
+    background: #fff url(asset_path('orderbuy.png')) no-repeat right center;
     position: relative;
     overflow: hidden;
 
 }
 .foo_chek:hover {
-        background: #ffa000 url(/assets/application/orderbuywhite.png) no-repeat right center;
+        background: #ffa000 url(asset_path('orderbuywhite.png')) no-repeat right center;
     color: #fff;
 }
 .foo_chek:after{
@@ -1308,7 +1306,7 @@ content: "";
 }
 .top_header.h_insad {
     height: 500px;
-    background: url(/assets/application/practices.jpg) no-repeat center center;
+    background: url(asset_path('practices.jpg')) no-repeat center center;
     background-size: cover;
 }
 .v_slog {
@@ -1459,7 +1457,7 @@ ul.tiul_cont {
 
 }
 .st-accordion .st_akor li > a span{
-    background: transparent url(/assets/application/clozeacardeon.png) no-repeat center center;
+    background: transparent url(asset_path('clozeacardeon.png')) no-repeat center center;
     text-indent:-9000px;
     width: 26px;
     height: 14px;
@@ -1477,7 +1475,7 @@ ul.tiul_cont {
     color: #ffa000;
 }
 .st-accordion .st_akor li > a:hover span{
-    background: transparent url(/assets/application/acardeonhover.png) no-repeat center center;
+    background: transparent url(asset_path('acardeonhover.png')) no-repeat center center;
 }
 .st-accordion .st_akor li.st-open > a{
         color: #58707C;
@@ -1563,7 +1561,7 @@ header {
     font-size:0px; 
     width: 32px;
     height: 32px;
-    background: url(/assets/application/closemenu_03.png) no-repeat center center;}
+    background: url(asset_path('closemenu_03.png')) no-repeat center center;}
     header a.close-menu-btn:hover {
       color: #0386a4; }
   header nav {
@@ -1589,7 +1587,7 @@ header {
     color: #fff;
     font-family: 'Exo2-ExtraBold';
     text-transform: uppercase;
-    background: url(/assets/application/menuline.png) no-repeat bottom center;
+    background: url(asset_path('menuline.png')) no-repeat bottom center;
     font-size: 21px!important;
     padding: 5px 0;
     line-height: 33px!important;
@@ -1641,13 +1639,13 @@ display: block;text-align: center;
     float: none; 
 
 }
-.menu_tel{display: inline-block; background: url(/assets/application/telowerflow.png) no-repeat left center;
+.menu_tel{display: inline-block; background: url(asset_path('telowerflow.png')) no-repeat left center;
     padding-left: 20px;}
 .menu_tel span{display: inline-block; color: #fff; padding: 0 5px}
 .pail_pp{
     display: inline-block;
     color:#fff;
-    background: url(/assets/application/mailowerflow.png) no-repeat left center;
+    background: url(asset_path('mailowerflow.png')) no-repeat left center;
     margin-right: 20px;
     padding-left: 30px;
     margin-left: 8%;}
@@ -1720,9 +1718,9 @@ position: relative;}
     padding-bottom: 10px;
     transition: all 0.3s;
     float: left;
-    background: url(/assets/application/searchbutton_03.png) no-repeat center center;
+    background: url(asset_path('searchbutton_03.png')) no-repeat center center;
 }
-.poisk_h [type="submit"]:hover { background:#0274BB url(/assets/application/searchbutton_03.png) no-repeat center center; opacity: 0.8; }
+.poisk_h [type="submit"]:hover { background:#0274BB url(asset_path('searchbutton_03.png')) no-repeat center center; opacity: 0.8; }
 
 
 
@@ -1736,7 +1734,7 @@ position: relative;}
 /* work*/
 .top_header.h_work {
     height: 500px;
-    background: url(/assets/application/careers.jpg) no-repeat center center;
+    background: url(asset_path('careers.jpg')) no-repeat center center;
     background-size: cover;
 }
 .work_zah {
@@ -1756,13 +1754,13 @@ position: relative;}
     padding: 7px 53px 9px 15px;
     margin: 0;
     font-size: 18px;
-    background: #039BE6 url(/assets/application/careers.png) no-repeat right center;
+    background: #039BE6 url(asset_path('careers.png')) no-repeat right center;
     position: relative;
     overflow: hidden;
 }
 .st-content .work_ad:hover{
     color: #fff;
-    background:#0274BB  url(/assets/application/careers.png) no-repeat right center;
+    background:#0274BB  url(asset_path('careers.png')) no-repeat right center;
 }
 
 .work_ad:after {
@@ -1826,10 +1824,10 @@ position: relative;}
     padding-bottom: 10px;
     transition: all 0.3s;
     float: left;
-    background: url(/assets/application/searchbutton.png) no-repeat center center;
+    background: url(asset_path('searchbutton.png')) no-repeat center center;
 }
 .poisk_h_ing [type="submit"]:hover {
-    background: #fff url(/assets/application/searchbutton.png) no-repeat center center;
+    background: #fff url(asset_path('searchbutton.png')) no-repeat center center;
     opacity: 0.8;
 }
 .poisk_h_ing .feedback-input::-webkit-input-placeholder {color:#536D7C;}
@@ -2000,7 +1998,7 @@ position: relative;}
 /*event*/
 .top_header.g_event {
     height: 500px;
-    background: url(/assets/application/events.jpg) no-repeat center center;
+    background: url(asset_path('events.jpg')) no-repeat center center;
     background-size: cover;
 }
 .ev_pafination {
@@ -2021,19 +2019,19 @@ position: relative;}
 
 .ev_pafination .ex_pt{
     left: 0px;
-    background: #EBEFF2 url(/assets/application/eventcontrolsleft.png) no-repeat center center;
+    background: #EBEFF2 url(asset_path('eventcontrolsleft.png')) no-repeat center center;
 }
 .ev_pafination .ex_pt:hover{
     left: 0px;
-    background: #ffa000 url(/assets/application/prev_t.png) no-repeat center center;
+    background: #ffa000 url(asset_path('prev_t.png')) no-repeat center center;
 }
 .ev_pafination .ex_xt{
     right: 0px;
-    background: #EBEFF2 url(/assets/application/eventcontrolsright.png) no-repeat center center;
+    background: #EBEFF2 url(asset_path('eventcontrolsright.png')) no-repeat center center;
 }
 .ev_pafination .ex_xt:hover{
     right: 0px;
-    background: #ffa000 url(/assets/application/next_t.png) no-repeat center center;
+    background: #ffa000 url(asset_path('next_t.png')) no-repeat center center;
 }
 .ev_dat {
     text-align: center;
@@ -2104,7 +2102,7 @@ position: relative;}
 /*publications*/
 .top_header.p_publ {
     height: 500px;
-    background: url(/assets/application/publications.jpg) no-repeat center center;
+    background: url(asset_path('publications.jpg')) no-repeat center center;
     background-size: cover;
 }
 .pob_sech {
@@ -2153,19 +2151,19 @@ section.sec_pablic {
 }
 .pos_pub.pPpubl:hover span {
     border: 1px solid #ffa000;
-    background: #ffa000 url(/assets/application/prev_t.png) no-repeat center center;
+    background: #ffa000 url(asset_path('prev_t.png')) no-repeat center center;
 }
 .pos_pub.pPpubr:hover span {
     border: 1px solid #ffa000;
-    background: #ffa000 url(/assets/application/frontbatton.png) no-repeat center center;
+    background: #ffa000 url(asset_path('frontbatton.png')) no-repeat center center;
 }
 .pos_pub.pPpubl span {
     left: 0px;
-    background: #EBEFF2 url(/assets/application/eventcontrolsleft.png) no-repeat center center;
+    background: #EBEFF2 url(asset_path('eventcontrolsleft.png')) no-repeat center center;
 }
 .pos_pub.pPpubr span {
     right: 0px;
-    background: #EBEFF2 url(/assets/application/eventcontrolsright.png) no-repeat center center;
+    background: #EBEFF2 url(asset_path('eventcontrolsright.png')) no-repeat center center;
 }
 .pos_pub p {
     font-family: 'Exo2-LightItalic';
@@ -2237,7 +2235,7 @@ form.poisk_h_ing.ff_pabb  .feedback-input {
 /*work*/
 .top_header.w_work {
     height: 500px;
-    background: url(/assets/application/work.jpg) no-repeat center center;
+    background: url(asset_path('work.jpg')) no-repeat center center;
     background-size: cover;
 }
 .menu_pab.pab_pabl.batot {
@@ -2393,10 +2391,10 @@ form.poisk_h_ing.ff_pabb  .feedback-input {
     border: 1px solid #CFD8DD;
 }
 .lin_top {
-background: url(/assets/application/iconworkfiltertop.png) no-repeat center center;
+background: url(asset_path('iconworkfiltertop.png')) no-repeat center center;
 }
 .lin_boot {
-background:#B0BFC6 url(/assets/application/iconworkfilterdown.png) no-repeat center center;
+background:#B0BFC6 url(asset_path('iconworkfilterdown.png')) no-repeat center center;
 }
 
 
@@ -2413,7 +2411,7 @@ background:#B0BFC6 url(/assets/application/iconworkfilterdown.png) no-repeat cen
     background-size: cover;
 }
 .bg_wwo{
-    background: url(/assets/application/workimg_01.jpg) no-repeat center center;
+    background: url(asset_path('workimg_01.jpg')) no-repeat center center;
     background-size: cover;
 }
 .sec_pablic.vn_bg {
@@ -2421,19 +2419,19 @@ background:#B0BFC6 url(/assets/application/iconworkfilterdown.png) no-repeat cen
 }
 .pos_pub.psid.pPpubr span {
     right: 0px;
-    background: #fff url(/assets/application/eventcontrolsright.png) no-repeat center center;
+    background: #fff url(asset_path('eventcontrolsright.png')) no-repeat center center;
 }
 .pos_pub.psid.pPpubl span {
     left: 0px;
-    background: #fff url(/assets/application/eventcontrolsleft.png) no-repeat center center;
+    background: #fff url(asset_path('eventcontrolsleft.png')) no-repeat center center;
 }
 .pos_pub.psid.pPpubr:hover span {
     right: 0px;
-    background: #ffa000 url(/assets/application/frontbatton.png) no-repeat center center;
+    background: #ffa000 url(asset_path('frontbatton.png')) no-repeat center center;
 }
 .pos_pub.psid.pPpubl:hover span {
     left: 0px;
-    background: #ffa000 url(/assets/application/prev_t.png) no-repeat center center;
+    background: #ffa000 url(asset_path('prev_t.png')) no-repeat center center;
 }
 .honnco_l {
     float: right;
@@ -2506,13 +2504,13 @@ background:#B0BFC6 url(/assets/application/iconworkfilterdown.png) no-repeat cen
 .cont_bootinf a {
     float: right;
     font-size: 18px;
-    background: url(/assets/application/share.png) no-repeat left center;
+    background: url(asset_path('share.png')) no-repeat left center;
     padding-left: 35px;
     color: #049CE8;
 }
 .cont_of {
     text-align: center;
-    background: url(/assets/application/quoteleft.png) no-repeat top left, url(/assets/application/quoteright.png) no-repeat bottom right;
+    background: url(asset_path('quoteleft.png')) no-repeat top left, url(asset_path('quoteright.png')) no-repeat bottom right;
         padding: 15px 0;
 }
 
@@ -2566,13 +2564,13 @@ display: block;
     clear: both;
     color: #fff;
     text-align: center;
-    background: #039BE6 url(/assets/application/mailone.png) no-repeat right center;
+    background: #039BE6 url(asset_path('mailone.png')) no-repeat right center;
     padding: 10px 0;
     position: relative;
     overflow: hidden;
 }
 .gijef:hover {
-    background: #ffa000 url(/assets/application/mailone.png) no-repeat right center;
+    background: #ffa000 url(asset_path('mailone.png')) no-repeat right center;
 }
 .gijef:after{
     position: absolute;
@@ -2594,14 +2592,14 @@ display: block;
 
 /**pablik_one**/
 .bg_pab {
-    background: url(/assets/application/publications-one.jpg) no-repeat center center;
+    background: url(asset_path('publications-one.jpg')) no-repeat center center;
     background-size: cover;
 }
 .ferit {
-    background: url(/assets/application/publications-onecalendar.png) no-repeat left center;
+    background: url(asset_path('publications-onecalendar.png')) no-repeat left center;
 }
 .ferit {
-    background: url(/assets/application/publications-onecalendar.png) no-repeat left center;
+    background: url(asset_path('publications-onecalendar.png')) no-repeat left center;
     padding-left: 35px;
     font-family: 'Exo2-LightItalic';
     font-size: 14px;
@@ -2611,15 +2609,15 @@ display: block;
 
 /**event_one**/
 .bg_eventv {
-    background: url(/assets/application/eventsone.jpg) no-repeat center center;
+    background: url(asset_path('eventsone.jpg')) no-repeat center center;
     background-size: cover;
 }
 .ferit1 {
-    background: url(/assets/application/eventsoneclock.png) no-repeat left center;
+    background: url(asset_path('eventsoneclock.png')) no-repeat left center;
     
 }
 .ferit2 {
-    background: url(/assets/application/eventsonemap.png) no-repeat left top;
+    background: url(asset_path('eventsonemap.png')) no-repeat left top;
     
 }
 .ferv{
@@ -2643,7 +2641,7 @@ display: block;
     top: 30%;
 }
 .bg_rbb {
-    background: url(/assets/application/aboutusone.jpg) no-repeat center center;
+    background: url(asset_path('aboutusone.jpg')) no-repeat center center;
     background-size: cover;
 }
 .ab_port {
@@ -2742,7 +2740,7 @@ display: block;
     position: absolute;
     height: 100%;
     width: 41px;
-    background: #039BE6 url(/assets/application/next_t.png) no-repeat center center;
+    background: #039BE6 url(asset_path('next_t.png')) no-repeat center center;
     top: 0px;
     right: 0px;
 }
@@ -2751,7 +2749,7 @@ display: block;
     position: absolute;
     height: 100%;
     width: 41px;
-    background: #ffa000 url(/assets/application/next_t.png) no-repeat center center;
+    background: #ffa000 url(asset_path('next_t.png')) no-repeat center center;
     top: 0px;
     right: 0px;
 }
@@ -2777,7 +2775,7 @@ display: block;
     color: #ffa000;
 }
 .gtl_inf.gyti {
-    background: url(/assets/application/quoteleft.png) no-repeat top left, url(/assets/application/quoteright.png) no-repeat bottom right;
+    background: url(asset_path('quoteleft.png')) no-repeat top left, url(asset_path('quoteright.png')) no-repeat bottom right;
     padding: 20px 10px 12px 10px;
 }
 .bixderm .bx-wrapper .bx-pager.bx-default-pager a {
@@ -2791,11 +2789,11 @@ display: block;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    background: url(/assets/application/aboutusoneslide.png) no-repeat top left;
+    background: url(asset_path('aboutusoneslide.png')) no-repeat top left;
 }
 .bixderm  .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active {
 
-    background: transparent url(/assets/application/aboutusoneslideactive.png) no-repeat top left!important;
+    background: transparent url(asset_path('aboutusoneslideactive.png')) no-repeat top left!important;
 }
 .bixderm .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
     position: absolute;
@@ -3047,11 +3045,11 @@ position: absolute;
     width: 40px;
     height: 40px;
     border: 1px solid #78909C;
-    background: url(/assets/application/clozeowerflow.png) no-repeat center center;
+    background: url(asset_path('clozeowerflow.png')) no-repeat center center;
 }
 .ta_x:hover {
     border: 1px solid #fff;
-    background:#78909C url(/assets/application/clozeowerflowhover.png) no-repeat center center;
+    background:#78909C url(asset_path('clozeowerflowhover.png')) no-repeat center center;
 }
 .foot_logo {
     margin-top: 25px;
@@ -3066,7 +3064,7 @@ position: absolute;
 /**contact**/
 .top_header.g_cont {
     height: 500px;
-    background: url(/assets/application/contacts.jpg) no-repeat center center;
+    background: url(asset_path('contacts.jpg')) no-repeat center center;
     background-size: cover;
 }
 .coo_chek {
@@ -3074,7 +3072,7 @@ position: absolute;
     background-color: #fff;
     padding: 7px 53px 9px 15px;
     font-size: 18px;
-    background: #029CE4 url(/assets/application/orderbuywhite.png) no-repeat right center;
+    background: #029CE4 url(asset_path('orderbuywhite.png')) no-repeat right center;
     position: relative;
     overflow: hidden;
     margin: 35px auto 0 auto;
@@ -3083,7 +3081,7 @@ position: absolute;
 
 }
 .coo_chek:hover {
-    background: #ffa000 url(/assets/application/orderbuywhite.png) no-repeat right center;
+    background: #ffa000 url(asset_path('orderbuywhite.png')) no-repeat right center;
 }
 .coo_chek:after {
     content: "";
@@ -3112,7 +3110,7 @@ position: absolute;
     width: 162px;
     display: block;
     margin: 20px auto 0 auto;
-    background: url(/assets/application/iconcontactstel.png) no-repeat center left;
+    background: url(asset_path('iconcontactstel.png')) no-repeat center left;
 }
 .las_cont {
     background: #fff;
@@ -3240,15 +3238,15 @@ position: absolute;
     font-family: 'Exo2-SemiBold';
 }
 .conif_tow li:first-child {
-    background: url(/assets/application/iconcontactsmap.png) no-repeat top left;
+    background: url(asset_path('iconcontactsmap.png')) no-repeat top left;
     margin-top: 30px;
 }
 .conif_tow li:nth-child(2) {
-    background: url(/assets/application/iconcontactstel.png) no-repeat top left;
+    background: url(asset_path('iconcontactstel.png')) no-repeat top left;
 
 }
 .conif_tow  li:last-child {
-    background: url(/assets/application/iconcontactsmail.png) no-repeat center left;
+    background: url(asset_path('iconcontactsmail.png')) no-repeat center left;
 }
 .on_oth {
     overflow: hidden;
@@ -3379,12 +3377,12 @@ position: absolute;
 .container.grkk {
     position: relative;
 }
-.soc_icon_pop .hf {background:  url(/assets/application/iconbluefacabook.png) no-repeat center center;}
-.soc_icon_pop .ft {background:  url(/assets/application/iconbluetvitter.png) no-repeat center center;}
-.soc_icon_pop .hi {background:  url(/assets/application/iconbluein.png) no-repeat center center;}
-.soc_icon_pop .hf:hover {background: #fff  url(/assets/application/fasebookh.png) no-repeat center center;}
-.soc_icon_pop .ft:hover {background: #fff  url(/assets/application/vkh.png) no-repeat center center;}
-.soc_icon_pop .hi:hover {background: #fff  url(/assets/application/inh.png) no-repeat center center;}
+.soc_icon_pop .hf {background:  url(asset_path('iconbluefacabook.png')) no-repeat center center;}
+.soc_icon_pop .ft {background:  url(asset_path('iconbluetvitter.png')) no-repeat center center;}
+.soc_icon_pop .hi {background:  url(asset_path('iconbluein.png')) no-repeat center center;}
+.soc_icon_pop .hf:hover {background: #fff  url(asset_path('fasebookh.png')) no-repeat center center;}
+.soc_icon_pop .ft:hover {background: #fff  url(asset_path('vkh.png')) no-repeat center center;}
+.soc_icon_pop .hi:hover {background: #fff  url(asset_path('inh.png')) no-repeat center center;}
 
 
 
@@ -3406,7 +3404,7 @@ position: absolute;
 /**ebaut**/
 
 .bg_be {
-    background: url(/assets/application/aboutner.jpg) no-repeat center center;
+    background: url(asset_path('aboutner.jpg')) no-repeat center center;
     background-size: cover;
 }
 .main_about {
@@ -3441,7 +3439,7 @@ position: absolute;
 
 .our_centr .bx-wrapper .bx-pager.bx-default-pager a {
     background: #fff;
-    background: url(/assets/application/aboutusslide.png) no-repeat center center;
+    background: url(asset_path('aboutusslide.png')) no-repeat center center;
     text-indent: -9999px;
     display: block;
     width: 16px;
@@ -3456,7 +3454,7 @@ position: absolute;
 .our_centr  .bx-wrapper .bx-pager.bx-default-pager a:hover, 
 .our_centr  .bx-wrapper .bx-pager.bx-default-pager a.active {
     background: transparent;
-    background: url(/assets/application/aboutusslideactive.png) no-repeat center center;
+    background: url(asset_path('aboutusslideactive.png')) no-repeat center center;
 }
 .our_centr .bx-wrapper .bx-pager {
     text-align: center;
@@ -3468,7 +3466,7 @@ position: absolute;
 }
 .our_centr  .bixderm .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .our_centr  .bx-wrapper .bx-pager.bx-default-pager a.active {
-    background: transparent url(/assets/application/aboutusslideactive.png) no-repeat top left!important;
+    background: transparent url(asset_path('aboutusslideactive.png')) no-repeat top left!important;
 }
 .compact_gtl.li_of {
     padding: 20px 0;
@@ -3628,7 +3626,7 @@ ul.infobot {
 
 .bx_em .bx-wrapper .bx-pager.bx-default-pager a {
     background: #fff;
-    background: url(/assets/application/aboutusslide.png) no-repeat center center;
+    background: url(asset_path('aboutusslide.png')) no-repeat center center;
     text-indent: -9999px;
     display: block;
     width: 16px;
@@ -3643,12 +3641,12 @@ ul.infobot {
 .bx_em  .bx-wrapper .bx-pager.bx-default-pager a:hover, 
 .bx_em  .bx-wrapper .bx-pager.bx-default-pager a.active {
     background: transparent;
-    background: url(/assets/application/aboutusslideactive.png) no-repeat center center;
+    background: url(asset_path('aboutusslideactive.png')) no-repeat center center;
 }
 
 .bx_em  .bixderm .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx_em  .bx-wrapper .bx-pager.bx-default-pager a.active {
-    background: transparent url(/assets/application/aboutusslideactive.png) no-repeat top left!important;
+    background: transparent url(asset_path('aboutusslideactive.png')) no-repeat top left!important;
 }
 .bx_em .bx-wrapper .bx-pager {
     text-align: center;
@@ -3699,11 +3697,11 @@ ul.infobot {
     text-align: center;
     padding: 8px 43px 9px 1px;
     color: #fff;
-    background: #039BE6 url(/assets/application/adwork.png) no-repeat right center;
+    background: #039BE6 url(asset_path('adwork.png')) no-repeat right center;
     display: block;
 }
 .work__vak:hover {
-    background: #ffa000 url(/assets/application/adwork.png) no-repeat right center;
+    background: #ffa000 url(asset_path('adwork.png')) no-repeat right center;
 }
 .work__vak:after{
     content: "";
@@ -3998,19 +3996,19 @@ ul.infobot {
 .customNavigation a:hover {border:1px solid #ffa000;}
 .customNavigation a.btn.next {
     right: 0px;
-    background: url(/assets/application/eventcontrolsright.png) no-repeat center center;
+    background: url(asset_path('eventcontrolsright.png')) no-repeat center center;
     border-right: none;
 }
 .customNavigation a.btn.prev {
     left: 0px;
-    background: url(/assets/application/eventcontrolsleft.png) no-repeat center center;
+    background: url(asset_path('eventcontrolsleft.png')) no-repeat center center;
     border-left: none;
 }
 .customNavigation a.btn.next:hover {
-    background: #ffa000 url(/assets/application/next_t.png) no-repeat center center;
+    background: #ffa000 url(asset_path('next_t.png')) no-repeat center center;
 }
 .customNavigation a.btn.prev:hover {
-    background: #ffa000 url(/assets/application/prev_t.png) no-repeat center center;
+    background: #ffa000 url(asset_path('prev_t.png')) no-repeat center center;
 }
 .row.ub_ppart {
     margin-top: 60px;
@@ -4031,7 +4029,7 @@ ul.infobot {
 
 
 .customNavigationw a.btw.next:hover {
-    background: #ffa000 url(/assets/application/next_t.png) no-repeat center center;
+    background: #ffa000 url(asset_path('next_t.png')) no-repeat center center;
 }
 .customNavigationw a {
     position: absolute;
@@ -4046,14 +4044,14 @@ ul.infobot {
 }
 .customNavigationw a.btw.next {
     right: 0px;
-    background: #EBEFF2 url(/assets/application/eventcontrolsright.png) no-repeat center center;
+    background: #EBEFF2 url(asset_path('eventcontrolsright.png')) no-repeat center center;
 }
 .customNavigationw a.btw.prev {
     left: 0px;
-    background: #EBEFF2 url(/assets/application/eventcontrolsleft.png) no-repeat center center;
+    background: #EBEFF2 url(asset_path('eventcontrolsleft.png')) no-repeat center center;
 }
 .customNavigationw a.btw.prev:hover {
-    background: #ffa000 url(/assets/application/prev_t.png) no-repeat center center;
+    background: #ffa000 url(asset_path('prev_t.png')) no-repeat center center;
 }
 .customNavigationw {
     text-align: center;
@@ -4412,7 +4410,7 @@ ul.resp-tabs-list p {
     width: 0;
     height: 0;
     float: right;
-    background: transparent url(/assets/application/clozeacardeon.png) no-repeat center center;
+    background: transparent url(asset_path('clozeacardeon.png')) no-repeat center center;
     text-indent: -9000px;
     width: 26px;
     height: 14px;
@@ -4427,14 +4425,14 @@ ul.resp-tabs-list p {
     transition: all 0.2s ease-in-out;
 }
 .resp-accordion:hover .resp-arrow {
-    background: transparent url("#{$images-root-url}/acardeonhover.png") no-repeat center center;
+    background: transparent url(asset_path('/acardeonhover.png')) no-repeat center center;
     color: #ffa000;
 }
 .resp-accordion:hover{
     color: #ffa000;
 }
 .resp-tab-active:hover .resp-arrow {
-    background: transparent url("#{$images-root-url}/acardeonhover.png") no-repeat center center;
+    background: transparent url(asset_path('acardeonhover.png')) no-repeat center center;
 }
 .resp-tab-active:hover  {
     color: #ffa000!important;
