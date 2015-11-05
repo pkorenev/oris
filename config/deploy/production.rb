@@ -13,7 +13,7 @@ set :server_name, 'www.oris.com oris.com'
 # at filepaths
 set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
 
-server '188.166.19.186', user: fetch(:deploy_user),
+server '188.166.32.160', user: fetch(:deploy_user),
                          roles: %w(web app db),
                          primary: true
 
