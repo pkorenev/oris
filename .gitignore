@@ -24,3 +24,7 @@ public/system
 public/assets
 
 solr/
+
+/vendor
+/public
+/.idea

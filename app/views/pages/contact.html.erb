@@ -1,51 +1,3 @@
-<% content_for :custom_header do %>
-    <header class="top_header g_cont">
-      <div class="header_topline">
-        <div class="container">
-
-          <div class="row row_baer">
-
-            <div class="col-md-3 col-sm-3 col-xs-3 inf_menu">
-              <div class="inf_bootom">
-
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-6">
-              <div class="logo">
-                <a href="#">
-                  <%= image_tag "application/logo.png", alt: "alt" %>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-3 soc_inf">
-              <div class="ob_inf">
-                <%= other_locale_link %>
-                <p class="soc_icon">
-                  <a class="hf" href="#"></a>
-                  <a class="ft" href="#"></a>
-                  <a class="hi" href="#"></a>
-                </p>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="v_slog">
-        <div class="container">
-          <div class="row">
-            <h3 class="vt_s">Контакты</h3>
-            <p class="vt_p">Обращайтесь, будем рады сотрудничеству!</p>
-            <a class="coo_chek" href="#">Заказать услугу</a>
-            <a href="tel:" class="tel_co">+7 7172 539 277</a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-<% end %>
-
 <% if @offices.try(&:any?) %>
     <section class="cont_main">
       <div class="container">
@@ -121,7 +73,7 @@
     </div>
   </div>
   <div class="c_m">
-    <%= image_tag "application/map_02.jpg", alt: "alt" %>
+    <% image_tag "application/map_02.jpg", alt: "alt" %>
   </div>
 </section>
 
@@ -161,7 +113,6 @@
     </div>
   </div>
 </section>
-
 
 
 

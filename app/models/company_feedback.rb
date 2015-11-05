@@ -1,9 +1,6 @@
 class CompanyFeedback < ActiveRecord::Base
   attr_accessible *attribute_names
 
-  belongs_to :partner
-  attr_accessible :partner
-
   translates :name, :comment, :company_url
   accepts_nested_attributes_for :translations
   attr_accessible :translations, :translations_attributes

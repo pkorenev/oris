@@ -1,6 +1,9 @@
 class Vacancy < ActiveRecord::Base
   attr_accessible *attribute_names
 
+  # associations
+  has_many :vacancy_requests
+
   translates :url_fragment, :name, :content
   accepts_nested_attributes_for :translations
   attr_accessible :translations, :translations_attributes

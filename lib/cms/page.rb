@@ -19,12 +19,14 @@ module Cms
     #after_save :reload_routes, if: proc { self.url_changed? }
 
     def self.default_url
-      page_key = self.name.split("::").last.underscore
-      I18n.t("pages.#{page_key}.title", raise: true) rescue page_key.humanize.parameterize
+      # page_key = self.name.split("::").last.underscore
+      # I18n.t("pages.#{page_key}.title", raise: true) rescue page_key.humanize.parameterize
+      self.name.split("::").last.underscore.humanize.parameterize
     end
 
     def self.default_head_title
-      self.name.split("::").last.underscore.humanize
+      page_key = self.name.split("::").last.underscore
+      I18n.t("pages.#{page_key}.head_title", raise: true) rescue page_key.humanize.parameterize
     end
 
     def self.disabled

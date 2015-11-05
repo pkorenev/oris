@@ -4,8 +4,8 @@ def pages_models
   Dir[Rails.root.join("app/models/pages/*")].map{|p| filename = File.basename(p, ".rb"); "Pages::" + filename.camelize }
 end
 
-def include_pages_models
-  include_models(pages_models)
+def include_pages_models(config)
+  include_models(config, *pages_models)
 end
 
 def include_models(config, *models)
@@ -109,9 +109,12 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  include_pages_models
+  include_pages_models(config)
 
-  models = [Pages, Project, ProjectCategory, Event, EventAddress, Publication, PublicationCategory, Service, ServiceDepartment, ServicePractice, User, Vacancy, Partner, PartnerEducation, CompanyFeedback, Office ]
+  #include_models config, HasTags::Tag, HasTags::Tagging
+
+
+  models = [Pages, Project, ProjectTag, ProjectCategory, Client, Event, EventAddress, Publication, PublicationCategory, Service, ServiceDepartment, ServicePractice, User, Vacancy, Partner, PartnerEducation, CompanyFeedback, Office ]
 
   models.each do |m|
     config.included_models += [m]
@@ -122,6 +125,35 @@ RailsAdmin.config do |config|
 
 
   # projects
+  config.model ProjectTag do
+    projects_navigation_label
+
+    list do
+      field :name
+      field :url_fragment
+      field :projects
+    end
+
+    edit do
+      field :translations, :globalize_tabs
+      field :projects
+    end
+
+    nested do
+      field :translations, :globalize_tabs
+    end
+  end
+
+  config.model ProjectTag::Translation do
+    visible false
+
+    nested do
+      field :locale, :hidden
+      field :name
+      field :url_fragment
+    end
+  end
+
   config.model ProjectCategory do
     projects_navigation_label
 
@@ -163,6 +195,9 @@ RailsAdmin.config do |config|
     edit do
       field :published
       field :project_category
+      field :project_tags
+      field :services
+      field :partners
       field :avatar do
         avatar_help
       end
@@ -172,7 +207,7 @@ RailsAdmin.config do |config|
       field :start_date
       field :end_date
       field :translations, :globalize_tabs
-      field :partners
+
     end
   end
 
@@ -421,6 +456,39 @@ RailsAdmin.config do |config|
     list_item_translation_config
   end
 
+  config.model Client do
+    projects_navigation_label
+
+    list do
+      field :published
+      field :avatar
+      field :short_description
+      field :name
+      field :projects
+    end
+
+    edit do
+      field :published
+      field :translations, :globalize_tabs
+
+      field :avatar do
+        avatar_help
+      end
+      field :projects
+    end
+  end
+
+  config.model Client::Translation do
+    visible false
+
+    nested do
+      field :locale, :hidden
+      field :name
+      field :company_url
+      field :short_description
+    end
+  end
+
   config.model Partner do
     about_us_navigation_label
 
@@ -530,5 +598,54 @@ RailsAdmin.config do |config|
       field :address
     end
   end
+
+  config.model Cms::Page do
+    visible false
+  end
+
+  config.model Cms::Page::Translation do
+    visible false
+  end
+
+
+  config.model Pages::Home do
+    visible false
+    # edit do
+    #   #field :banners
+    #   field :translations, :globalize_tabs
+    #   field :years_of_experience
+    #   field :projects_count
+    #   field :happy_clients_count
+    #   field :seo_tags
+    #   field :sitemap_record
+    # end
+  end
+
+  config.model Pages::Home::Translation do
+    visible false
+
+    nested do
+      field :locale, :hidden
+      field :about_html
+    end
+  end
+
+  config.model Pages::About do
+    visible false
+  end
+
+  config.model Pages::About::Translation do
+    visible false
+  end
+
+  config.model Pages::Career do
+    visible false
+  end
+
+  config.model Pages::Career::Translation do
+    visible false
+  end
+
+
 
 end

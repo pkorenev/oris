@@ -1,6 +1,10 @@
 class Service < ActiveRecord::Base
   attr_accessible *attribute_names
 
+  has_and_belongs_to_many :projects
+  #has_many :projects
+  attr_accessible :projects, :project_ids
+
   translates :url_fragment, :name, :content
   accepts_nested_attributes_for :translations
   attr_accessible :translations, :translations_attributes

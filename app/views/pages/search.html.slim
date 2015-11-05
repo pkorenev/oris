@@ -31,12 +31,12 @@ section.see_content
         - @results.each do |obj|
           li
             p.inf_zer
-              = link_to I18n.t("search.#{obj.item.class.name.downcase}"), send("#{obj.item.class.name.downcase.pluralize}_path")
+              = link_to I18n.t("search.#{obj.item.class.name.downcase}"), obj.item.try(&:url)
               span
                 | /
                 = Russian::strftime(obj.created_at, "%d %B %C")
             h3.zer_h
-              = link_to obj.name, obj.item.url
+              = link_to obj.name, obj.item.try(&:url)
             p.s_det= truncate_html obj.content, length: 222
       .s_pagi
         - (1..@results.total_pages).each do |page|

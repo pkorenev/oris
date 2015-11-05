@@ -1,0 +1,34 @@
+<% content_for :article_layout do %>
+    <% render "article_page_heading", article: article %>
+
+
+
+    <%= render "article_main", article: article %>
+
+
+    <section class=" sec_pablic vn_bg">
+      <div class="container">
+
+
+        <div class="row pabl_pagi">
+          <div class=" pos_pub psid pPpubl col-md-6 col-sm-6 col-xs-12 ">
+            <a href="<%= prev_article.url %>">
+              <p>Предыдущий проект</p>
+              <h3><%= prev_article.name  %></h3>
+              <span></span>
+            </a>
+          </div>
+          <div class=" pos_pub psid pPpubr col-md-6 col-sm-6 col-xs-12">
+            <a href="<%= next_article.url %>">
+              <p>Следующий проект</p>
+              <h3><%= next_article.name %></h3>
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<% end %>
+
+<%= render template: "layouts/application" %>

@@ -22,6 +22,8 @@ class PagesController < ApplicationController
 
     @available_vacancies_count_string = "Доступно #{@total_vacancies_count} вакансий"
 
+    @vacancy_request = VacancyRequest.new
+
     set_page_metadata("career")
   end
 
@@ -48,7 +50,7 @@ class PagesController < ApplicationController
     search = Sunspot.search(Project::Translation, Publication::Translation,\
                             Service::Translation, Event::Translation) do
       with  :locale, I18n.locale
-      fulltext params[:s]
+      fulltext params[:s], highlight: true
       paginate page: params[:page] || 1, per_page: 5
     end
 
