@@ -93,3 +93,5 @@ gem 'truncate_html'
 gem 'simple_form'
 
 gem 'pjax_rails'
+
+gem 'bower-rails'
