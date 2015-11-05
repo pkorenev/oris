@@ -87,4 +87,10 @@ module PagesHelper
          (content_tag(:p, description, class: "vt_p") if description.present?)
         ].select(&:present?).join)
   end
+
+  def order_service_request
+    @order_service_request ||= OrderServiceRequest.new
+
+    @order_service_request
+  end
 end

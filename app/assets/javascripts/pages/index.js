@@ -8,7 +8,7 @@
         var $bx_px = $('.bx_px')
 
         if ($bx_px.length) {
-            var slider = $('.bx_px').bxSlider({
+            var slider =$bx_px.bxSlider({
                 auto: true,
                 pager: false,
                 onSliderLoad: function (currentIndex) {

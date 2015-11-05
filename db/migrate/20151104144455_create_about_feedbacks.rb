@@ -11,7 +11,7 @@ class CreateAboutFeedbacks < ActiveRecord::Migration
   end
 
   def down
-    AboutCompanyFeedback
+    AboutCompanyFeedback.drop_translation_table!
 
     drop_table :about_feedbacks
   end

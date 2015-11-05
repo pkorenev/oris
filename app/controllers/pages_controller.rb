@@ -22,6 +22,8 @@ class PagesController < ApplicationController
 
     @available_vacancies_count_string = "Доступно #{@total_vacancies_count} вакансий"
 
+    @vacancy_request = VacancyRequest.new
+
     set_page_metadata("career")
   end
 

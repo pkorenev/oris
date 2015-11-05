@@ -8,6 +8,10 @@ class Publication < ActiveRecord::Base
   has_attached_image :avatar, styles: { publications_index: "220x320#", thumb: "100x150#" }
   has_attached_image :banner, styles: { page: "1366x500", thumb: "205x75#" }
 
+  amoeba do
+    include_association :translations
+  end
+
 
   translates :url_fragment, :name, :content
   accepts_nested_attributes_for :translations

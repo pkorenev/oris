@@ -82,7 +82,6 @@ gem 'enumerize'
 
 gem 'http_accept_language'
 
-
 gem 'attachable', github: "VoroninNick/attachable"
 gem 'sunspot_rails'
 
@@ -93,5 +92,6 @@ gem 'truncate_html'
 gem 'simple_form'
 
 gem 'pjax_rails'
+
 
 gem 'bower-rails'

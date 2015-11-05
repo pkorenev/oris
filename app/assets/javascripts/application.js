@@ -7,10 +7,15 @@
 //= require application/jquery.counterup.min.js
 //= require application/waypoints.min.js
 //= require application/jquery.easyResponsiveTabs
+//= require application/jquery.accordion
+//= require application/jquery.easing.1.3
+//= require jquery-form/jquery.form
 //= require application/simplemenu.js
 //= require application/common
 //= require application/js
+//= require forms
 //= require_directory ./pages
+
 
 
 
@@ -21,7 +26,7 @@ $('.site-search__icon').click(function() {
 
 
 // script
-$('#my_popup').popup({
+$('.popup').popup({
     transition: 'all 0.3s'
 });
 

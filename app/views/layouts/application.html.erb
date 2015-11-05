@@ -30,8 +30,12 @@
     <%= render "menu" %>
     <%= render "search" %>
 
-    <%= yield %>
 
+    <% if content_for?(:article_layout) %>
+        <%= content_for(:article_layout) %>
+    <% else %>
+        <%= yield %>
+    <% end %>
     <% if content_for?(:custom_footer) %>
         <%= content_for(:custom_footer) %>
     <% else %>

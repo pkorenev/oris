@@ -31,11 +31,14 @@ ru:
       page_heading:
         name: "Вакансии"
         description: "Станьте частью команды профессионалов"
+      open_or_close: "Открыть или закрыть"
+
     projects:
       show:
         client: "Клиент"
         clients: "Клиенты"
         managers: "Проектом управляли"
+
   search:
     results: "Результаты поиска"
     found: "Найдено %{count} совпадения"
@@ -45,5 +48,12 @@ ru:
     publication: Публикации
     service: Наш опыт
     event: Мероприятия
+    index:
+      all_practices: "Все виды практик"
+      all_departments: "Все отрасли"
+      practices_filter: "Фильтр Практик"
+      departments_filter: "Фильтр Отраслей"
 
+  vacancy:
+    new: "Подать заявку"
 

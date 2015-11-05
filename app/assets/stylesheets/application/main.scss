@@ -853,6 +853,7 @@ footer {
     box-sizing: border-box;
     outline: 0;
     font-family: 'Exo2-LightItalic';
+
 }
 
 .ff_for .feedback-input:focus { border:1px solid #ffa000; }
@@ -1508,7 +1509,7 @@ ul.tiul_cont {
     border-right:1px solid #fff;
     border-bottom:1px solid #fff;
 }
-#st-accordion .st_akor {
+.st-accordion .st_akor {
     padding: 0;
 }
 .ac_zah {
@@ -1595,8 +1596,27 @@ header {
 }
 .pp_n li .m_activ{
   color: #0274BB;
+
+
+  // from tag 'a' style
+  text-decoration: none;
+  font-weight: 300;
+  width: 100%;
+  display: block;
+  text-align: center;
+  height: auto !important;
+  font-family: 'Exo2-ExtraBold';
+  text-transform: uppercase;
+  background: url(/assets/application/menuline.png) no-repeat bottom center;
+  font-size: 21px !important;
+  padding: 5px 0;
+  line-height: 33px !important;
+}
+
+.pp_n li span.m_activ{
   pointer-events: none;
 }
+
 .pp_n li .m_activ:hover{
     color: #0274BB;
     background-color: transparent;
@@ -1750,29 +1770,11 @@ position: relative;}
     padding-bottom: 40px;
 }
 .st-content .work_ad {
-    color: #fff;
-    background-color: #039BE6;
-    padding: 7px 53px 9px 15px;
-    margin: 0;
-    font-size: 18px;
-    background: #039BE6 url(/assets/application/careers.png) no-repeat right center;
-    position: relative;
-    overflow: hidden;
-}
-.st-content .work_ad:hover{
-    color: #fff;
-    background:#0274BB  url(/assets/application/careers.png) no-repeat right center;
+    @include button;
 }
 
-.work_ad:after {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 38px;
-    top: 0px;
-    right: 38px;
-    background: #fff;
-}
+
+
 
 
 
@@ -4532,3 +4534,9 @@ ul.resp-tabs-list p {
   width: 50px;
   background: #039be5;
 }
+
+
+.feedback-input input[type=file] {
+  border: none;
+}
+

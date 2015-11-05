@@ -3,9 +3,20 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   #root to: 'pages#stub'
-  post "subscribe", to: "mailchimp#subscribe"
+
+
+
 
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+    post "subscribe", to: "mailchimp#subscribe"
+    controller "forms" do
+      post "contact_feedback", action: "contact_message_request", as: :contact_feedback
+      #post "subscribe", action: "subscription_request", as: :subscribe
+      post "order-service", action: "order_service_request", as: :order_service
+      post "vacancies/:vacancy_id", action: "vacancy_request", as: :vacancy_request
+    end
+
+
     root to: "pages#index"
     get "career", to: "pages#career", as: :career, defaults: { menu_item: :career, menu_item_root: true }
     get "about", to: "pages#about", defaults: { menu_item: :about, menu_item_root: true }

@@ -8,3 +8,6 @@ ru:
       events: "Мероприятия"
       career: "Вакансии"
       contact: "Контакты"
+    popups:
+      close: "Закрыть"
+      order_service: "Заказать услугу"

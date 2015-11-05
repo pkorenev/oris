@@ -7,6 +7,9 @@ ru:
       event_address:
         one: "Адрес"
         other: "Адреса"
+      project_tag:
+        one: "Тег"
+        other: "Теги"
       project_category:
         one: "Категория проектов"
         other: "Категории проектов"
@@ -53,6 +56,8 @@ ru:
         other: "Клиенты"
 
 
+
+
     attributes:
       event:
         published: "Опубликовано"
@@ -94,3 +99,12 @@ ru:
         name: "Название компании"
         comment: "Текст отзыва"
         company_url: "Сайт компании"
+      vacancy_request:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        phone: "Номер телефона"
+        email: "Электронная почта"
+        сv: "Резюме"
+        site_url: "Сайт"
+        social_link: "Профайл в социальних сетях"
+        description: "Сопроводительное письмо"

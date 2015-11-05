@@ -2,6 +2,9 @@ class ProjectsController < ApplicationController
   def index
     @projects = categorized_index(params[:project_category], ProjectCategory, Project, :projects)
     @total_projects_by_query_count = @projects.count
+
+    @practices = ServicePractice.published
+    @departments = ServiceDepartment.published
   end
 
   def show

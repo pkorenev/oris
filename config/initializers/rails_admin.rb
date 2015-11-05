@@ -609,16 +609,43 @@ RailsAdmin.config do |config|
 
 
   config.model Pages::Home do
-    edit do
-      field :banners
-      field :translations, :globalize_tabs
-      field :seo_tags
-      field :sitemap_record
-    end
+    visible false
+    # edit do
+    #   #field :banners
+    #   field :translations, :globalize_tabs
+    #   field :years_of_experience
+    #   field :projects_count
+    #   field :happy_clients_count
+    #   field :seo_tags
+    #   field :sitemap_record
+    # end
   end
 
   config.model Pages::Home::Translation do
     visible false
+
+    nested do
+      field :locale, :hidden
+      field :about_html
+    end
   end
+
+  config.model Pages::About do
+    visible false
+  end
+
+  config.model Pages::About::Translation do
+    visible false
+  end
+
+  config.model Pages::Career do
+    visible false
+  end
+
+  config.model Pages::Career::Translation do
+    visible false
+  end
+
+
 
 end

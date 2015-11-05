@@ -1,0 +1,17 @@
+<section class="osn_colcont">
+  <div class="container">
+    <div class="row">
+      <% if !defined?(show_info) || show_info != false %>
+        <%= render "article_info_panel", article: article %>
+      <% end %>
+      <div class="col-md-8 col-sm-8 col-xs-12 honnco_r">
+        <%= raw article.content %>
+        <div class="cont_bootinf">
+          <p><%= article.formatted_numeric_date %></p>
+          <a href="#">Поделиться проектом</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

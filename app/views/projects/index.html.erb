@@ -3,21 +3,24 @@
 			<div class="row">
 
 			<div class="col-md-4 col-sm-4 col-xs-12">
-			<h3 class="po_hp">Фильтр Практик</h3>
-		  <select name="sources" id="sources" class="custom-select sources" placeholder="Все виды практик">
-		    <option value="profile">Все виды практик</option>
-		    <option value="word">Все виды практик</option>
-		    <option value="hashtag">Все виды практик</option>
+			<h3 class="po_hp"><%= t("pages.projects.index.practices_filter") %></h3>
+		  <select name="sources" id="sources" class="custom-select sources" placeholder="<%= t("pages.projects.index.all_practices") %>">
+		    <%  %>
+            <option value="profile"><%= t("pages.projects.index.all_practices") %></option>
+            <% @practices.each do |service| %>
+                <option value="<%= service.id %>"><%= service.name %></option>
+            <% end %>
 		  </select>
 			</div>
 
 
 			<div class="col-md-4 col-sm-4 col-xs-12">
-			<h3 class="po_hp">Фильтр Отраслей</h3>
-		  <select name="sources" id="sources" class="custom-select sources" placeholder="Автомобильная промышленность">
-		    <option value="profile">Все виды практик</option>
-		    <option value="word">Все виды практик</option>
-		    <option value="hashtag">Все виды практик</option>
+			<h3 class="po_hp"><%= t("pages.projects.index.departments_filter") %></h3>
+		  <select name="practices" id="sources" class="custom-select sources" placeholder="<%= t("pages.projects.index.all_practices") %>">
+            <option value=""><%= t("pages.projects.index.all_departments") %></option>
+		    <% @departments.each do |service|  %>
+                <option value="<% service.id %>"><%= service.name %></option>
+            <% end %>
 		  </select>
 			</div>
 
@@ -29,8 +32,6 @@
 			<div class="gu_t1">
 		  <select name="sources" id="sources" class="custom-select sources" placeholder="По дате">
 		    <option value="profile">Все виды практик</option>
-		    <option value="word">Все виды практик</option>
-		    <option value="hashtag">Все виды практик</option>
 		  </select>
 		  </div>
 		  <div class="gu_t2">
@@ -39,6 +40,8 @@
 		  </div>
 		  </div>
 			</div>
+
+
 			</div>
 		</div>
 	</section>
@@ -105,32 +108,3 @@
 			</div>
 		</div>
 	</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

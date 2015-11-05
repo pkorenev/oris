@@ -1,6 +1,3 @@
-//= require application/jquery.accordion
-//= require application/jquery.easing.1.3
-
 $(function() {
     $('.tt_bot').matchHeight();
 });

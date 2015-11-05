@@ -13,7 +13,7 @@ class CreateAboutPage < ActiveRecord::Migration
   end
 
   def down
-    Pages::About.dropo_translation_table!
+    Pages::About.drop_translation_table!
 
     drop_table :about_pages
   end

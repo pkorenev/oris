@@ -9,6 +9,12 @@ class ServicesController < ArticlesController
 
   end
 
+  def show
+    article = Service.first
+
+    render layout: "article", article: article
+  end
+
   def resource_class
     params[:resource_class].try{|c| c.constantize }
   end

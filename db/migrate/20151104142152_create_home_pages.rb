@@ -7,7 +7,7 @@ class CreateHomePages < ActiveRecord::Migration
       t.integer :happy_clients_count
     end
 
-    Pages::Home.create_translation_table!
+    Pages::Home.create_translation_table!(about_html: :text)
   end
 
   def down

@@ -50,11 +50,11 @@
             <ul class="st_akor">
               <% @vacancies.each do |vacancy| %>
                   <li>
-                    <a href="#"><%= vacancy.name %><span class="st-arrow">Открыть или закрыть</span></a>
+                    <a href="#"><%= vacancy.name %><span class="st-arrow"><%= t("pages.career.open_or_close") %></span></a>
                     <div class="st-content">
                       <%= raw vacancy.content %>
                       <p>
-                        <a href="#" class="work_ad">Подать заявку</a>
+                        <button href="<%= vacancy_request_path(vacancy_id: vacancy) %>" class="work_ad open-vacancy-request-popup"><%= t("vacancy.new") %></button>
                       </p>
                     </div>
                   </li>
@@ -84,3 +84,5 @@
 <% content_for :scripts do %>
     <script src="/assets/pages/career.js"></script>
 <% end %>
+
+<%= render "vacancy_request_popup" %>

@@ -8,7 +8,7 @@ class CreateAboutFeatures < ActiveRecord::Migration
       t.timestamps null: false
     end
 
-    AboutFeature.create_translation_table!(name :string)
+    AboutFeature.create_translation_table!(name: :string)
   end
 
   def down
