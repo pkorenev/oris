@@ -1,8 +1,3 @@
-<% content_for :page_heading do %>
-    <h3 class="vt_s"><%= t("pages") %></h3>
-    <p class="vt_p"><%= @publication.formatted_word_date %></p>
-<% end %>
-
 <section class="pob_sech">
     <div class="container">
         <div class="row">
@@ -27,7 +22,7 @@
         <div class="row">
         <div class="ob_pab">
             <div class="cont_filtr">
-                <ul class="menu_pab pab_pabl">
+                <ul class="menu_pab pab_pabl publications-tabs">
                   <% categories_tabs(PublicationCategory, publications_path).each do |tab| %>
                     <li><a href="<%= tab[:url] %>" class="<%= "p_activ" if tab[:active] %>"><%= tab[:name] %></a></li>
                   <% end %>
@@ -35,7 +30,7 @@
             </div>
         </div>
         </div>
-        <div class="row ">
+        <div class="row publications-tab-content" data-pjax-container="" >
           <% @publications.each do |publication| %>
               <%= render "publication_list_item", publication: publication %>
           <% end %>

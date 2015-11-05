@@ -1,0 +1,58 @@
+ru:
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'Обязательное'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Please review the problems below:"
+
+    # Examples
+    # labels:
+    #   defaults:
+    #     password: 'Password'
+    #   user:
+    #     new:
+    #       email: 'E-mail to sign in.'
+    #     edit:
+    #       email: 'E-mail.'
+    # hints:
+    #   defaults:
+    #     username: 'User name to sign in.'
+    #     password: 'No special characters, please.'
+    # include_blanks:
+    #   defaults:
+    #     age: 'Rather not say'
+    # prompts:
+    #   defaults:
+    #     age: 'Select your age'
+    placeholders:
+      defaults:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        site_url: "Ваш сайт"
+        social_link: "Профайл в социальной сети"
+        description: "Сопроводительное письмо"
+        company_name: "Название компании"
+        activity_scope: "Сфера деятельности"
+        contact_person: "Контактное лицо"
+        phone: "Номер телефона"
+        email: "Электронная почта"
+        description: "Описание проекта/запроса"
+      vacancy_request:
+        phone: "Номер телефона*"
+        email: "Электронная почта*"
+    helpers:
+      defaults:
+        submit: "Отправить"
+      user:
+        #submit: "Отправить"
+      vacancy_request:
+        submit: "Я хочу эту работу"
+    messages:
+      required_fields_reference: "* Обязательные поля"
+      all_fields_required: "Все поля обязательны для заполнения"

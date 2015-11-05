@@ -1,4 +1,5 @@
 //= require libs/jquery/jquery-1.11.3.min
+//= require jquery.pjax
 //= require application/jquery.matchHeight-min.js
 //= require application/jquery.popupoverlay.js
 //= require application/jquery.bxslider.js
@@ -9,6 +10,7 @@
 //= require application/simplemenu.js
 //= require application/common
 //= require application/js
+//= require_directory ./pages
 
 
 

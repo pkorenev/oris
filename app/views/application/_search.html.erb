@@ -9,12 +9,8 @@
             <div class="container">
               <div class="row">
 
-                <h3 class="seacth">Поиск по сайту</h3>
-                <form class="poisk_h">
-                  <input name="name" type="text" class="feedback-input" placeholder="Я хочу найти.." />
-                  <input type="submit" value="SUBMIT"/>
-                </form>
-
+                <h3 class="seacth"><%=t 'search.website_search' %></h3>
+                <%= render 'search_form', form_class: 'poisk_h' %>
               </div>
             </div>
           </div>
