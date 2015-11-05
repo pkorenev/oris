@@ -1,11 +1,5 @@
 <%= fetch(:rails_env) %>:
-  adapter: postgresql
+  adapter: sqlite3
   timeout: 5000
-  encoding: utf8
-  reconnect: false
-  database: <%= "#{fetch(:application)}_#{fetch(:rails_env)}" %>
+  database: <%= fetch(:deploy_to) %>/<%= fetch(:rails_env) %>.sqlite3
   pool: 5
-  username: <%= "#{fetch(:application)}_#{fetch(:rails_env)}" %>
-  password:
-  host:
-  port: 5432

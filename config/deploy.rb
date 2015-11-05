@@ -31,7 +31,6 @@ set(:linked_dirs, %w(
   vendor/bundle
   public/system
   public/uploads
-  db
 ))
 
 set(:config_files, %w(
