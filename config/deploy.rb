@@ -55,8 +55,8 @@ set(:symlinks, [
   }
 ])
 
-# set :assets_roles, %w(web)
-# set :precompile_only_if_changed, false
+set :assets_roles, %w(web)
+set :precompile_only_if_changed, false
 
 namespace :deploy do
   # make sure we're deploying what we think we're deploying

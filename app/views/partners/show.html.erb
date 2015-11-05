@@ -2,7 +2,7 @@
     <div class="v_slog v_slo_on">
       <div class="container">
         <div class="row">
-          <img class="ab_port" src="/assets/application/aboutuspartnerbanner.jpg" alt="">
+          <%= image_tag "application/aboutuspartnerbanner.jpg", class: "ab_port", alt: "" %>
           <h3 class="vt_s"><%= @partner.name %></h3>
           <p class="vt_p"><%= @partner.status %></p>
         </div>
@@ -59,7 +59,7 @@
                     <div class="gtl_inf gyti">
                       <p><%= feedback.comment %></p>
                     </div>
-                    <img class="gt_lw" src="/assets/application/duzhki_23.jpg" alt="alt">
+                    <%= image_tag "application/duzhki_23.jpg", class: "gt_lw", alt: "alt" %>
 
                     <h3 class="gtl_h3 homin">
                       <% if feedback.company_url.present? %>

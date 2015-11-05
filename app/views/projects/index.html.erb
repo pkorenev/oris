@@ -14,7 +14,9 @@
 					</div>
 					<div class="col-md-6 col-sm-6 col-xs-6">
 						<div class="logo">
-							<a href="#"><img src="/assets/application/logo.png" alt="alt"></a>
+							<a href="#">
+								<%= image_tag "application/logo.png", alt: "alt" %>
+							</a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-3 col-xs-3 soc_inf">
@@ -122,7 +124,7 @@
                     <div class="col-md-6 col-sm-6 col-xs-12 tt_bot">
                     <div class="test_bc">
                         <div class="tes_1">
-                            <img src="/assets/application/imageproject_10.jpg" alt="alt">
+                            <%= image_tag "application/imageproject_10.jpg", alt: "alt"%>
                             <div class="test_title">
                                 <a href="#"><%= project.project_category.name %></a>
                             </div>
