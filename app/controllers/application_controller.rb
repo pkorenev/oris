@@ -32,7 +32,14 @@ class ApplicationController < ActionController::Base
   end
 
   def get_categorized_item(url, category_class, resource_class, child_association_name, parent_association_name, collection = nil)
-    resource = resource_class.translation_class.where(url_fragment: url).first.try(&:item)
+    if collection
+      resource = collection.map{|r| r.translations.where(url_fragment: url).first.try(&:item) }.select{|r| !r.nil? }.first
+    else
+
+      resource ||= resource_class.translation_class.where(url_fragment: url).first.try(&:item)
+
+
+    end
 
     if resource
       resources = collection
@@ -62,6 +69,10 @@ class ApplicationController < ActionController::Base
     end
 
     resource
+  end
+
+  def get_neightbor_items
+
   end
 
   def render_not_found
@@ -176,7 +187,7 @@ class ApplicationController < ActionController::Base
 
 
   def pjax?
-    !request.headers['X-PJAX'].nil?
+    !!request.headers['X-PJAX']
   end
 
   def index

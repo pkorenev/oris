@@ -1,0 +1,12 @@
+- items.each_with_index do |service, index|
+  li
+    a href=service.url
+      - if service.respond_to?(:list_item_name)
+        = service.list_item_name(index)
+      - else
+        = service.name
+      span class="st-arrow"
+        |Открыть или закрыть
+    div id="article-#{service.id}-content" data-container-name="article-content-#{index}" class="st-content #{ 'ajax-load' if @article && @article.id == service.id }"
+      - if (defined?(show_all_contents) && show_all_contents == true)  || (@article && @article.id == service.id)
+        = raw service.content

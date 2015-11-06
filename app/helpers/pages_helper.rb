@@ -1,7 +1,7 @@
 module PagesHelper
   def menu_items
     items = []
-    keys = [:about, :projects, {key: :services, url: ServiceCategory.first.url}, :publications, :events, :career, :contact]
+    keys = [:about, :projects, {key: :services, url: ServiceCategory.first.try(&:url) || services_path}, :publications, :events, :career, :contact]
     keys.each do |item|
       if !item.is_a?(Hash)
         item = {key: item.to_sym}

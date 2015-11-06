@@ -1,6 +1,6 @@
-$('#st-accordionx').accordion({
-    oneOpenedItem	: true
-});
+#$('#st-accordionx').accordion({
+#    oneOpenedItem	: true
+#});
 
 
 $("body").on "click", ".open-vacancy-request-popup", (event)->
@@ -15,3 +15,27 @@ $("body").on "click", ".open-vacancy-request-popup", (event)->
 
 
 
+$(".accordion-ul > li > div").slideUp()
+
+$(".accordion").on "click", ".accordion-ul > li > a", (e)->
+  e.preventDefault()
+  $link = $(this)
+  $li = $link.closest("li")
+  $content = $li.find(">div")
+
+  scroll_top = $li.offset().top
+
+  $ul = $li.closest("ul")
+
+  if !$li.hasClass("opened")
+    $ul.children().filter(".opened").removeClass("opened").slideUp()
+
+    $li.addClass("opened")
+    $content.slideDown()
+
+    $("html, body").animate({
+      scrollTop: scroll_top
+    })
+  else
+    $li.removeClass("opened")
+    $content.slideUp()

@@ -21,4 +21,16 @@ class Vacancy < ActiveRecord::Base
       self.url_fragment = self.name.parameterize if self.url_fragment.blank?
     end
   end
+
+  def to_param(locale = I18n.locale)
+    self.translations_by_locale[locale].url_fragment
+  end
+
+  def url(locale = I18n.locale)
+    routes.vacancy_path(vacancy_id: self, locale: locale)
+  end
+
+  def routes
+    Rails.application.routes.url_helpers
+  end
 end

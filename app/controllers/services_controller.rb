@@ -9,7 +9,7 @@ class ServicesController < ArticlesController
     init_locale_links(@active_category)
 
 
-
+    render locals: { show_all_contents: pjax? }
 
     # @services_practices = ServicePractice.all.order_by_desc
     # @services_departments = ServiceDepartment.all.order_by_desc
@@ -21,13 +21,17 @@ class ServicesController < ArticlesController
 
     @article = get_categorized_item(params[:id], ServiceCategory, Service, :services, :service_category, collection)
 
+    #return render inline: "#{@article.inspect}"
+
     if @article.nil?
       return render_not_found
     end
 
     init_locale_links(@article)
 
-    render layout: "article", article: @article
+    return render inline: @article.content if pjax?
+
+    render layout: "article", locals: {article: @article, prev_article: @prev_article, next_article: @next_article}
   end
 
   def resource_class

@@ -6,4 +6,24 @@
 #  window.OPTIONS = options
 
 
-$(".ajax-load")
+#$(".ajax-load")
+
+#$("body").on "click", ".accordion li > a", (e)->
+#  e.preventDefault()
+#  console.log "event"
+#
+#  $link = $(this)
+#  $li = $link.closest("li")
+#  $li.addClass("st-open")
+#  $container = $link.next()
+#  empty_container = $container.children().length == 0
+#  url = $link.attr("href")
+#  $.pjax({
+#    url: url
+#    container: $container
+#  })
+#
+#
+#
+#  top = $link.offset().top
+#  $("html, body").animate({scrollTop: top})

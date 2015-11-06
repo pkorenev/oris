@@ -18,7 +18,8 @@ Rails.application.routes.draw do
 
 
     root to: "pages#index"
-    get "career", to: "pages#career", as: :career, defaults: { menu_item: :career, menu_item_root: true }
+    get "career/:vacancy_id", to: "vacancies#show", as: :vacancy, defaults: { menu_item: :career }
+    get "career", to: "vacancies#index", as: :career, defaults: { menu_item: :career, menu_item_root: true }
     get "about", to: "pages#about", defaults: { menu_item: :about, menu_item_root: true }
     get "contact", to: "pages#contact", defaults: { menu_item: :contact, menu_item_root: true }
     get "search", to: "pages#search", defaults: { menu_item: :contact, menu_item_root: true }

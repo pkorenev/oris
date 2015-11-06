@@ -47,21 +47,21 @@ $(document).ready(function(){
     });
 });
 
-$(function() {
+//$(function() {
+//
+//    $('#st-accordion').accordion({
+//        oneOpenedItem	: true
+//    });
+//
+//});
 
-    $('#st-accordion').accordion({
-        oneOpenedItem	: true
-    });
-
-});
-
-$(function() {
-
-    $('#st-accordiona').accordion({
-        oneOpenedItem	: true
-    });
-
-});
+//$(function() {
+//
+//    $('#st-accordiona').accordion({
+//        oneOpenedItem	: true
+//    });
+//
+//});
 
 $(document).ready(function () {
 

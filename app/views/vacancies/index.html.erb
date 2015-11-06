@@ -49,21 +49,21 @@
           <div id="st-accordionx" class="st-accordion accordion">
             <ul class="st_akor accordion-ul">
               <% 50.times do %>
-                  <%# render "accordion_items", items: @vacancies, show_all_contents: true %>
-              <% @vacancies.each do |vacancy| %>
+                  <%= render "accordion_items", items: @vacancies, show_all_contents: true %>
+                  <% @vacancies.each do |vacancy| %>
 
-                  <!--<li>-->
-                    <!--<a href="<%= vacancy.url %>"><%= vacancy.name %><span class="st-arrow"><%= t("pages.career.open_or_close") %></span></a>-->
-                    <!--<div class="st-content">-->
+                      <!--<li>-->
+                      <!--<a href="<%= vacancy.url %>"><%= vacancy.name %><span class="st-arrow"><%= t("pages.career.open_or_close") %></span></a>-->
+                      <!--<div class="st-content">-->
                       <!--<% if false %>-->
-                      <!--<%= raw vacancy.content %>-->
-                      <!--<p>-->
-                        <!--<button href="<%= vacancy_request_path(vacancy_id: vacancy) %>" class="work_ad open-vacancy-request-popup"><%= t("vacancy.new") %></button>-->
-                      <!--</p>-->
-                      <!--<% end %>-->
-                    <!--</div>-->
-                  <!--</li>-->
-              <% end %>
+                          <!--<%= raw vacancy.content %>-->
+                          <!--<p>-->
+                          <!--<button href="<%= vacancy_request_path(vacancy_id: vacancy) %>" class="work_ad open-vacancy-request-popup"><%= t("vacancy.new") %></button>-->
+                          <!--</p>-->
+                          <!--<% end %>-->
+                      <!--</div>-->
+                      <!--</li>-->
+                  <% end %>
               <% end %>
             </ul>
 

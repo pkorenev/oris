@@ -20,7 +20,7 @@ class Service < ActiveRecord::Base
 
   class Translation
     attr_accessible *attribute_names
-    belongs_to :item, class_name: Service
+    belongs_to :item, class_name: Service, foreign_key: :service_id
     attr_accessible :item
 
     before_validation :set_url_fragment
@@ -33,6 +33,17 @@ class Service < ActiveRecord::Base
       text :name
       text :content
     end
+  end
+
+  def formatted_numeric_date
+    date = created_at
+    "#{date.day}/#{date.month}/#{date.year}"
+  end
+
+  def formatted_word_date
+    date = created_at
+    month_name = "декабря"
+    "#{date.day} #{month_name} #{date.year}"
   end
 
   def list_item_name(index, locale = I18n.locale)
