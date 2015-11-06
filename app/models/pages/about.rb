@@ -12,4 +12,10 @@ class Pages::About < ActiveRecord::Base
     belongs_to :item, class_name: HomePageBanner, foreign_key: :home_page_banner_id
     attr_accessible :item
   end
+
+  def self.default_head_title
+    #page_key = self.name.split("::").last.underscore
+    I18n.t("pages.about.head_title", raise: true) rescue "about".humanize.parameterize
+  end
+
 end

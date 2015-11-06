@@ -1,2 +1,4 @@
 en:
   layout:
+    vacancy-success: "Thank you"
+    vacancy-success-content: "You have successfully left your CV. Our recruiter will contact you."

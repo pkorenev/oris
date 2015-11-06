@@ -30,10 +30,12 @@ Rails.application.routes.draw do
 
     scope "services", defaults: { menu_item: :services } do
       root to: "services#index", as: :services
-      get "practices", to: "services#index", defaults: { resource_class: "ServicePractice", menu_item_root: true }, as: :services_practices
-      get "departments", to: "services#index", defaults: { resource_class: "ServiceDepartment" }, as: :services_departments
-      get ":id", to: "services#show", as: :service
-
+      #get "practices", to: "services#index", defaults: { resource_class: "ServicePractice", menu_item_root: true }, as: :services_practices
+      #get "departments", to: "services#index", defaults: { resource_class: "ServiceDepartment" }, as: :services_departments
+      scope ":service_category" do
+        root to: "services#index", as: "services_category"
+        get ":id", to: "services#show", as: :service
+      end
     end
 
     scope "projects", defaults: { menu_item: :projects } do

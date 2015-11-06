@@ -48,6 +48,7 @@
 
           <div id="st-accordionx" class="st-accordion">
             <ul class="st_akor">
+              <% 15.times do %>
               <% @vacancies.each do |vacancy| %>
                   <li>
                     <a href="#"><%= vacancy.name %><span class="st-arrow"><%= t("pages.career.open_or_close") %></span></a>
@@ -58,6 +59,7 @@
                       </p>
                     </div>
                   </li>
+              <% end %>
               <% end %>
             </ul>
 
@@ -73,16 +75,5 @@
 <% end %>
 
 
-
-
-
-
-
-
-
-
-<% content_for :scripts do %>
-    <script src="/assets/pages/career.js"></script>
-<% end %>
 
 <%= render "vacancy_request_popup" %>

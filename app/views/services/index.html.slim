@@ -1,0 +1,17 @@
+section class="kat_tab"
+  div class="container"
+    = categories_tabs_row(ServiceCategory, services_path, false, tabs_class: "services-tabs")
+    div  class="row category-tab-content"
+      div class="tab_container"
+        div id="tab1" class="tab_content"
+          div id="st-accordion" class="st-accordion"
+            ul class="st_akor acordion"
+              - @services.each_with_index do |service, index|
+                li
+                  a.ajax-load href=service.url data-container="article-content-#{index}"
+                    = service.list_item_name(index)
+                    span class="st-arrow"
+                      |Открыть или закрыть
+                  div data-container-name="article-content-#{index}" class="st-content #{ 'ajax-load' if @article && @article.id == service.id }"
+                    - if @article && @article.id == service.id
+                      = raw service.content

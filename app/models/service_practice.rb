@@ -1,3 +1,0 @@
-class ServicePractice < Service
-
-end

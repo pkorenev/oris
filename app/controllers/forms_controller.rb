@@ -20,8 +20,12 @@ class FormsController < ApplicationController
   end
 
   def vacancy_request
-    @vacancy_request = VacancyRequest.new(params[:vacancy_request])
+    vacancy = Vacancy.find(params[:vacancy_id])
+    vacancy_request_params = params[:vacancy_request]
+    vacancy_request_params[:vacancy] = vacancy
+    @vacancy_request = VacancyRequest.new(vacancy_request_params)
     if request.post?
+
       if @vacancy_request.valid?
         @vacancy_request.save
         render json: @vacancy_request, status: 201

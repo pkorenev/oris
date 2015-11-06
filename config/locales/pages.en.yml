@@ -11,3 +11,5 @@ en:
     publication: Publications
     service: Services
     event: Events
+  vacancy:
+    new: "Send CV"

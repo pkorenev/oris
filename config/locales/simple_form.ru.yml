@@ -46,6 +46,9 @@ ru:
       vacancy_request:
         phone: "Номер телефона*"
         email: "Электронная почта*"
+    labels:
+      vacancy_request:
+        cv: "Ваше резюме*"
     helpers:
       defaults:
         submit: "Отправить"

@@ -13,3 +13,5 @@ $("body").on "click", ".open-vacancy-request-popup", (event)->
   $form.attr("action", url)
   $("#vacancy-request-popup").popup('show')
 
+
+

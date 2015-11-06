@@ -1,0 +1,8 @@
+div class="row"
+  div class="ob_pab"
+    div class="cont_filtr"
+      ul class="category-tabs #{options[:tabs_class]}"
+        - tabs.each do |tab|
+            li class=("active" if tab[:active])
+              a href="#{tab[:url]}"
+                = tab[:name]

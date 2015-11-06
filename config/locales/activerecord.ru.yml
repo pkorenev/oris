@@ -25,6 +25,9 @@ ru:
       service:
         one: "Услуга"
         other: "Услуги"
+      service_category:
+        one: "Категория услуг"
+        other: "Категории услуг"
       service_practice:
         one: "Услуга/Практика"
         other: "Услуги/Практика"

@@ -7,3 +7,47 @@
 .ff_for .feedback-input
   &[type=file]
     border: none
+
+    
+.category-tabs
+  li
+    position: relative
+    margin: 0 0px 0 0
+    list-style: none
+    cursor: pointer
+    float: left
+    background: transparent!important
+    display: block
+
+    color: #94A8B3
+    font-size: 20px
+    text-align: center
+    padding-bottom: 12px
+
+    a
+      //position: absolute
+      //left: 0
+      //right: 0
+      //top: 0
+      //bottom: 0
+      //text-align: center
+      padding: 4px 0 12px 0
+      display: block
+
+
+    &.active
+      a
+        margin-bottom: 0px !important
+        border-bottom: 5px solid #029BDF!important
+        padding: 3px 0 9px 0!important
+
+      a
+        color: #029BDF !important
+        font-family: 'Exo2-ExtraBold'
+
+  &.publications-tabs
+    li
+      width: percentage(1/5)
+  &.services-tabs
+    li
+      width: 50%

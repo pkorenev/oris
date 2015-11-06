@@ -1,4 +1,4 @@
-div id="vacancy-request-popup" class="popup"
+div id="vacancy-request-popup" class="popup" data-success-popup="vacancy-request-success-popup"
   div class="cent_blok_k"
     h3 class="pop_h"
       = t("layout.popups.order_service")
@@ -9,8 +9,8 @@ div id="vacancy-request-popup" class="popup"
         = f.input_field :last_name
         = f.input_field :phone, required: true
         = f.input_field :email, required: true
-        = f.file_field :cv, required: true, class: "hide"
-        = f.label :cv, class: "feedback-input button"
+        = f.file_field :cv, required: false, class: "hide"
+        = f.label :cv, class: "feedback-input button", required: false
         = f.input_field :site_url
         = f.input_field :social_link
         = f.text_area :description
@@ -21,3 +21,11 @@ div id="vacancy-request-popup" class="popup"
 
     a href="#" class="my_popup_close ta_x"
       = t("layout.popups.close")
+
+
+div id="vacancy-request-success-popup" class="popup"
+  div class="cent_blok_k"
+    h3 class="pop_h"
+      = t("layout.popups.vacancy-success")
+    p
+      = t("layout.popups.vacancy-success-content")

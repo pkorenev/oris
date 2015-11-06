@@ -7,7 +7,7 @@
 		  <select name="sources" id="sources" class="custom-select sources" placeholder="<%= t("pages.projects.index.all_practices") %>">
 		    <%  %>
             <option value="profile"><%= t("pages.projects.index.all_practices") %></option>
-            <% @practices.each do |service| %>
+            <% @services.each do |service| %>
                 <option value="<%= service.id %>"><%= service.name %></option>
             <% end %>
 		  </select>
