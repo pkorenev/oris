@@ -13,7 +13,9 @@
             </div>
             <div class="col-md-6 col-sm-6 col-xs-6 reht">
               <div class="logo">
-                <a href="index.html"><img src="<%= images_root %>/logo.png" alt="alt"></a>
+                <a href="index.html">
+                  <%= image_tag "application/logo.png", alt: "alt" %>
+                </a>
               </div>
             </div>
             <div class="col-md-3 col-sm-3 col-xs-3 soc_inf">
@@ -30,39 +32,6 @@
           </div>
 
         </div>
-
-        <!--<div class="s_1hed">-->
-          <!--<div class="container">-->
-            <!--<div class="row post_ban">-->
-              <!--<div class="tu_ban">-->
-                <!--<ul class="bxslider second-main-banner">-->
-                  <!--<li><a href="ebaut.html#recognition">-->
-                    <!--<img src="<%= images_root %>/slide_03.jpg" alt="alt">-->
-                    <!--<p class="s_slogan">A new breed of local firm, offering good advice and a strong dedication to client service” – Legal 500 (link to Recognition)  <span></span></p></a>-->
-                  <!--</li>-->
-                  <!--<li><a href="Practices1.html">-->
-                    <!--<img src="<%= images_root %>/slide_03.jpg" alt="alt">-->
-                    <!--<p class="s_slogan">Leading law firm with proven track of cutting-edge projects in the power and natural resources sectors (link to Our Services)<span></span></p> </a>-->
-                  <!--</li>-->
-                  <!--<li><a href="Practices1.html">-->
-                    <!--<img src="<%= images_root %>/slide_03.jpg" alt="alt">-->
-                    <!--<p class="s_slogan">Trusted legal advisor to financial development institutions (link to Our Services) <span></span> </p></a>-->
-                  <!--</li>-->
-
-                <!--</ul>-->
-
-                <!--<div class="custom-thumbnails-wrap">-->
-                  <!--<ul id="custom-thumbnails">-->
-                    <!--<li><a data-slide-index="0" href="">1</a></li>-->
-                    <!--<li><a data-slide-index="1" href="">2</a></li>-->
-                    <!--<li><a data-slide-index="2" href="">3</a></li>-->
-                  <!--</ul>-->
-                <!--</div>-->
-              <!--</div>-->
-
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
         <%= render "home_slider" %>
       </div>
       <div class="hed_baner">
@@ -104,7 +73,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-sm-4 col-xs-12 p_tex ter_im">
-        <img src="<%= images_root %>/aboutmus.jpg" alt="alt">
+        <%= image_tag "application/aboutmus.jpg", alt: "alt"%>
       </div>
       <div class="col-md-8 col-sm-8 col-xs-12 p_ot">
         <h3 class="et_zah"><a href="<%= about_path %>">Why ORIS?</a></h3>
@@ -133,14 +102,14 @@
           <p class="coun_op">Years of experience</p>
         </div>
         <div class="col-md-2 col-sm-2 col-xs-2 gert_ad">
-          <img class="caund_bg" src="<%= images_root %>/count.png" alt="alt">
+          <%= image_tag "application/count.png", class: "caund_bg", alt: "alt"%>
         </div>
         <div class="col-md-2 col-sm-2 col-xs-2 gert_ad">
           <span class="counter cat_namb" style="display: inline-block; width: 32%">300</span>
           <p class="coun_op">Projects</p>
         </div>
         <div class="col-md-2 col-sm-2 col-xs-2 gert_ad">
-          <img class="caund_bg" src="<%= images_root %>/count.png" alt="alt">
+          <%= image_tag "application/count.png", class: "caund_bg", alt: "alt"%>
         </div>
         <div class="col-md-3 col-sm-3 col-xs-3 gert_ad">
           <div class="proc_cinm">
@@ -372,7 +341,7 @@
             <div class="gtl_inf">
               <p>Рефинансирование исполнено. Перестрахование косвенно индоссирует преддоговорный закон. Еще до момента заключения договора конфиденциальность законодательно подтверждает обычай делового оборота. Регрессное требование, делая скидку на латентность данных правоотношений, требует индоссамент.</p>
             </div>
-            <img class="gt_lw" src="<%= images_root %>/linewhite.jpg" alt="alt">
+            <%= image_tag "application/linewhite.jpg", class: "gt_lw", alt: "alt"%>
             <h3 class="gtl_h3">Compact GTL Limited</h3>
 
           </li>
@@ -381,7 +350,7 @@
             <div class="gtl_inf">
               <p>Рефинансирование исполнено. Перестрахование косвенно индоссирует преддоговорный закон. Еще до момента заключения договора конфиденциальность законодательно подтверждает обычай делового оборота. Регрессное требование, делая скидку на латентность данных правоотношений, требует индоссамент.</p>
             </div>
-            <img class="gt_lw" src="<%= images_root %>/linewhite.jpg" alt="alt">
+            <%= image_tag "application/linewhite.jpg", class: "gt_lw", alt: "alt"%>
             <h3 class="gtl_h3">Compact GTL Limited</h3>
 
           </li>
@@ -390,7 +359,7 @@
             <div class="gtl_inf">
               <p>Рефинансирование исполнено. Перестрахование косвенно индоссирует преддоговорный закон. Еще до момента заключения договора конфиденциальность законодательно подтверждает обычай делового оборота. Регрессное требование, делая скидку на латентность данных правоотношений, требует индоссамент.</p>
             </div>
-            <img class="gt_lw" src="<%= images_root %>/linewhite.jpg" alt="alt">
+            <%= image_tag "application/linewhite.jpg", class: "gt_lw", alt: "alt"%>
             <h3 class="gtl_h3">Compact GTL Limited</h3>
 
           </li>
@@ -466,7 +435,7 @@
     </div>
 
   </div>
-  <img src="<%= images_root %>/map_02.jpg" alt="alt">
+  <%= image_tag "application/map_02.jpg", alt: "alt"%>
 </section>
 
 
@@ -540,7 +509,7 @@
 
 
 <% content_for :scripts do %>
-    <script src="/assets/pages/index.js" type="text/javascript"></script>
+    <%= javascript_include_tag "pages/index.js" %>
 <% end %>
 
 

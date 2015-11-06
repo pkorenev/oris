@@ -1,0 +1,5 @@
+<%= fetch(:rails_env) %>:
+  adapter: sqlite3
+  timeout: 5000
+  database: <%= fetch(:deploy_to) %>/<%= fetch(:rails_env) %>.sqlite3
+  pool: 5

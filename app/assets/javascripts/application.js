@@ -9,7 +9,6 @@
 //= require application/jquery.easyResponsiveTabs
 //= require application/jquery.accordion
 //= require application/jquery.easing.1.3
-//= require jquery-form/jquery.form
 //= require application/simplemenu.js
 //= require application/common
 //= require application/js

@@ -43,7 +43,7 @@
 @media only screen and (max-width : 1000px) {
 .ttm_t {width: 225px;     padding: 0;}
 .pail_pp {
-    background: url(/assets/application/mailowerflow.png) no-repeat center center;
+    background: url(asset_path('mailowerflow.png')) no-repeat center center;
     margin-right: 0px;
     padding-left: 0px;
     margin-left: 0%;
@@ -55,7 +55,7 @@
          float: left;
 }
 .menu_tel {
-    background: url(/assets/application/telowerflow.png) no-repeat center center;
+    background: url(asset_path('telowerflow.png')) no-repeat center center;
     height: 27px;
     width: 50%;
     font-size: 0px;
@@ -63,10 +63,10 @@
     border: 1px solid #fff;
         float: left;
 }
-.menu_tel:hover {    background: #ffa000 url(/assets/application/telowerflow.png) no-repeat center center;
+.menu_tel:hover {    background: #ffa000 url(asset_path('telowerflow.png')) no-repeat center center;
  border: 1px solid #ffa000;}
 .st_ppmenu {bottom: 10px;}
-.pail_pp:hover{        background: #ffa000 url(/assets/application/mailowerflow.png) no-repeat center center;
+.pail_pp:hover{        background: #ffa000 url(asset_path('mailowerflow.png')) no-repeat center center;
     border: 1px solid #ffa000;}
 .tu_ban { position: relative;}
 

@@ -11,7 +11,7 @@
                             <div class="row">
                               <% @project.clients.each do |client|  %>
                               <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <img src="/assets/application/workimg_04.jpg" alt="alt">
+                                    <% image_tag "application/workimg_04.jpg", alt: "alt" %>
                                 </div>
                                 <div class="col-md-8 col-sm-8 col-xs-4 gh_ot">
                                 <% if client.company_url.present? %>
@@ -81,27 +81,3 @@
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
