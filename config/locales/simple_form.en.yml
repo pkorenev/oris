@@ -10,6 +10,23 @@ en:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Please review the problems below:"
+
+    placeholders:
+      defaults:
+        first_name: "First name"
+        last_name: "Last name"
+        site_url: "Your site"
+        social_link: "Social network profile"
+        description: "Covering letter"
+        company_name: "Company name"
+        activity_scope: "Activity scope"
+        contact_person: "Contact person"
+        phone: "Phone number"
+        email: "Email"
+        description: "Description"
+      vacancy_request:
+        phone: "Phone number*"
+        email: "email*"
     # Examples
     # labels:
     #   defaults:
@@ -29,3 +46,13 @@ en:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
+    labels:
+      vacancy_request:
+        cv: "Your CV*"
+    helpers:
+      defaults:
+        submit: "Submit"
+      user:
+        #submit: "Отправить"
+      vacancy_request:
+        submit: "I want this job"

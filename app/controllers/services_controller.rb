@@ -1,18 +1,33 @@
 class ServicesController < ArticlesController
   def index
-    if resource_class.blank?
-      return redirect_to services_practices_path
+    if params[:service_category].blank?
+      return redirect_to ServiceCategory.first.url
     end
 
-    @services_practices = ServicePractice.all.order_by_desc
-    @services_departments = ServiceDepartment.all.order_by_desc
+    @services = categorized_index(params[:service_category], ServiceCategory, Service, :services)
+
+    init_locale_links(@active_category)
+
+
+
+
+    # @services_practices = ServicePractice.all.order_by_desc
+    # @services_departments = ServiceDepartment.all.order_by_desc
 
   end
 
   def show
-    article = Service.first
+    collection = categorized_index(params[:service_category], ServiceCategory, Service, :services)
 
-    render layout: "article", article: article
+    @article = get_categorized_item(params[:id], ServiceCategory, Service, :services, :service_category, collection)
+
+    if @article.nil?
+      return render_not_found
+    end
+
+    init_locale_links(@article)
+
+    render layout: "article", article: @article
   end
 
   def resource_class

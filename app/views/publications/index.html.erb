@@ -26,18 +26,8 @@
 
 <section class=" sec_pablic">
     <div class="container">
-        <div class="row">
-        <div class="ob_pab">
-            <div class="cont_filtr">
-                <ul class="menu_pab pab_pabl publications-tabs">
-                  <% categories_tabs(PublicationCategory, publications_path).each do |tab| %>
-                    <li><a href="<%= tab[:url] %>" class="<%= "p_activ" if tab[:active] %>"><%= tab[:name] %></a></li>
-                  <% end %>
-                </ul>
-            </div>
-        </div>
-        </div>
-        <div class="row publications-tab-content" data-pjax-container="" >
+        <%= categories_tabs_row(PublicationCategory, publications_path, tabs_class: "publications-tabs") %>
+        <div class="row category-tab-content publications-tab-content" data-pjax-container="" >
           <% @publications.each do |publication| %>
               <%= render "publication_list_item", publication: publication %>
           <% end %>

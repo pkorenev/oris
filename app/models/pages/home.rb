@@ -17,7 +17,7 @@ class Pages::Home < ActiveRecord::Base
 
   def self.default_head_title
     page_key = self.name.split("::").last.underscore
-    I18n.t("pages.#{page_key}.head_title", raise: true) rescue page_key.humanize.parameterize
+    I18n.t("pages.home.head_title", raise: true) rescue page_key.humanize.parameterize
   end
 
 end

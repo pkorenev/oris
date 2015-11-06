@@ -109,12 +109,15 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  include_pages_models(config)
+
 
   #include_models config, HasTags::Tag, HasTags::Tagging
 
 
-  models = [Pages, Project, ProjectTag, ProjectCategory, Client, Event, EventAddress, Publication, PublicationCategory, Service, ServiceDepartment, ServicePractice, User, Vacancy, Partner, PartnerEducation, CompanyFeedback, Office ]
+  models = [Pages, Project, ProjectTag, ProjectCategory, Client, Event, EventAddress, Publication, PublicationCategory, Service, User, Vacancy, Partner, PartnerEducation, CompanyFeedback, Office ]
+  include_pages_models(config)
+
+  include_models(config, ServiceCategory)
 
   models.each do |m|
     config.included_models += [m]
@@ -350,12 +353,49 @@ RailsAdmin.config do |config|
 
   # services
 
-  config.model Service do
+  config.model ServiceCategory do
+    services_navigation_label
+
+    list do
+      field :name
+      field :url_fragment
+      field :services
+    end
+
+    edit do
+      field :translations, :globalize_tabs
+      field :services
+    end
+  end
+
+  config.model ServiceCategory::Translation do
     visible false
+
+    nested do
+      field :locale, :hidden
+      field :name
+      field :url_fragment
+    end
+  end
+
+  config.model Service do
+    services_navigation_label
+    list do
+      field :published
+      field :service_category
+      field :name
+      field :url_fragment
+    end
+
+    edit do
+      field :published
+      field :service_category
+      field :translations, :globalize_tabs
+    end
   end
 
   config.model Service::Translation do
-    visible false
+    service_translation_config
   end
 
   def service_config
@@ -394,41 +434,41 @@ RailsAdmin.config do |config|
     end
   end
 
-  config.model ServicePractice do
+  # config.model ServicePractice do
+  #   visible false
+  #   label do
+  #     I18n.t("activerecord.models.service_practice.one")
+  #   end
+  #
+  #   label_plural do
+  #     I18n.t("activerecord.models.service_practice.other")
+  #   end
+  #
+  #   service_config
+  # end
+  #
+  # config.model ServiceDepartment do
+  #   visible false
+  #   label do
+  #     I18n.t("activerecord.models.service_department.one")
+  #   end
+  #
+  #   label_plural do
+  #     I18n.t("activerecord.models.service_department.other")
+  #   end
+  #
+  #   service_config
+  # end
 
-    label do
-      I18n.t("activerecord.models.service_practice.one")
-    end
-
-    label_plural do
-      I18n.t("activerecord.models.service_practice.other")
-    end
-
-    service_config
-  end
-
-  config.model ServiceDepartment do
-
-    label do
-      I18n.t("activerecord.models.service_department.one")
-    end
-
-    label_plural do
-      I18n.t("activerecord.models.service_department.other")
-    end
-
-    service_config
-  end
 
 
-
-  config.model ServiceDepartment::Translation do
-    service_translation_config
-  end
-
-  config.model ServicePractice::Translation do
-    service_translation_config
-  end
+  # config.model ServiceDepartment::Translation do
+  #   service_translation_config
+  # end
+  #
+  # config.model ServicePractice::Translation do
+  #   service_translation_config
+  # end
 
 
   config.model User do
@@ -649,3 +689,7 @@ RailsAdmin.config do |config|
 
 
 end
+
+
+# ServicePractice [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+# ServiceDepartment [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41]

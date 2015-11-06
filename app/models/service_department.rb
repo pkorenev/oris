@@ -1,3 +1,0 @@
-class ServiceDepartment < Service
-
-end

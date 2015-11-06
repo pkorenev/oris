@@ -119,10 +119,15 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def init_locale_links
-    @locale_links = {}
+  def init_locale_links(resource = nil)
+    @locale_links ||= {}
     I18n.available_locales.each do |locale|
-      @locale_links[locale.to_sym] = url_for locale: locale
+      if resource
+        url = resource.url(locale)
+      else
+        url = url_for locale: locale
+      end
+      @locale_links[locale.to_sym] = url
     end
 
   end
