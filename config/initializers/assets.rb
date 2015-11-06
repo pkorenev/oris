@@ -21,4 +21,5 @@ Rails.application.config.assets.precompile += %w(
   pages/services.js
   stub.css
   print.css
+  ckeditor/*
 )
