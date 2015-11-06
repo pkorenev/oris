@@ -3,6 +3,9 @@ class ProjectsController < ApplicationController
     @projects = categorized_index(params[:project_category], ProjectCategory, Project, :projects)
     @total_projects_by_query_count = @projects.count
 
+    # TODO: solve this bug
+    @services ||= []
+    @departments ||= []
     #@practices = ServicePractice.published
     #@departments = ServiceDepartment.published
   end

@@ -6,6 +6,8 @@ class ServicesController < ArticlesController
 
     @services = categorized_index(params[:service_category], ServiceCategory, Service, :services)
 
+    @services ||= []
+
     init_locale_links(@active_category)
 
 
