@@ -1,4 +1,23 @@
 en:
   layout:
-    vacancy-success: "Thank you"
-    vacancy-success-content: "You have successfully left your CV. Our recruiter will contact you."
+    menu:
+      about: "About"
+      projects: "Our experience"
+      services: "Our services"
+      publications: "Publications"
+      events: "Events"
+      career: "Career"
+      contact: "Contacts"
+    footer:
+      subscribe-form:
+        title: "Subscribe for news about ORIS"
+      lets-collaborate: "Let's collaborate!"
+      copyright: "© «ORIS» 2015. All rights reserved."
+    popups:
+      close: "Закрыть"
+      order_service: "Order service"
+
+      vacancy-success: "Thank you"
+      vacancy-success-content: "You have successfully left your CV. Our recruiter will contact you."
+    buttons:
+      order_service: "Order service"

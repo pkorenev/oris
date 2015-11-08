@@ -2382,7 +2382,7 @@ form.poisk_h_ing.ff_pabb  .feedback-input {
     float: left;
     padding-left: 1%;
 }
-.gu_t2 a {
+.gu_t2 a, .gu_t2 label {
     width: 46%;
     height: 43px;
     display: block;
@@ -2394,7 +2394,7 @@ form.poisk_h_ing.ff_pabb  .feedback-input {
 background: url(asset_path('application/iconworkfiltertop.png')) no-repeat center center;
 }
 .lin_boot {
-background:#B0BFC6 url(asset_path('application/iconworkfilterdown.png')) no-repeat center center;
+background: url(asset_path('application/iconworkfilterdown.png')) no-repeat center center;
 }
 
 

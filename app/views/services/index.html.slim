@@ -4,6 +4,7 @@ section class="kat_tab"
     div  class="row category-tab-content"
       div class="tab_container"
         div id="tab1" class="tab_content"
-          div id="st-accordion" class="st-accordion"
-            ul class="st_akor accordion"
-              = render "accordion_items", items: @services
+          div id="st-accordion" class="st-accordion accordion"
+            ul class="st_akor accordion-ul isotope-grid isotope-grid-vertical"
+              - @services.each_with_index do |service, index|
+                = render "accordion_items", show_all_contents: true, item: service, index: index, html: { class: "isotope-grid-item category-#{service.service_category_id}" }

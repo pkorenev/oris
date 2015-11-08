@@ -1,4 +1,4 @@
-li class=(html[:class] if defined?(html))
+li
   a href=item.url
     - if item.respond_to?(:list_item_name)
       = item.list_item_name(index)
@@ -9,3 +9,6 @@ li class=(html[:class] if defined?(html))
   div id="article-#{item.id}-content" data-container-name="article-content-#{index}" class="st-content #{ 'ajax-load' if @article && @article.id == item.id }"
     - if (defined?(show_all_contents) && show_all_contents == true)  || (@article && @article.id == item.id)
       = raw item.content
+
+    button href="#{vacancy_request_path(vacancy_id: item)}" class="work_ad open-vacancy-request-popup"
+      = t("vacancy.new")

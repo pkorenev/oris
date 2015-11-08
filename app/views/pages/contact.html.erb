@@ -2,7 +2,7 @@
     <section class="cont_main">
       <div class="container">
         <div class="row">
-          <h3 class="nash_h3 aur_h3 d_kilo"><a href="#">Наши офисы</a></h3>
+          <h3 class="nash_h3 aur_h3 d_kilo"><a href="#"><%= t("pages.contact.our-offices.title") %></a></h3>
 
           <% @offices.each do |office| %>
               <div class="col-md-12 col-sm-12 col-xs-12 snb_cont">
@@ -69,7 +69,7 @@
 <section class="map_cont">
   <div class="container">
     <div class="row">
-      <h3 class="nash_h3 aur_h3"><a href="#">Посмотреть на карте</a></h3>
+      <h3 class="nash_h3 aur_h3"><a href="#"><%= t("pages.contact.map.title")  %></a></h3>
     </div>
   </div>
   <div class="c_m">
@@ -83,36 +83,6 @@
 
 
 
-<section class="las_cont">
-  <div class="container">
-    <div class="row">
-      <h3 class="nash_h3 aur_h3"><a href="#">Напишите нам</a></h3>
-      <div class="col-md-6 col-sm-6 col-xs-12">
-        <div class="form_co">
-          <form class="ff_for m_ing">
-            <div class="g_cinf">
-              <input name="name" type="text" class="feedback-input" placeholder="Имя">
-              <input name="phone" type="text" class="feedback-input" placeholder="Номер телефона">
-              <input name="email" type="text" class="feedback-input" placeholder="Електронная почта">
-              <textarea name="text" class="feedback-input" placeholder="Сообщение..."></textarea>
-            </div>
-            <input type="submit" value="Отправить">
-          </form>
-        </div>
-      </div>
-      <div class="col-md-6 col-sm-6 col-xs-12">
-        <div class="con_snt g_cinf">
-          <h3 class="nash_h3 cont_inde"><a href="#">Хотите быть всегда в курсе наших новостей?</a></h3>
-          <p class="cint_inf">Подпишитесь на нашу рассылку, чтобы первыми узнавать о новостях фирмы</p>
-          <form class="oris_podoiska cont_poisk">
-            <input name="email" type="text" class="feedback-input" placeholder="Email">
-            <input type="submit" value="SUBMIT">
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<%= render "contact_form" %>
 
 

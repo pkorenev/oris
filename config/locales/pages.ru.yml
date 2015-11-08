@@ -38,6 +38,19 @@ ru:
         client: "Клиент"
         clients: "Клиенты"
         managers: "Проектом управляли"
+      index:
+        all_practices: "Все практики"
+    contact:
+      subscribe-form:
+        title: "ХОТИТЕ БЫТЬ ВСЕГДА В КУРСЕ НАШИХ НОВОСТЕЙ?"
+        description: "Подпишитесь на нашу рассылку, чтобы первыми узнавать о новостях фирмы"
+      feedback-form:
+        title: "НАПИШИТЕ НАМ"
+      map:
+        title: "Посмотреть на карте"
+      our-offices:
+        title: "Наши офисы"
+
 
   search:
     results: "Результаты поиска"

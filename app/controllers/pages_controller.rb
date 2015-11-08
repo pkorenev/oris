@@ -30,6 +30,7 @@ class PagesController < ApplicationController
   def contact
     set_page_metadata("contact")
     @offices = Office.published
+    @contact_feedback = ContactFeedback.new(params[:contact_feedback])
   end
 
   def about

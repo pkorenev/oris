@@ -1,0 +1,28 @@
+- content_for :page_heading do
+  h3 class="vt_s"
+    = t("pages.publications.page_heading.name")
+  p class="vt_p"
+    = t("pages.publications.page_heading.description")
+
+
+section.pob_sech
+  .container
+    .row
+      .col-md-8.col-sm-8.col-xs-12
+        h3.po_hp Поиск по публикациям
+        form.poisk_h_ing.ff_pabb
+          input.feedback-input name="name" placeholder=("Я хачу найти...") type="text" /
+          input type="submit" value="SUBMIT"
+      .col-md-4.col-sm-4.col-xs-12
+        h3.zer_po Результаты поиска
+        p.zer_reg Найдено 23 совпадения
+
+
+
+section class=" sec_pablic"
+  div class="container"
+    = categories_tabs_row(PublicationCategory, publications_path, tabs_class: "publications-tabs")
+    div class="row category-tab-content publications-tab-content isotope-grid" data-pjax-container=""
+      .grid-sizer
+      - @publications.each do |publication|
+        = render "publication_list_item", publication: publication

@@ -93,4 +93,8 @@ module PagesHelper
 
     @order_service_request
   end
+
+  def subscribe_request
+
+  end
 end

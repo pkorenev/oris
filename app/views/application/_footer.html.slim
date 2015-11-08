@@ -1,0 +1,26 @@
+footer
+  .container
+    .row.foot_ot
+      .col-md-4.col-sm-4.col-xs-12
+        a.foot_logo href="#"
+          = image_tag "application/logofooter.png", alt: "alt"
+      .col-md-4.col-sm-4.col-xs-6
+        h3.tu_foot
+          = t("layout.footer.subscribe-form.title")
+        form.oris_podoiska
+          input.feedback-input name="email" placeholder="Email" type="text"
+          input type="submit" value="SUBMIT"
+      .col-md-4.col-sm-4.col-xs-6
+        h3.tu_foot.f_wor
+          = t("layout.footer.lets-collaborate")
+        a.foo_chek.my_popup_open href="#"
+          = t("layout.buttons.order_service")
+  .bot_footer
+    .container
+      .row
+        .col-md-12.col-sm-12.col-xs-12
+          p.f_copi
+            = t("layout.footer.copyright")
+
+
+= render "order_service_popup"

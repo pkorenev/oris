@@ -9,7 +9,7 @@ $("body").on "click", ".open-vacancy-request-popup", (event)->
   url = $link.attr("href")
   $popup = $("#vacancy-request-popup")
   $form = $popup.find("form")
-  $form.resetForm()
+  $form.resetForm() if $form.length > 0 && $form.resetForm
   $form.attr("action", url)
   $("#vacancy-request-popup").popup('show')
 
@@ -39,3 +39,6 @@ $(".accordion").on "click", ".accordion-ul > li > a", (e)->
   else
     $li.removeClass("opened")
     $content.slideUp()
+
+  $(this).closest(".isotope-grid").isotope()
+

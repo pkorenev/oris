@@ -1,0 +1,20 @@
+div id="my_popup" class="popup"
+  div class="cent_blok_k"
+    h3 class="pop_h"
+      = t("layout.popups.order_service") 
+
+    = simple_form_for order_service_request, url: order_service_path, html: {class: "ff_for popz"} do |f| 
+      - f.with_options label: false, placeholder: true, class: "feedback-input" do |f|  
+      = f.input_field :company_name, placeholder: true, required: true 
+      = f.input_field :activity_scope, required: true 
+      = f.input_field :contact_person 
+      = f.input_field :phone 
+      = f.input_field :email 
+      = f.text_field :description 
+      p class="ob_po"
+        = t("simple_form.messages.all_fields_required") 
+      = f.button :submit, t("simple_form.helpers.defaults.submit") 
+
+
+    a href="#" class="my_popup_close ta_x"
+      = t("layout.popups.close") 

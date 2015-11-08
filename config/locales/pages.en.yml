@@ -2,6 +2,20 @@ en:
   pages:
     home:
       title: "Home"
+    contact:
+      subscribe-form:
+        title: "Want to be always aware of our news?"
+        description: "Sign up for our newsletter to be the first to learn the news of the company"
+      feedback-form:
+        title: "CONTACT US"
+      our-offices:
+        title: "Our offices"
+      map:
+        title: "View in map"
+    projects:
+      index:
+        all_practices: "All practices"
+        all_departments: "All departments"
   search:
     results: "Search Results"
     found: "%{count} Items found"

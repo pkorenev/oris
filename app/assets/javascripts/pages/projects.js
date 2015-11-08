@@ -27,9 +27,12 @@ $(".custom-select-trigger").on("click", function() {
     event.stopPropagation();
 });
 $(".custom-option").on("click", function() {
-    $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+    $select = $(this).parents(".custom-select-wrapper").find("select")
+    $select.val($(this).data("value"));
     $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
     $(this).addClass("selection");
     $(this).parents(".custom-select").removeClass("opened");
     $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+
+    $select.trigger("change")
 });

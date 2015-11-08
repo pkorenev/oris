@@ -41,6 +41,10 @@ class Publication < ActiveRecord::Base
   scope :published, -> { where(published: true) }
   scope :order_by_created_at_desc, -> { order("created_at desc") }
 
+  # validations
+
+  validates :publication_category, :avatar, :banner, :name, :url_fragment, :content, presence: { message: "Заполните, прежде чем опубликовать" }, if: -> { self.published? }
+
 
   # additional methods
 

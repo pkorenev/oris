@@ -13,6 +13,7 @@ en:
 
     placeholders:
       defaults:
+        name: "Name"
         first_name: "First name"
         last_name: "Last name"
         site_url: "Your site"
@@ -56,3 +57,7 @@ en:
         #submit: "Отправить"
       vacancy_request:
         submit: "I want this job"
+      contact_feedback:
+        submit: "Send"
+      subscribe_form:
+        submit: "Subscribe"

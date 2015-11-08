@@ -1,27 +1,27 @@
   <section class="pob_sech">
     <div class="container">
       <div class="row">
-
+      <form>
       <div class="col-md-4 col-sm-4 col-xs-12">
       <h3 class="po_hp"><%= t("pages.projects.index.practices_filter") %></h3>
-      <select name="sources" id="sources" class="custom-select sources" placeholder="<%= t("pages.projects.index.all_practices") %>">
-        <%  %>
-            <option value="profile"><%= t("pages.projects.index.all_practices") %></option>
-            <% @practices.each do |service| %>
-                <option value="<%= service.id %>"><%= service.name %></option>
-            <% end %>
-      </select>
+        <%= select("filter", "practice_service_id", [[t("pages.projects.index.all_practices"), 0]] + @practices.map{|s| [s.name, s.id] }, {}, {class: "custom-select sources practices_select",\
+         placeholder: t("pages.projects.index.all_practices")}) %>
       </div>
 
 
       <div class="col-md-4 col-sm-4 col-xs-12">
       <h3 class="po_hp"><%= t("pages.projects.index.departments_filter") %></h3>
-      <select name="practices" id="sources" class="custom-select sources" placeholder="<%= t("pages.projects.index.all_practices") %>">
-            <option value=""><%= t("pages.projects.index.all_departments") %></option>
-        <% @departments.each do |service|  %>
-                <option value="<% service.id %>"><%= service.name %></option>
-            <% end %>
-      </select>
+      <!--<select name="practices" id="sources" class="custom-select sources" placeholder="<%= t("pages.projects.index.all_practices") %>">-->
+            <!--<option value=""><%= t("pages.projects.index.all_departments") %></option>-->
+        <!--<% @departments.each do |service|  %>-->
+                <!--<option value="<% service.id %>"><%= service.name %></option>-->
+            <!--<% end %>-->
+      <!--</select>-->
+
+        <%= select("filter", "department_service_id", [[t("pages.projects.index.all_departments"), 0]] + @departments.map{|s| [s.name, s.id] }, {}, {class: "custom-select sources departments_select",\
+         placeholder: t("pages.projects.index.all_departments")}) %>
+
+
       </div>
 
 
@@ -30,17 +30,20 @@
         
       <div class="otr_se">
       <div class="gu_t1">
-      <select name="sources" id="sources" class="custom-select sources" placeholder="По дате">
-        <option value="profile">Все виды практик</option>
+      <select name="filter[sorting_property]" id="sources" class="custom-select sources projects_sorting_property_select" placeholder="По дате">
+        <option value="date">По дате</option>
+        <option value="name">По имени</option>
       </select>
       </div>
-      <div class="gu_t2">
-      <a href="#" class="lin_top"></a>
-      <a href="#" class="lin_boot"></a>
+      <div class="gu_t2 sort-direction">
+      <input style="display: none" name="filter[sorting_direction]" value="asc" type="radio" id="filter_sorting_asc"/>
+      <input style="display: none" name="filter[sorting_direction]" value="desc" type="radio" id="filter_sorting_desc"/>
+      <label for="filter_sorting_asc" class="lin_top"></label>
+      <label for="filter_sorting_desc" class="lin_boot"></label>
       </div>
       </div>
       </div>
-
+        </form>
 
       </div>
     </div>
@@ -49,26 +52,28 @@
 
   <section class=" sec_pablic">
     <div class="container">
-      <div class="row">
-      <div class="ob_pab">
-        <div class="cont_filtr">
-          <ul class="menu_pab pab_pabl batot">
-                      <% categories_tabs(ProjectCategory, projects_path).each do |tab| %>
-                          <li><a href="<%= tab[:url] %>" class="<%= "p_activ" if tab[:active] %>"><%= tab[:name] %></a></li>
-                      <% end %>
-          </ul>
-        </div>
-      </div>
-      </div>
+      <!--<div class="row">-->
+      <!--<div class="ob_pab">-->
+        <!--<div class="cont_filtr">-->
+          <!--<ul class="menu_pab pab_pabl batot">-->
+                      <!--<% categories_tabs(ProjectCategory, projects_path).each do |tab| %>-->
+                          <!--<li><a href="<%= tab[:url] %>" class="<%= "p_activ" if tab[:active] %>"><%= tab[:name] %></a></li>-->
+                      <!--<% end %>-->
+          <!--</ul>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--</div>-->
+      <%= categories_tabs_row(ProjectCategory, projects_path, tabs_class: "projects-tabs") %>
       <div class="row">
       <h3 class="work_zah"><%= total_projects_count %></h3>
 
 
-
-
+        <div class="projects-tab-content isotope-grid">
+          <div class="grid-sizer"></div>
         <% @projects.each do |project| %>
 
-                    <div class="col-md-6 col-sm-6 col-xs-12 tt_bot">
+                    <div class="col-md-6 col-sm-6 col-xs-12 tt_bot isotope-grid-item category-<%= project.project_category_id %> <%= project.services.pluck(:id).map{|id| "service-#{id}"}.join(" ") %>" data-name="<%= project.name %>" data-date="<%= project.end_date %>">
+
                     <div class="test_bc">
                         <div class="tes_1">
                             <%= image_tag "application/imageproject_10.jpg", alt: "alt" %>
@@ -88,23 +93,27 @@
 
                 <% end %>
 
+        </div>
+      </div>
 
-      </div>
-      <div class="row pabl_pagi">
-        <div class=" pos_pub pPpubl">
-          <a href="#">
-            <p>Читать</p>
-            <h3>Новости фирмы</h3>
-            <span></span>
-          </a>
-        </div>
-        <div class=" pos_pub pPpubr">
-          <a href="#">
-            <p>Читать</p>
-            <h3>Новости фирмы</h3>
-            <span></span>
-          </a>
-        </div>
-      </div>
+
+      <!--<div class="row pabl_pagi">-->
+        <!--<div class=" pos_pub pPpubl">-->
+          <!--<a href="#">-->
+            <!--<p>Читать</p>-->
+            <!--<h3>Новости фирмы</h3>-->
+            <!--<span></span>-->
+          <!--</a>-->
+        <!--</div>-->
+        <!--<div class=" pos_pub pPpubr">-->
+          <!--<a href="#">-->
+            <!--<p>Читать</p>-->
+            <!--<h3>Новости фирмы</h3>-->
+            <!--<span></span>-->
+          <!--</a>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!-- -->
+
     </div>
   </section>

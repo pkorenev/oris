@@ -3,6 +3,6 @@ div class="row"
     div class="cont_filtr"
       ul class="category-tabs #{options[:tabs_class]}"
         - tabs.each do |tab|
-            li class=("active" if tab[:active])
+            li class=("active" if tab[:active]) data-filter=".category-#{tab[:category_id]}"
               a href="#{tab[:url]}"
                 = tab[:name]

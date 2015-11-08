@@ -48,8 +48,10 @@
 
           <div id="st-accordionx" class="st-accordion accordion">
             <ul class="st_akor accordion-ul">
-              <% 50.times do %>
-                  <%= render "accordion_items", items: @vacancies, show_all_contents: true %>
+              <%# 50.times do %>
+                  <% @vacancies.each_with_index do |service, index| %>
+                  <%= render "accordion_items2", show_all_contents: true, item: service, index: index %>
+                  <% if false %>
                   <% @vacancies.each do |vacancy| %>
 
                       <!--<li>-->
@@ -64,7 +66,9 @@
                       <!--</div>-->
                       <!--</li>-->
                   <% end %>
+                  <% end %>
               <% end %>
+              <%# end %>
             </ul>
 
           </div>

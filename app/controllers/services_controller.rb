@@ -1,10 +1,11 @@
 class ServicesController < ArticlesController
   def index
-    if params[:service_category].blank?
-      return redirect_to ServiceCategory.first.url
-    end
+    # if params[:service_category].blank?
+    #   return redirect_to ServiceCategory.first.url
+    # end
 
-    @services = categorized_index(params[:service_category], ServiceCategory, Service, :services)
+    #@services = categorized_index(params[:service_category], ServiceCategory, Service, :services)
+    @services = Service.published
 
     @services ||= []
 

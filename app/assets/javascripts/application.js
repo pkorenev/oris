@@ -9,6 +9,7 @@
 //= require application/jquery.easyResponsiveTabs
 //= require application/jquery.accordion
 //= require application/jquery.easing.1.3
+//= require isotope/dist/isotope.pkgd.min
 //= require application/simplemenu.js
 //= require application/common
 //= require application/js

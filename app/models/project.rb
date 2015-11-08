@@ -12,7 +12,7 @@ class Project < ActiveRecord::Base
 
   attr_accessible :project_category
   attr_accessible :partners, :partner_ids
-  #attr_accessible :services, :service_ids
+  attr_accessible :services, :service_ids
 
   attr_accessible :project_tags, :project_tag_ids
   attr_accessible :clients, :client_ids
@@ -48,6 +48,11 @@ class Project < ActiveRecord::Base
 
   # scopes
   scope :published, -> { where(published: true) }
+
+  # validations
+
+  validates :project_category, :avatar, :start_date, :end_date, :banner, :name, :url_fragment, :short_description, :content, presence: { message: "Заполните, прежде чем опубликовать" }, if: -> { self.published? }
+
 
   def date_range
     "20 октября 2014 – 19 января 2015"

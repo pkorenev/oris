@@ -1,0 +1,28 @@
+section.las_cont
+  .container
+    .row
+      h3.nash_h3.aur_h3
+        a href="#"
+          = t("pages.contact.feedback-form.title")
+      .col-md-6.col-sm-6.col-xs-12
+        .form_co
+          = simple_form_for @contact_feedback, url: contact_feedback_path, method: "post", html: { class: "ff_for m_ing" } do |f|
+            .g_cinf
+              - f.with_options label: false, placeholder: true, class: "feedback-input" do |f|
+                = f.input_field :name, placeholder: true
+                = f.input_field :phone, required: true
+                = f.input_field :email, required: true
+                = f.text_area :message
+
+            = f.button :submit, t("simple_form.helpers.contact_feedback.submit")
+      .col-md-6.col-sm-6.col-xs-12
+        .con_snt.g_cinf
+          h3.nash_h3.cont_inde
+            a href="#"
+              = t("pages.contact.subscribe-form.title")
+          p.cint_inf
+            = t("pages.contact.subscribe-form.description")
+          = simple_form_for "subscribe_form", url: subscribe_path, method: "post", html: { class: "oris_podoiska cont_poisk" } do |f|
+            - f.with_options label: false, placeholder: true, class: "feedback-input" do |f|
+              = f.input_field :email
+            = f.button :submit, t("simple_form.helpers.subscribe_form.submit")

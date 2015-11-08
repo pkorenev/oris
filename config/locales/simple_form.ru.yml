@@ -56,6 +56,10 @@ ru:
         #submit: "Отправить"
       vacancy_request:
         submit: "Я хочу эту работу"
+      contact_feedback:
+        submit: "Отправить"
+      subscribe_form:
+        submit: "Подписаться"
     messages:
       required_fields_reference: "* Обязательные поля"
       all_fields_required: "Все поля обязательны для заполнения"

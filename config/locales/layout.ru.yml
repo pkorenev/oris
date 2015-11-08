@@ -8,9 +8,16 @@ ru:
       events: "Мероприятия"
       career: "Вакансии"
       contact: "Контакты"
+    footer:
+      subscribe-form:
+        title: "Подписка на новости от ORIS"
+      lets-collaborate: "Будем рады сотрудничеству!"
+      copyright: "© «ORIS» 2015. Все права защищены."
     popups:
       close: "Закрыть"
       order_service: "Заказать услугу"
 
       vacancy-success: "Спасибо вам"
       vacancy-success-content: "Вы успешно оставили заявку. Наш рекрутер свяжится с Вами."
+    buttons:
+      order_service: "Заказать услугу"

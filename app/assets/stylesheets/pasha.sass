@@ -45,7 +45,7 @@
         color: #029BDF !important
         font-family: 'Exo2-ExtraBold'
 
-  &.publications-tabs
+  &.publications-tabs, &.projects-tabs
     li
       width: percentage(1/5)
   &.services-tabs
@@ -56,3 +56,40 @@
 #contact-map
   height: 370px
   display: block
+
+
+// projects filter form
+#filter_sorting_asc:checked ~ label[for=filter_sorting_asc], #filter_sorting_desc:checked ~ label[for=filter_sorting_desc]
+  background-color: #B0BFC6
+
+
+
+
+// publications
+.publications-tab-content
+  .grid-sizer, .isotope-grid-item
+    width: 22.4%
+    margin-right: 2.6%
+
+
+// projects
+.projects-tab-content
+  .grid-sizer, .isotope-grid-item
+    width: 50%
+    margin: 0 0 30px 0
+
+.accordion-ul
+  > li
+    > .st-content
+      display: none
+
+
+.accordion-ul
+  &.isotope-grid
+    height: auto !important
+    .isotope-grid-item
+      position: relative !important
+      top: auto !important
+      left: auto !important
+      transform: none !important
+      -webkit-transform: none !important
